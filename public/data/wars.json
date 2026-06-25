@@ -1,0 +1,290 @@
+[
+  {
+    "id": "ww2",
+    "name": "第二次世界大战",
+    "startYear": 1939,
+    "endYear": 1945,
+    "location": "欧洲、亚洲、太平洋、非洲",
+    "belligerents": ["同盟国", "轴心国"],
+    "casualties": 70000000,
+    "background": "由法西斯扩张、1929 年经济危机与《凡尔赛条约》遗留问题共同引发，是人类历史上规模最大的战争。",
+    "relatedCountryIds": ["china", "germany", "japan", "usa", "uk", "russia", "italy", "france"],
+    "figures": [
+      { "name": "温斯顿·丘吉尔", "description": "英国首相，以激昂演说凝聚同盟国意志。" },
+      { "name": "毛泽东", "description": "中国共产党领导人，领导敌后战场抗战。" },
+      { "name": "富兰克林·罗斯福", "description": "美国总统，推动美国加入反法西斯战争。" }
+    ],
+    "attires": [
+      { "countryId": "china", "caption": "国民革命军蓝灰色军装，德式 M35 钢盔" },
+      { "countryId": "uk", "caption": "卡其色军服，布洛迪钢盔，棕色军靴" },
+      { "countryId": "germany", "caption": "原野灰 field grey 制服，M40 钢盔" },
+      { "countryId": "usa", "caption": "橄榄褐 M1943 野战夹克，M1 钢盔" }
+    ]
+  },
+  {
+    "id": "ww1",
+    "name": "第一次世界大战",
+    "startYear": 1914,
+    "endYear": 1918,
+    "location": "欧洲、中东、非洲、太平洋",
+    "belligerents": ["协约国", "同盟国"],
+    "casualties": 17000000,
+    "background": "帝国主义列强为重新瓜分世界和争夺全球霸权而爆发的大规模战争，坦克与毒气首次投入战场。",
+    "relatedCountryIds": ["uk", "germany", "france", "russia", "usa", "italy"],
+    "figures": [
+      { "name": "伍德罗·威尔逊", "description": "美国总统，提出十四点和平原则。" },
+      { "name": "保罗·冯·兴登堡", "description": "德军元帅，东线坦能堡战役指挥官。" }
+    ],
+    "attires": [
+      { "countryId": "france", "caption": "地平线蓝 horizon-blue 羊毛大衣，阿德里安钢盔" },
+      { "countryId": "germany", "caption": "原野灰步兵制服，钉盔或钢盔，长筒皮靴" },
+      { "countryId": "uk", "caption": "卡其色 1902 式军服，布洛迪钢盔，绑腿裹腿" }
+    ]
+  },
+  {
+    "id": "napoleonic",
+    "name": "拿破仑战争",
+    "startYear": 1803,
+    "endYear": 1815,
+    "location": "欧洲、大西洋、地中海",
+    "belligerents": ["法兰西第一帝国", "反法同盟"],
+    "casualties": 3500000,
+    "background": "法国大革命后，拿破仑试图以军事扩张统一欧洲，引发全欧反法同盟。",
+    "relatedCountryIds": ["france", "uk", "germany", "russia", "italy"],
+    "figures": [
+      { "name": "拿破仑·波拿巴", "description": "法兰西第一帝国皇帝，欧洲军事史上的传奇统帅。" },
+      { "name": "威灵顿公爵", "description": "英军统帅，滑铁卢战役击败拿破仑。" }
+    ],
+    "attires": [
+      { "countryId": "france", "caption": "深蓝色或白色步兵制服，高筒熊皮帽或双角帽" },
+      { "countryId": "uk", "caption": "红色上衣、白色 cross-belt、黑色三角帽或 shako 军帽" },
+      { "countryId": "russia", "caption": "深绿色长外套、白色马裤、三角帽或毛皮帽" }
+    ]
+  },
+  {
+    "id": "mongol-conquests",
+    "name": "蒙古西征",
+    "startYear": 1206,
+    "endYear": 1368,
+    "location": "欧亚大陆",
+    "belligerents": ["蒙古帝国", "花剌子模、金朝、宋朝、罗斯诸国等"],
+    "casualties": 30000000,
+    "background": "成吉思汗及其继承者以骑兵优势迅速扩张，建立了历史上面积最大的陆地帝国。",
+    "relatedCountryIds": ["mongolia", "china", "russia", "india"],
+    "figures": [
+      { "name": "成吉思汗", "description": "蒙古帝国奠基者，统一蒙古各部并开启西征。" },
+      { "name": "拔都", "description": "成吉思汗之孙，领导长子西征深入欧洲。" }
+    ],
+    "attires": [
+      { "countryId": "mongolia", "caption": "皮质或毡质长袍，金属鳞甲，皮帽，高筒马靴" },
+      { "countryId": "china", "caption": "宋代步兵札甲，宽袖战袍，幞头或铁盔" },
+      { "countryId": "russia", "caption": "罗斯贵族锁子甲与长袍，毛皮帽，圆盾" }
+    ]
+  },
+  {
+    "id": "us-civil-war",
+    "name": "美国内战",
+    "startYear": 1861,
+    "endYear": 1865,
+    "location": "美国",
+    "belligerents": ["美利坚合众国", "美利坚联盟国"],
+    "casualties": 750000,
+    "background": "因奴隶制存废、州权与联邦权力之争而引发，是美国历史上最血腥的战争。",
+    "relatedCountryIds": ["usa"],
+    "figures": [
+      { "name": "亚伯拉罕·林肯", "description": "美国总统，领导联邦取得胜利并废除奴隶制。" },
+      { "name": "罗伯特·李", "description": "南军总司令，弗吉尼亚绅士将领。" }
+    ],
+    "attires": [
+      { "countryId": "usa", "caption": "联邦军深蓝夹克与浅蓝长裤，kepi 便帽或毡帽" }
+    ]
+  },
+  {
+    "id": "franco-prussian",
+    "name": "普法战争",
+    "startYear": 1870,
+    "endYear": 1871,
+    "location": "法国、普鲁士",
+    "belligerents": ["普鲁士王国", "法兰西第二帝国"],
+    "casualties": 180000,
+    "background": "普鲁士首相俾斯麦以埃姆斯电报激怒法国，借机完成德意志统一。",
+    "relatedCountryIds": ["germany", "france"],
+    "figures": [
+      { "name": "奥托·冯·俾斯麦", "description": "普鲁士首相，以铁血政策统一德意志。" },
+      { "name": "拿破仑三世", "description": "法兰西第二帝国皇帝，色当战役被俘。" }
+    ],
+    "attires": [
+      { "countryId": "germany", "caption": "普鲁士蓝制服，尖顶盔 Pickelhaube，白色 cross-belt" },
+      { "countryId": "france", "caption": "红色长裤与深蓝色上衣，kepi 军帽" }
+    ]
+  },
+  {
+    "id": "first-sino-japanese",
+    "name": "甲午战争",
+    "startYear": 1894,
+    "endYear": 1895,
+    "location": "朝鲜半岛、黄海、中国东北",
+    "belligerents": ["清朝", "日本帝国"],
+    "casualties": 100000,
+    "background": "日本明治维新后谋求对外扩张，与清朝争夺朝鲜半岛控制权。",
+    "relatedCountryIds": ["china", "japan"],
+    "figures": [
+      { "name": "李鸿章", "description": "清朝北洋大臣，战后签订《马关条约》。" },
+      { "name": "伊藤博文", "description": "日本首相，主导战后谈判。" }
+    ],
+    "attires": [
+      { "countryId": "china", "caption": "清军勇营号衣，胸前“勇”字，布帽或斗笠" },
+      { "countryId": "japan", "caption": "明治陆军深蓝色毛呢军服，大檐帽，白色绑腿" }
+    ]
+  },
+  {
+    "id": "russo-japanese",
+    "name": "日俄战争",
+    "startYear": 1904,
+    "endYear": 1905,
+    "location": "中国东北、朝鲜半岛、黄海、日本海",
+    "belligerents": ["日本帝国", "俄罗斯帝国"],
+    "casualties": 150000,
+    "background": "日俄两国为争夺中国东北和朝鲜利益而爆发，是日本首次击败欧洲列强。",
+    "relatedCountryIds": ["japan", "russia", "china"],
+    "figures": [
+      { "name": "东乡平八郎", "description": "日本海军大将，对马海战指挥官。" },
+      { "name": "乃木希典", "description": "日本陆军大将，以旅顺攻坚战闻名。" }
+    ],
+    "attires": [
+      { "countryId": "japan", "caption": "明治三十七年式军服，大檐帽或军帽，白色绑腿" },
+      { "countryId": "russia", "caption": "沙俄卡其色军服，毛皮帽 papakha 或布帽" }
+    ]
+  },
+  {
+    "id": "peloponnesian",
+    "name": "伯罗奔尼撒战争",
+    "startYear": -431,
+    "endYear": -404,
+    "location": "古希腊城邦",
+    "belligerents": ["雅典领导的提洛同盟", "斯巴达领导的伯罗奔尼撒同盟"],
+    "casualties": 100000,
+    "background": "雅典与斯巴达为争夺希腊霸权而进行的长期战争，标志着古典希腊黄金时代的终结。",
+    "relatedCountryIds": ["greece"],
+    "figures": [
+      { "name": "伯里克利", "description": "雅典政治家，战争初期领导雅典。" },
+      { "name": "吕山德", "description": "斯巴达海军统帅，羊河口海战获胜。" }
+    ],
+    "attires": [
+      { "countryId": "greece", "caption": "希腊重装步兵 hoplite 青铜胸甲与胫甲，圆盾与科林斯头盔" }
+    ]
+  },
+  {
+    "id": "crusades",
+    "name": "十字军东征",
+    "startYear": 1096,
+    "endYear": 1291,
+    "location": "中东、地中海东岸",
+    "belligerents": ["基督教十字军", "伊斯兰政权"],
+    "casualties": 3000000,
+    "background": "西欧基督教国家以收复耶路撒冷为名义对中东发动的一系列宗教战争。",
+    "relatedCountryIds": ["france", "uk", "germany", "italy", "egypt"],
+    "figures": [
+      { "name": "理查一世", "description": "英格兰国王，第三次十字军东征领袖。" },
+      { "name": "萨拉丁", "description": "库尔德穆斯林统帅，收复耶路撒冷。" }
+    ],
+    "attires": [
+      { "countryId": "uk", "caption": "中世纪锁子甲、白色罩袍绣红十字、锥形头盔" },
+      { "countryId": "france", "caption": "骑士锁子甲与 surcoat，鸢尾花纹章" },
+      { "countryId": "egypt", "caption": "马穆鲁克骑兵丝绸长袍、弯刀与圆盾" }
+    ]
+  },
+  {
+    "id": "hundred-years-war",
+    "name": "百年战争",
+    "startYear": 1337,
+    "endYear": 1453,
+    "location": "法国、英格兰",
+    "belligerents": ["英格兰王国", "法兰西王国"],
+    "casualties": 2500000,
+    "background": "英法两国因王位继承与领土争端爆发，最终法国完成民族统一。",
+    "relatedCountryIds": ["uk", "france"],
+    "figures": [
+      { "name": "圣女贞德", "description": "法国民族英雄，推动法军扭转战局。" },
+      { "name": "爱德华三世", "description": "英格兰国王，百年战争主要发起者。" }
+    ],
+    "attires": [
+      { "countryId": "france", "caption": "法国骑士板甲与绣有百合花的罩袍" },
+      { "countryId": "uk", "caption": "英格兰长弓手绿色或棕色短衣，皮甲与便帽" }
+    ]
+  },
+  {
+    "id": "korean-war",
+    "name": "朝鲜战争",
+    "startYear": 1950,
+    "endYear": 1953,
+    "location": "朝鲜半岛",
+    "belligerents": ["联合国军 / 韩国", "朝鲜 / 中国志愿军"],
+    "casualties": 3000000,
+    "background": "冷战初期热战，朝鲜半岛分裂后爆发，中美苏等大国间接介入。",
+    "relatedCountryIds": ["china", "usa"],
+    "figures": [
+      { "name": "彭德怀", "description": "中国人民志愿军司令员。" },
+      { "name": "道格拉斯·麦克阿瑟", "description": "联合国军总司令，仁川登陆策划者。" }
+    ],
+    "attires": [
+      { "countryId": "china", "caption": "志愿军棉军服，解放帽，胶鞋或棉鞋" },
+      { "countryId": "usa", "caption": "美军 M-1951 野战服，钢盔，防寒靴" }
+    ]
+  },
+  {
+    "id": "vietnam-war",
+    "name": "越南战争",
+    "startYear": 1955,
+    "endYear": 1975,
+    "location": "越南、老挝、柬埔寨",
+    "belligerents": ["北越 / 越共", "南越 / 美国"],
+    "casualties": 3000000,
+    "background": "冷战背景下，美国为防止共产主义扩张而介入越南内战。",
+    "relatedCountryIds": ["usa"],
+    "figures": [
+      { "name": "胡志明", "description": "越南民主共和国领导人。" },
+      { "name": "林登·约翰逊", "description": "美国总统，大幅升级美军介入。" }
+    ],
+    "attires": [
+      { "countryId": "usa", "caption": "丛林迷彩 M65 野战夹克，M1 钢盔，帆布靴" }
+    ]
+  },
+  {
+    "id": "gulf-war",
+    "name": "海湾战争",
+    "startYear": 1990,
+    "endYear": 1991,
+    "location": "科威特、伊拉克",
+    "belligerents": ["多国部队", "伊拉克"],
+    "casualties": 85000,
+    "background": "伊拉克入侵科威特后，美国领导多国部队进行军事干预。",
+    "relatedCountryIds": ["usa", "uk"],
+    "figures": [
+      { "name": "诺曼·施瓦茨科普夫", "description": "多国部队总司令，主导“沙漠风暴”行动。" },
+      { "name": "萨达姆·侯赛因", "description": "伊拉克总统，发动入侵科威特。" }
+    ],
+    "attires": [
+      { "countryId": "usa", "caption": "六色沙漠迷彩 DBDU 或巧克力片迷彩，PASGT 头盔" },
+      { "countryId": "uk", "caption": "英军沙漠 DPM 迷彩，Mk6 钢盔" }
+    ]
+  },
+  {
+    "id": "chu-han",
+    "name": "楚汉战争",
+    "startYear": -206,
+    "endYear": -202,
+    "location": "中国中原地区",
+    "belligerents": ["汉军", "楚军"],
+    "casualties": 500000,
+    "background": "秦朝灭亡后，刘邦与项羽争夺天下，最终刘邦建立汉朝。",
+    "relatedCountryIds": ["china"],
+    "figures": [
+      { "name": "刘邦", "description": "汉王，最终击败项羽建立汉朝。" },
+      { "name": "项羽", "description": "西楚霸王，以勇武著称。" }
+    ],
+    "attires": [
+      { "countryId": "china", "caption": "秦汉时期皮甲与青铜盔，宽袖深衣，长剑" }
+    ]
+  }
+]

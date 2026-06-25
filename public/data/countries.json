@@ -1,0 +1,122 @@
+[
+  {
+    "id": "china",
+    "name": "中国",
+    "nameEn": "China",
+    "lat": 35.8617,
+    "lon": 104.1954,
+    "description": "拥有数千年连续文明史，历史上经历了统一与分裂的多次轮回，也是二十世纪多场重大战争的参战国。",
+    "totalWars": 7,
+    "estimatedCasualties": 95000000
+  },
+  {
+    "id": "usa",
+    "name": "美国",
+    "nameEn": "United States",
+    "lat": 37.0902,
+    "lon": -95.7129,
+    "description": "18 世纪独立后迅速扩张，20 世纪成为两次世界大战与冷战的关键力量。",
+    "totalWars": 6,
+    "estimatedCasualties": 2500000
+  },
+  {
+    "id": "uk",
+    "name": "英国",
+    "nameEn": "United Kingdom",
+    "lat": 55.3781,
+    "lon": -3.436,
+    "description": "曾建立庞大的殖民帝国，在拿破仑战争、两次世界大战中扮演核心角色。",
+    "totalWars": 7,
+    "estimatedCasualties": 2200000
+  },
+  {
+    "id": "germany",
+    "name": "德国",
+    "nameEn": "Germany",
+    "lat": 51.1657,
+    "lon": 10.4515,
+    "description": "19 世纪统一后迅速崛起，发动了两次世界大战，深刻改变了现代历史走向。",
+    "totalWars": 5,
+    "estimatedCasualties": 12000000
+  },
+  {
+    "id": "france",
+    "name": "法国",
+    "nameEn": "France",
+    "lat": 46.2276,
+    "lon": 2.2137,
+    "description": "欧洲大陆传统强国，经历了百年战争、拿破仑战争与两次世界大战。",
+    "totalWars": 6,
+    "estimatedCasualties": 3500000
+  },
+  {
+    "id": "russia",
+    "name": "俄罗斯",
+    "nameEn": "Russia",
+    "lat": 61.524,
+    "lon": 105.3188,
+    "description": "领土横跨欧亚，参与了拿破仑战争、两次世界大战及冷战时期的多场冲突。",
+    "totalWars": 6,
+    "estimatedCasualties": 30000000
+  },
+  {
+    "id": "japan",
+    "name": "日本",
+    "nameEn": "Japan",
+    "lat": 36.2048,
+    "lon": 138.2529,
+    "description": "明治维新后走上扩张道路，参与了甲午战争、日俄战争与第二次世界大战。",
+    "totalWars": 5,
+    "estimatedCasualties": 5500000
+  },
+  {
+    "id": "italy",
+    "name": "意大利",
+    "nameEn": "Italy",
+    "lat": 41.8719,
+    "lon": 12.5674,
+    "description": "古罗马帝国的继承者，现代意大利在两次世界大战中均为重要参战国。",
+    "totalWars": 4,
+    "estimatedCasualties": 1200000
+  },
+  {
+    "id": "egypt",
+    "name": "埃及",
+    "nameEn": "Egypt",
+    "lat": 26.8206,
+    "lon": 30.8025,
+    "description": "古代文明的发祥地之一，见证了十字军东征、拿破仑远征与现代中东战争。",
+    "totalWars": 3,
+    "estimatedCasualties": 300000
+  },
+  {
+    "id": "greece",
+    "name": "希腊",
+    "nameEn": "Greece",
+    "lat": 39.0742,
+    "lon": 21.8243,
+    "description": "西方文明摇篮，伯罗奔尼撒战争与希波战争的发源地。",
+    "totalWars": 3,
+    "estimatedCasualties": 250000
+  },
+  {
+    "id": "india",
+    "name": "印度",
+    "nameEn": "India",
+    "lat": 20.5937,
+    "lon": 78.9629,
+    "description": "南亚次大陆文明古国，历经孔雀王朝扩张、莫卧儿征服与英殖民战争。",
+    "totalWars": 3,
+    "estimatedCasualties": 4000000
+  },
+  {
+    "id": "mongolia",
+    "name": "蒙古",
+    "nameEn": "Mongolia",
+    "lat": 46.8625,
+    "lon": 103.8467,
+    "description": "13 世纪蒙古帝国的核心，成吉思汗的西征震撼了欧亚大陆。",
+    "totalWars": 2,
+    "estimatedCasualties": 15000000
+  }
+]

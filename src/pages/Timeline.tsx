@@ -1,11 +1,11 @@
-import { useRef, useMemo } from 'react';
+import { useRef, useMemo, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, ChevronLeft, ChevronRight, Skull } from 'lucide-react';
 import { useWars } from '@/hooks/useWars';
 import { useCountries } from '@/hooks/useCountries';
 import { useAppStore } from '@/stores/appStore';
 import { formatYearRange, formatCasualties } from '@/utils/format';
-import { generateAttireImageUrl } from '@/utils/image';
+import { generateWarImageUrl } from '@/utils/image';
 import { CallToAction } from '@/components/CallToAction';
 import type { War } from '@/types';
 
@@ -31,16 +31,16 @@ export default function Timeline() {
 
   const items = useMemo(() => {
     return sortedWars.map((war, idx) => {
-      const primaryAttire = war.attires?.[0];
-      const primaryCountry = primaryAttire
-        ? countryMap.get(primaryAttire.countryId)
+      const primaryCountry = war.relatedCountryIds[0]
+        ? countryMap.get(war.relatedCountryIds[0])
         : undefined;
-      const imageUrl = primaryAttire
-        ? generateAttireImageUrl(
-            primaryCountry?.name ?? primaryAttire.countryId,
-            primaryAttire.caption ?? ''
-          )
-        : '';
+      const imageUrl = generateWarImageUrl(
+        war.name,
+        war.location,
+        war.startYear,
+        war.belligerents,
+        war.background
+      );
       return {
         war,
         imageUrl,
@@ -59,6 +59,38 @@ export default function Timeline() {
       scrollRef.current.scrollBy({ left: amount, behavior: 'smooth' });
     }
   };
+
+  // 支持滚轮横向滚动，并在到达边缘时丝滑切换为页面纵向滚动
+  // 依赖 loading：组件挂载时若处于 loading 状态，scrollRef 尚未绑定 DOM，
+  // 需在 loading 结束后重新绑定监听器
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const onWheel = (e: WheelEvent) => {
+      // 只处理垂直滚轮（水平滚轮交给浏览器默认行为）
+      if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+      if (el.scrollWidth <= el.clientWidth) return;
+
+      const delta = e.deltaY;
+      const atLeft = el.scrollLeft <= 0;
+      const atRight = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1;
+      const scrollingLeft = delta < 0;
+      const scrollingRight = delta > 0;
+
+      // 在边缘且朝边缘外滚动时，交给页面纵向滚动
+      if ((atLeft && scrollingLeft) || (atRight && scrollingRight)) {
+        return;
+      }
+
+      // 否则拦截并转为横向滚动
+      e.preventDefault();
+      el.scrollLeft += delta;
+    };
+
+    el.addEventListener('wheel', onWheel, { passive: false, capture: true });
+    return () => el.removeEventListener('wheel', onWheel, { capture: true });
+  }, [loading]);
 
   // 精确计算每个锚点的坐标
   // 锚点位于卡片靠近中心线的一侧
@@ -141,8 +173,7 @@ export default function Timeline() {
         {/* 时间线滚动容器 */}
         <div
           ref={scrollRef}
-          className="relative overflow-x-auto pb-16"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          className="timeline-scroll relative overflow-x-auto overflow-y-hidden pb-16"
         >
           <div
             className="relative"
@@ -263,6 +294,7 @@ interface TimelineCardProps {
 
 function TimelineCard({ war, imageUrl, countryName, index, onClick }: TimelineCardProps) {
   const baseRotate = index % 2 === 0 ? -2 : 2;
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <motion.button
@@ -288,20 +320,23 @@ function TimelineCard({ war, imageUrl, countryName, index, onClick }: TimelineCa
       {/* 顶部细条装饰 */}
       <div className="h-1 w-full bg-gradient-to-r from-archive-terracotta via-archive-amber to-archive-terracotta" />
 
-      {/* 战争图片 */}
+      {/* 战争相关人物/着装插画 */}
       <div className="relative aspect-[4/3] overflow-hidden bg-archive-border">
-        {imageUrl ? (
-          <img
-            src={imageUrl}
-            alt={`${war.name} 时期着装`}
-            className="h-full w-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-105"
-            loading="lazy"
-          />
-        ) : (
-          <div className="flex h-full items-center justify-center text-archive-muted">
-            <Skull className="h-8 w-8" />
+        {!loaded && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="h-8 w-8 animate-spin rounded-full border-2 border-archive-border border-t-archive-amber" />
           </div>
         )}
+        <img
+          src={imageUrl}
+          alt={`${war.name} 历史士兵着装`}
+          className={`h-full w-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-105 ${
+            loaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          loading="lazy"
+          onLoad={() => setLoaded(true)}
+          onError={() => setLoaded(true)}
+        />
         {/* 图片渐变遮罩 */}
         <div className="absolute inset-0 bg-gradient-to-t from-archive-ink/50 via-transparent to-transparent opacity-80" />
         {/* 年份徽章 */}

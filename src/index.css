@@ -31,6 +31,7 @@ body {
 /* Custom range slider styling */
 .slider-thumb::-webkit-slider-thumb {
   appearance: none;
+  pointer-events: auto;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -48,6 +49,7 @@ body {
 }
 
 .slider-thumb::-moz-range-thumb {
+  pointer-events: auto;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -88,4 +90,14 @@ body {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* 隐藏时间线横向滚动条 */
+.timeline-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.timeline-scroll::-webkit-scrollbar {
+  display: none;
 }

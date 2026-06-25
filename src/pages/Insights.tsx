@@ -15,6 +15,7 @@ import { useCountries } from '@/hooks/useCountries';
 import { formatCasualties } from '@/utils/format';
 import { CallToAction } from '@/components/CallToAction';
 import { useT, localized } from '@/i18n/useT';
+import { PageBackground } from '@/components/PageBackground';
 
 interface AnimatedCounterProps {
   value: number;
@@ -210,8 +211,9 @@ export default function Insights() {
   return (
     <main className="min-h-screen bg-archive-cream pt-16">
       {/* 页面标题区 */}
-      <section className="px-6 pb-10 pt-12 md:pt-16">
-        <div className="mx-auto max-w-6xl">
+      <section className="relative overflow-hidden px-6 pb-10 pt-12 md:pt-16">
+        <PageBackground variant="hero" instance={0} />
+        <div className="relative mx-auto max-w-6xl">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-sage">
             {t('insights.badge')}
           </p>
@@ -225,8 +227,9 @@ export default function Insights() {
       </section>
 
       {/* 核心统计数字 */}
-      <section className="px-6 pb-16">
-        <div className="mx-auto max-w-6xl">
+      <section className="relative overflow-hidden px-6 pb-16">
+        <PageBackground variant="stats" instance={1} />
+        <div className="relative mx-auto max-w-6xl">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {statCards.map((card, idx) => {
               const Icon = card.icon;
@@ -260,8 +263,9 @@ export default function Insights() {
       </section>
 
       {/* 伤亡人数时代趋势图 */}
-      <section className="px-6 pb-16">
-        <div className="mx-auto max-w-6xl">
+      <section className="relative overflow-hidden px-6 pb-16">
+        <PageBackground variant="insights" instance={0} />
+        <div className="relative mx-auto max-w-6xl">
           <div className="mb-6 flex items-center gap-2">
             <TrendingUp className="h-4 w-4 text-archive-terracotta" />
             <h2 className="font-serif text-2xl font-medium text-archive-ink md:text-3xl">
@@ -325,8 +329,9 @@ export default function Insights() {
       </section>
 
       {/* 伤亡最惨重的战争 TOP 10 */}
-      <section className="px-6 pb-16">
-        <div className="mx-auto max-w-6xl">
+      <section className="relative overflow-hidden px-6 pb-16">
+        <PageBackground variant="warArchive" instance={1} />
+        <div className="relative mx-auto max-w-6xl">
           <div className="mb-6 flex items-center gap-2">
             <BarChart3 className="h-4 w-4 text-archive-terracotta" />
             <h2 className="font-serif text-2xl font-medium text-archive-ink md:text-3xl">
@@ -381,8 +386,9 @@ export default function Insights() {
       </section>
 
       {/* 国家参与战争热度 */}
-      <section className="px-6 pb-16">
-        <div className="mx-auto max-w-6xl">
+      <section className="relative overflow-hidden px-6 pb-16">
+        <PageBackground variant="insights" instance={1} />
+        <div className="relative mx-auto max-w-6xl">
           <div className="mb-6 flex items-center gap-2">
             <Users className="h-4 w-4 text-archive-terracotta" />
             <h2 className="font-serif text-2xl font-medium text-archive-ink md:text-3xl">
@@ -457,8 +463,9 @@ export default function Insights() {
       </section>
 
       {/* 反思语 */}
-      <section className="px-6 pb-20">
-        <div className="mx-auto max-w-3xl text-center">
+      <section className="relative overflow-hidden px-6 pb-20">
+        <PageBackground variant="cta" instance={1} />
+        <div className="relative mx-auto max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

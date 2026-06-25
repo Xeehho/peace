@@ -4,6 +4,7 @@ import { Quote as QuoteIcon, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useQuotes } from '@/hooks/useQuotes';
 import { formatYear } from '@/utils/format';
 import { useT, localized } from '@/i18n/useT';
+import { PageBackground } from './PageBackground';
 
 const AUTOPLAY_INTERVAL = 8000;
 
@@ -40,11 +41,13 @@ export function QuotesCarousel() {
 
   return (
     <section className="relative overflow-hidden bg-archive-ink px-6 py-24">
-      {/* 背景装饰 */}
+      {/* 背景装饰：色块光晕 */}
       <div className="pointer-events-none absolute inset-0 opacity-5">
         <div className="absolute -left-20 top-10 h-96 w-96 rounded-full bg-archive-amber blur-3xl" />
         <div className="absolute -right-20 bottom-10 h-96 w-96 rounded-full bg-archive-terracotta blur-3xl" />
       </div>
+      {/* 背景装饰：和平主题铜版画 */}
+      <PageBackground variant="quotes" instance={0} tone="dark" />
 
       <div className="relative mx-auto max-w-4xl">
         <div className="mb-12 text-center">

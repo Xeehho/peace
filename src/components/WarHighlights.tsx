@@ -7,6 +7,7 @@ import { useCountries } from '@/hooks/useCountries';
 import { formatCasualties, formatYearRange } from '@/utils/format';
 import { useAppStore } from '@/stores/appStore';
 import { useT, localized } from '@/i18n/useT';
+import { PageBackground } from './PageBackground';
 
 export function WarHighlights() {
   const { wars } = useWars();
@@ -22,8 +23,9 @@ export function WarHighlights() {
   );
 
   return (
-    <section className="bg-archive-cream px-6 py-20">
-      <div className="mx-auto max-w-6xl">
+    <section className="relative overflow-hidden bg-archive-cream px-6 py-20">
+      <PageBackground variant="warArchive" instance={0} />
+      <div className="relative mx-auto max-w-6xl">
         <div className="mb-12 flex items-end justify-between">
           <div>
             <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-sage">

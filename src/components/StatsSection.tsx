@@ -7,6 +7,7 @@ import { useCountries } from '@/hooks/useCountries';
 import { formatCasualties } from '@/utils/format';
 import { useT } from '@/i18n/useT';
 import type { Language } from '@/types';
+import { PageBackground } from './PageBackground';
 
 interface StatItemProps {
   icon: React.ReactNode;
@@ -70,8 +71,9 @@ export function StatsSection() {
     : 0;
 
   return (
-    <section className="border-t border-archive-border/60 bg-archive-cream px-6 py-20">
-      <div className="mx-auto max-w-6xl">
+    <section className="relative overflow-hidden border-t border-archive-border/60 bg-archive-cream px-6 py-20">
+      <PageBackground variant="stats" instance={0} />
+      <div className="relative mx-auto max-w-6xl">
         <div className="mb-12 text-center">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-sage">
             {t('stats.badge')}

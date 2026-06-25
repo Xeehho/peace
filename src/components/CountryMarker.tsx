@@ -92,11 +92,11 @@ export function CountryMarker({
 
       {isHovered && !isSelected && (
         <Html
-          distanceFactor={viewMode === 'country' ? 22 : 10}
+          distanceFactor={viewMode === 'country' ? 16 : 7}
           style={{ pointerEvents: 'none' }}
           zIndexRange={[10, 0]}
         >
-          <div className="whitespace-nowrap rounded border border-archive-border bg-white/95 px-1.5 py-0.5 text-[9px] font-medium text-archive-ink shadow-soft">
+          <div className="whitespace-nowrap rounded border border-archive-border bg-white/95 px-1 py-0.5 text-[7px] font-medium text-archive-ink shadow-soft">
             {localized(country, 'name', lang)}
           </div>
         </Html>

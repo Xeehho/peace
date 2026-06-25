@@ -53,6 +53,7 @@ export const useAppStore = create<AppState>()(
           selectedCountryId: null,
           selectedWarId: null,
           viewMode: 'global',
+          hoveredCountryId: null,
         }),
     }),
     {

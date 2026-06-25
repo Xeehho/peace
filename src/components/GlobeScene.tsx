@@ -8,6 +8,7 @@ import { useAppStore } from '@/stores/appStore';
 import { Earth } from './Earth';
 import { Atmosphere } from './Atmosphere';
 import { CountryMarker } from './CountryMarker';
+import { CountryBorders } from './CountryBorders';
 import { WarArcs } from './WarArcs';
 import { CameraController } from './CameraController';
 
@@ -59,30 +60,40 @@ export function GlobeScene({ countries, wars }: GlobeSceneProps) {
       <group ref={earthGroupRef}>
         <Earth />
         <Atmosphere />
-        <WarArcs
-          wars={wars}
+        <CountryBorders
           countries={countries}
-          timeRange={timeRange}
           selectedCountryId={selectedCountryId}
         />
-        {countries.map((country) => (
-          <CountryMarker
-            key={country.id}
-            country={country}
-            isSelected={country.id === selectedCountryId}
-            isHovered={country.id === hoveredCountryId}
-            viewMode={viewMode}
-            onClick={() => setSelectedCountry(country.id)}
-            onPointerEnter={() => setHoveredCountry(country.id)}
-            onPointerLeave={() => setHoveredCountry(null)}
+        {/* 选中具体国家后隐藏红色战争连线，让国界轮廓成为唯一视觉焦点 */}
+        {!selectedCountryId && (
+          <WarArcs
+            wars={wars}
+            countries={countries}
+            timeRange={timeRange}
+            selectedCountryId={selectedCountryId}
           />
-        ))}
+        )}
+        {/* 选中具体国家后隐藏全部黄色光点，改由国界轮廓作为视觉焦点 */}
+        {!selectedCountryId &&
+          countries.map((country) => (
+            <CountryMarker
+              key={country.id}
+              country={country}
+              isSelected={country.id === selectedCountryId}
+              isHovered={country.id === hoveredCountryId}
+              viewMode={viewMode}
+              onClick={() => setSelectedCountry(country.id)}
+              onPointerEnter={() => setHoveredCountry(country.id)}
+              onPointerLeave={() => setHoveredCountry(null)}
+            />
+          ))}
       </group>
 
       <CameraController
         targetCountry={selectedCountry}
         viewMode={viewMode}
         controlsRef={controlsRef}
+        earthGroupRef={earthGroupRef}
       />
     </>
   );

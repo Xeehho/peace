@@ -42,6 +42,21 @@ function AnimatedCounter({ value, format }: AnimatedCounterProps) {
   return <span ref={ref}>{display}</span>;
 }
 
+// 国家 id → ISO 3166-1 alpha-2 代码，用于 flagcdn 国旗图片
+const COUNTRY_FLAG_CODE: Record<string, string> = {
+  china: 'cn', usa: 'us', uk: 'gb', germany: 'de', france: 'fr',
+  russia: 'ru', japan: 'jp', italy: 'it', egypt: 'eg', greece: 'gr',
+  india: 'in', mongolia: 'mn', afghanistan: 'af', iraq: 'iq', iran: 'ir',
+  ukraine: 'ua', israel: 'il', vietnam: 'vn', korea: 'kr', spain: 'es',
+  turkey: 'tr', cuba: 'cu', rwanda: 'rw', serbia: 'rs', yemen: 'ye',
+  canada: 'ca', australia: 'au',
+};
+
+function flagUrl(countryId: string, size = 80): string {
+  const code = COUNTRY_FLAG_CODE[countryId];
+  return code ? `https://flagcdn.com/w${size}/${code}.png` : '';
+}
+
 export default function Insights() {
   const { wars, loading } = useWars();
   const { countries } = useCountries();
@@ -381,7 +396,8 @@ export default function Insights() {
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {countryParticipation.map((item, idx) => {
                 const sizeRatio = item.count / maxParticipation;
-                const dotSize = 12 + sizeRatio * 28;
+                const flagSize = 18 + sizeRatio * 22;
+                const flag = flagUrl(item.country.id, 80);
                 return (
                   <motion.div
                     key={item.country.id}
@@ -396,16 +412,30 @@ export default function Insights() {
                     className="flex items-center gap-3 rounded-xl border border-archive-border/60 bg-archive-cream/40 p-3 transition-colors hover:border-archive-amber/50"
                   >
                     <div className="flex w-12 shrink-0 items-center justify-center">
-                      <div
-                        className="rounded-full"
-                        style={{
-                          width: `${dotSize}px`,
-                          height: `${dotSize}px`,
-                          background:
-                            'radial-gradient(circle at 30% 30%, #C88A3D, #B85C4F)',
-                          boxShadow: '0 0 12px rgba(184, 92, 79, 0.3)',
-                        }}
-                      />
+                      {flag ? (
+                        <img
+                          src={flag}
+                          alt={localized(item.country, 'name', lang)}
+                          loading="lazy"
+                          className="rounded-sm object-cover shadow-sm"
+                          style={{
+                            width: `${flagSize}px`,
+                            height: `${flagSize * 0.7}px`,
+                            boxShadow: `0 0 ${6 + sizeRatio * 10}px rgba(200, 138, 61, ${0.2 + sizeRatio * 0.35})`,
+                          }}
+                        />
+                      ) : (
+                        <div
+                          className="rounded-full"
+                          style={{
+                            width: `${flagSize}px`,
+                            height: `${flagSize}px`,
+                            background:
+                              'radial-gradient(circle at 30% 30%, #C88A3D, #B85C4F)',
+                            boxShadow: '0 0 12px rgba(184, 92, 79, 0.3)',
+                          }}
+                        />
+                      )}
                     </div>
                     <div className="min-w-0 flex-1">
                       <p className="truncate text-sm font-medium text-archive-ink">

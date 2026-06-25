@@ -6,11 +6,13 @@ import { useWars } from '@/hooks/useWars';
 import { formatCasualties, formatYearRange, formatYear } from '@/utils/format';
 import { generateAttireImageUrl } from '@/utils/image';
 import { AttireFigureCard } from './AttireFigureCard';
+import { useT, localized, localizedArray } from '@/i18n/useT';
 
 export function WarModal() {
   const { selectedWarId, setSelectedWar, selectedCountryId } = useAppStore();
   const { wars } = useWars();
   const { countries } = useCountries();
+  const { t, lang } = useT();
 
   const war = wars.find((w) => w.id === selectedWarId);
   const countryMap = new Map(countries.map((c) => [c.id, c]));
@@ -61,11 +63,11 @@ export function WarModal() {
                   className="flex items-center gap-1.5 text-sm text-archive-muted transition-colors hover:text-archive-ink"
                 >
                   <ArrowLeft className="h-4 w-4" />
-                  返回国家
+                  {t('warModal.backToCountry')}
                 </button>
               ) : (
                 <span className="text-xs font-medium uppercase tracking-widest text-archive-sage">
-                  War Detail
+                  {t('warModal.warDetail')}
                 </span>
               )}
               <button
@@ -77,26 +79,26 @@ export function WarModal() {
             </div>
 
             <div className="p-6">
-              <h2 className="font-serif text-2xl text-archive-ink">{war.name}</h2>
+              <h2 className="font-serif text-2xl text-archive-ink">{localized(war, 'name', lang)}</h2>
               <p className="mt-1 font-mono text-sm text-archive-amber">
-                {formatYearRange(war.startYear, war.endYear)}
+                {formatYearRange(war.startYear, war.endYear, lang)}
               </p>
 
               <div className="mt-6 grid grid-cols-2 gap-4">
                 <div className="rounded border border-archive-border bg-archive-cream/60 p-4">
                   <div className="flex items-center gap-2 text-xs text-archive-muted">
                     <MapPin className="h-3.5 w-3.5" />
-                    <span>地点</span>
+                    <span>{t('warModal.location')}</span>
                   </div>
-                  <p className="mt-1 text-sm text-archive-ink">{war.location}</p>
+                  <p className="mt-1 text-sm text-archive-ink">{localized(war, 'location', lang)}</p>
                 </div>
                 <div className="rounded border border-archive-border bg-archive-cream/60 p-4">
                   <div className="flex items-center gap-2 text-xs text-archive-muted">
                     <Skull className="h-3.5 w-3.5" />
-                    <span>伤亡人数</span>
+                    <span>{t('warModal.casualties')}</span>
                   </div>
                   <p className="mt-1 font-mono text-lg text-archive-terracotta">
-                    {formatCasualties(war.casualties)}
+                    {formatCasualties(war.casualties, lang)}
                   </p>
                 </div>
               </div>
@@ -104,10 +106,10 @@ export function WarModal() {
               <div className="mt-4 rounded border border-archive-border bg-archive-cream/60 p-4">
                 <div className="flex items-center gap-2 text-xs text-archive-muted">
                   <Users className="h-3.5 w-3.5" />
-                  <span>参战方</span>
+                  <span>{t('warModal.belligerents')}</span>
                 </div>
                 <p className="mt-1 text-sm text-archive-ink">
-                  {war.belligerents.join(' vs ')}
+                  {localizedArray(war, 'belligerents', lang).join(' vs ')}
                 </p>
               </div>
 
@@ -115,7 +117,7 @@ export function WarModal() {
               <div className="mt-6">
                 <h3 className="mb-3 flex items-center gap-2 font-serif text-lg text-archive-ink">
                   <TrendingDown className="h-4 w-4 text-archive-terracotta" />
-                  战争影响
+                  {t('warModal.impact')}
                 </h3>
                 <div className="space-y-3">
                   {/* 持续时间 */}
@@ -124,9 +126,9 @@ export function WarModal() {
                       <Clock className="h-4 w-4" />
                     </div>
                     <div className="flex-1">
-                      <p className="text-xs text-archive-muted">持续时长</p>
+                      <p className="text-xs text-archive-muted">{t('warModal.duration')}</p>
                       <p className="text-sm font-medium text-archive-ink">
-                        {duration === 0 ? '同年爆发与结束' : `${duration} 年`}
+                        {duration === 0 ? t('warModal.durationSameYear') : t('warModal.durationYears', duration)}
                       </p>
                     </div>
                   </div>
@@ -134,7 +136,7 @@ export function WarModal() {
                   {/* 伤亡占比可视化 */}
                   <div className="rounded-lg border border-archive-border/60 bg-white p-3">
                     <div className="mb-2 flex items-center justify-between">
-                      <p className="text-xs text-archive-muted">占记录总伤亡比</p>
+                      <p className="text-xs text-archive-muted">{t('warModal.casualtyRatio')}</p>
                       <p className="font-mono text-sm font-medium text-archive-terracotta">
                         {casualtyPercentage.toFixed(1)}%
                       </p>
@@ -155,13 +157,13 @@ export function WarModal() {
                       <MapPin className="h-4 w-4" />
                     </div>
                     <div className="flex-1">
-                      <p className="text-xs text-archive-muted">涉及国家与地区</p>
+                      <p className="text-xs text-archive-muted">{t('warModal.involvedCountries')}</p>
                       <div className="mt-1 flex flex-wrap gap-1.5">
                         {war.relatedCountryIds.map((cid) => {
                           const c = countryMap.get(cid);
                           return c ? (
                             <span key={cid} className="rounded-full bg-archive-cream px-2 py-0.5 text-[10px] font-medium text-archive-ink">
-                              {c.name}
+                              {localized(c, 'name', lang)}
                             </span>
                           ) : null;
                         })}
@@ -172,9 +174,9 @@ export function WarModal() {
               </div>
 
               <div className="mt-6">
-                <h3 className="mb-2 font-serif text-lg text-archive-ink">背景故事</h3>
+                <h3 className="mb-2 font-serif text-lg text-archive-ink">{t('warModal.background')}</h3>
                 <p className="leading-relaxed text-archive-muted">
-                  {war.background}
+                  {localized(war, 'background', lang)}
                 </p>
               </div>
 
@@ -182,7 +184,7 @@ export function WarModal() {
               <div className="mt-4 flex items-start gap-2.5 rounded-lg border border-archive-amber/30 bg-archive-amber/5 p-4">
                 <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-archive-amber" />
                 <p className="text-xs leading-relaxed text-archive-muted">
-                  {formatCasualties(war.casualties)} 不是一个冰冷的数字，而是无数被战争吞噬的人生——每一个数字背后，都是一个完整的故事。
+                  {formatCasualties(war.casualties, lang)} {t('warModal.reflection')}
                 </p>
               </div>
 
@@ -190,7 +192,7 @@ export function WarModal() {
                 <div className="mt-6">
                   <h3 className="mb-3 flex items-center gap-2 font-serif text-lg text-archive-ink">
                     <UserCircle2 className="h-4 w-4 text-archive-amber" />
-                    同时期人物
+                    {t('warModal.figures')}
                   </h3>
                   <div className="grid gap-3 sm:grid-cols-2">
                     {war.figures.map((figure, idx) => (
@@ -198,9 +200,9 @@ export function WarModal() {
                         key={idx}
                         className="rounded border border-archive-border bg-archive-cream/60 p-3"
                       >
-                        <p className="font-medium text-archive-ink">{figure.name}</p>
+                        <p className="font-medium text-archive-ink">{localized(figure, 'name', lang)}</p>
                         <p className="mt-1 text-xs leading-relaxed text-archive-muted">
-                          {figure.description}
+                          {localized(figure, 'description', lang)}
                         </p>
                       </div>
                     ))}
@@ -212,7 +214,7 @@ export function WarModal() {
                 <div className="mt-6">
                   <h3 className="mb-3 flex items-center gap-2 font-serif text-lg text-archive-ink">
                     <Shirt className="h-4 w-4 text-archive-amber" />
-                    各国着装
+                    {t('warModal.attires')}
                   </h3>
                   <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                     {war.attires.map((attire, idx) => {
@@ -225,7 +227,7 @@ export function WarModal() {
                             country?.name ?? attire.countryId,
                             attire.caption ?? ''
                           )}
-                          caption={attire.caption}
+                          caption={localized(attire, 'caption', lang)}
                         />
                       );
                     })}

@@ -4,6 +4,7 @@ import { Html } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import type { Country } from '@/types';
 import { getCountryPosition } from '@/utils/geo';
+import { useT, localized } from '@/i18n/useT';
 
 interface CountryMarkerProps {
   country: Country;
@@ -30,6 +31,7 @@ export function CountryMarker({
   const markerRef = useRef<THREE.Mesh>(null);
   const glowRef = useRef<THREE.Mesh>(null);
   const position = useMemo(() => getCountryPosition(country.lat, country.lon), [country.lat, country.lon]);
+  const { lang } = useT();
 
   useFrame((_, delta) => {
     const active = isSelected || isHovered;
@@ -95,7 +97,7 @@ export function CountryMarker({
           zIndexRange={[10, 0]}
         >
           <div className="whitespace-nowrap rounded border border-archive-border bg-white/95 px-1.5 py-0.5 text-[9px] font-medium text-archive-ink shadow-soft">
-            {country.name}
+            {localized(country, 'name', lang)}
           </div>
         </Html>
       )}

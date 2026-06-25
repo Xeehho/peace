@@ -2,842 +2,1020 @@
   {
     "id": "ww2",
     "name": "第二次世界大战",
+    "nameEn": "World War II",
     "startYear": 1939,
     "endYear": 1945,
     "location": "欧洲、亚洲、太平洋、非洲",
+    "locationEn": "Europe, Asia, Pacific, Africa",
     "belligerents": ["同盟国", "轴心国"],
+    "belligerentsEn": ["Allies", "Axis"],
     "casualties": 70000000,
     "background": "由法西斯扩张、1929 年经济危机与《凡尔赛条约》遗留问题共同引发，是人类历史上规模最大的战争。",
+    "backgroundEn": "Triggered jointly by fascist expansion, the 1929 economic crisis, and unresolved issues of the Treaty of Versailles, it was the largest war in human history.",
     "relatedCountryIds": ["china", "germany", "japan", "usa", "uk", "russia", "italy", "france"],
     "figures": [
-      { "name": "温斯顿·丘吉尔", "description": "英国首相，以激昂演说凝聚同盟国意志。" },
-      { "name": "毛泽东", "description": "中国共产党领导人，领导敌后战场抗战。" },
-      { "name": "富兰克林·罗斯福", "description": "美国总统，推动美国加入反法西斯战争。" }
+      { "name": "温斯顿·丘吉尔", "nameEn": "Winston Churchill", "description": "英国首相，以激昂演说凝聚同盟国意志。", "descriptionEn": "British Prime Minister who rallied Allied resolve with stirring oratory."      },
+      { "name": "毛泽东", "nameEn": "Mao Zedong", "description": "中国共产党领导人，领导敌后战场抗战。", "descriptionEn": "Leader of the Chinese Communist Party who led resistance in occupied areas."
+      },
+      { "name": "富兰克林·罗斯福", "nameEn": "Franklin D. Roosevelt", "description": "美国总统，推动美国加入反法西斯战争。", "descriptionEn": "US President who led America into the anti-fascist war."
+      }
     ],
     "attires": [
-      { "countryId": "china", "caption": "国民革命军蓝灰色军装，德式 M35 钢盔" },
-      { "countryId": "uk", "caption": "卡其色军服，布洛迪钢盔，棕色军靴" },
-      { "countryId": "germany", "caption": "原野灰 field grey 制服，M40 钢盔" },
-      { "countryId": "usa", "caption": "橄榄褐 M1943 野战夹克，M1 钢盔" }
+      { "countryId": "china", "caption": "国民革命军蓝灰色军装，德式 M35 钢盔", "captionEn": "National Revolutionary Army blue-grey uniform, German M35 helmet" },
+      { "countryId": "uk", "caption": "卡其色军服，布洛迪钢盔，棕色军靴", "captionEn": "Khaki service dress, Brodie helmet, brown boots" },
+      { "countryId": "germany", "caption": "原野灰 field grey 制服，M40 钢盔", "captionEn": "Field grey uniform, M40 helmet" },
+      { "countryId": "usa", "caption": "橄榄褐 M1943 野战夹克，M1 钢盔", "captionEn": "Olive drab M1943 field jacket, M1 helmet" }
     ]
   },
   {
     "id": "ww1",
     "name": "第一次世界大战",
+    "nameEn": "World War I",
     "startYear": 1914,
     "endYear": 1918,
     "location": "欧洲、中东、非洲、太平洋",
+    "locationEn": "Europe, Middle East, Africa, Pacific",
     "belligerents": ["协约国", "同盟国"],
+    "belligerentsEn": ["Allied Powers", "Central Powers"],
     "casualties": 17000000,
     "background": "帝国主义列强为重新瓜分世界和争夺全球霸权而爆发的大规模战争，坦克与毒气首次投入战场。",
+    "backgroundEn": "A large-scale war in which imperialist powers fought to repartition the world and contest global hegemony; tanks and poison gas were deployed for the first time.",
     "relatedCountryIds": ["uk", "germany", "france", "russia", "usa", "italy"],
     "figures": [
-      { "name": "伍德罗·威尔逊", "description": "美国总统，提出十四点和平原则。" },
-      { "name": "保罗·冯·兴登堡", "description": "德军元帅，东线坦能堡战役指挥官。" }
+      { "name": "伍德罗·威尔逊", "nameEn": "Woodrow Wilson", "description": "美国总统，提出十四点和平原则。", "descriptionEn": "US President who proposed the Fourteen Points for peace." },
+      { "name": "保罗·冯·兴登堡", "nameEn": "Paul von Hindenburg", "description": "德军元帅，东线坦能堡战役指挥官。", "descriptionEn": "German field marshal, commander at the Battle of Tannenberg on the Eastern Front." }
     ],
     "attires": [
-      { "countryId": "france", "caption": "地平线蓝 horizon-blue 羊毛大衣，阿德里安钢盔" },
-      { "countryId": "germany", "caption": "原野灰步兵制服，钉盔或钢盔，长筒皮靴" },
-      { "countryId": "uk", "caption": "卡其色 1902 式军服，布洛迪钢盔，绑腿裹腿" }
+      { "countryId": "france", "caption": "地平线蓝 horizon-blue 羊毛大衣，阿德里安钢盔", "captionEn": "Horizon-blue wool coat, Adrian helmet" },
+      { "countryId": "germany", "caption": "原野灰步兵制服，钉盔或钢盔，长筒皮靴", "captionEn": "Field grey infantry uniform, Pickelhaube or steel helmet, tall leather boots" },
+      { "countryId": "uk", "caption": "卡其色 1902 式军服，布洛迪钢盔，绑腿裹腿", "captionEn": "Khaki 1902-pattern service dress, Brodie helmet, puttees" }
     ]
   },
   {
     "id": "napoleonic",
     "name": "拿破仑战争",
+    "nameEn": "Napoleonic Wars",
     "startYear": 1803,
     "endYear": 1815,
     "location": "欧洲、大西洋、地中海",
+    "locationEn": "Europe, Atlantic, Mediterranean",
     "belligerents": ["法兰西第一帝国", "反法同盟"],
+    "belligerentsEn": ["First French Empire", "Coalitions"],
     "casualties": 3500000,
     "background": "法国大革命后，拿破仑试图以军事扩张统一欧洲，引发全欧反法同盟。",
+    "backgroundEn": "After the French Revolution, Napoleon sought to unify Europe through military expansion, provoking pan-European coalitions against France.",
     "relatedCountryIds": ["france", "uk", "germany", "russia", "italy"],
     "figures": [
-      { "name": "拿破仑·波拿巴", "description": "法兰西第一帝国皇帝，欧洲军事史上的传奇统帅。" },
-      { "name": "威灵顿公爵", "description": "英军统帅，滑铁卢战役击败拿破仑。" }
+      { "name": "拿破仑·波拿巴", "nameEn": "Napoleon Bonaparte", "description": "法兰西第一帝国皇帝，欧洲军事史上的传奇统帅。", "descriptionEn": "Emperor of the First French Empire and a legendary commander in European military history." },
+      { "name": "威灵顿公爵", "nameEn": "Duke of Wellington", "description": "英军统帅，滑铁卢战役击败拿破仑。", "descriptionEn": "British commander who defeated Napoleon at the Battle of Waterloo." }
     ],
     "attires": [
-      { "countryId": "france", "caption": "深蓝色或白色步兵制服，高筒熊皮帽或双角帽" },
-      { "countryId": "uk", "caption": "红色上衣、白色 cross-belt、黑色三角帽或 shako 军帽" },
-      { "countryId": "russia", "caption": "深绿色长外套、白色马裤、三角帽或毛皮帽" }
+      { "countryId": "france", "caption": "深蓝色或白色步兵制服，高筒熊皮帽或双角帽", "captionEn": "Dark blue or white infantry uniform, bearskin or bicorn hat" },
+      { "countryId": "uk", "caption": "红色上衣、白色 cross-belt、黑色三角帽或 shako 军帽", "captionEn": "Red coat, white cross-belt, black tricorn or shako" },
+      { "countryId": "russia", "caption": "深绿色长外套、白色马裤、三角帽或毛皮帽", "captionEn": "Dark green greatcoat, white breeches, tricorn or fur cap" }
     ]
   },
   {
     "id": "mongol-conquests",
     "name": "蒙古西征",
+    "nameEn": "Mongol Conquests",
     "startYear": 1206,
     "endYear": 1368,
     "location": "欧亚大陆",
+    "locationEn": "Eurasia",
     "belligerents": ["蒙古帝国", "花剌子模、金朝、宋朝、罗斯诸国等"],
+    "belligerentsEn": ["Mongol Empire", "Khwarezm, Jin, Song, Rus' principalities, et al."],
     "casualties": 30000000,
     "background": "成吉思汗及其继承者以骑兵优势迅速扩张，建立了历史上面积最大的陆地帝国。",
+    "backgroundEn": "Genghis Khan and his successors expanded rapidly through cavalry superiority, forging the largest contiguous land empire in history.",
     "relatedCountryIds": ["mongolia", "china", "russia", "india"],
     "figures": [
-      { "name": "成吉思汗", "description": "蒙古帝国奠基者，统一蒙古各部并开启西征。" },
-      { "name": "拔都", "description": "成吉思汗之孙，领导长子西征深入欧洲。" }
+      { "name": "成吉思汗", "nameEn": "Genghis Khan", "description": "蒙古帝国奠基者，统一蒙古各部并开启西征。", "descriptionEn": "Founder of the Mongol Empire who unified the Mongol tribes and launched the westward conquests." },
+      { "name": "拔都", "nameEn": "Batu Khan", "description": "成吉思汗之孙，领导长子西征深入欧洲。", "descriptionEn": "Grandson of Genghis Khan who led the western advance deep into Europe." }
     ],
     "attires": [
-      { "countryId": "mongolia", "caption": "皮质或毡质长袍，金属鳞甲，皮帽，高筒马靴" },
-      { "countryId": "china", "caption": "宋代步兵札甲，宽袖战袍，幞头或铁盔" },
-      { "countryId": "russia", "caption": "罗斯贵族锁子甲与长袍，毛皮帽，圆盾" }
+      { "countryId": "mongolia", "caption": "皮质或毡质长袍，金属鳞甲，皮帽，高筒马靴", "captionEn": "Leather or felt robe, metal scale armor, leather cap, tall riding boots" },
+      { "countryId": "china", "caption": "宋代步兵札甲，宽袖战袍，幞头或铁盔", "captionEn": "Song infantry laminate armor, wide-sleeved war robe, futou or iron helmet" },
+      { "countryId": "russia", "caption": "罗斯贵族锁子甲与长袍，毛皮帽，圆盾", "captionEn": "Rus' noble mail hauberk and robe, fur cap, round shield" }
     ]
   },
   {
     "id": "us-civil-war",
     "name": "美国内战",
+    "nameEn": "American Civil War",
     "startYear": 1861,
     "endYear": 1865,
     "location": "美国",
+    "locationEn": "United States",
     "belligerents": ["美利坚合众国", "美利坚联盟国"],
+    "belligerentsEn": ["Union", "Confederacy"],
     "casualties": 750000,
     "background": "因奴隶制存废、州权与联邦权力之争而引发，是美国历史上最血腥的战争。",
+    "backgroundEn": "Triggered by disputes over slavery, states' rights, and federal authority, it is the bloodiest war in American history.",
     "relatedCountryIds": ["usa"],
     "figures": [
-      { "name": "亚伯拉罕·林肯", "description": "美国总统，领导联邦取得胜利并废除奴隶制。" },
-      { "name": "罗伯特·李", "description": "南军总司令，弗吉尼亚绅士将领。" }
+      { "name": "亚伯拉罕·林肯", "nameEn": "Abraham Lincoln", "description": "美国总统，领导联邦取得胜利并废除奴隶制。", "descriptionEn": "US President who led the Union to victory and abolished slavery." },
+      { "name": "罗伯特·李", "nameEn": "Robert E. Lee", "description": "南军总司令，弗吉尼亚绅士将领。", "descriptionEn": "Commander of the Confederate Army, a gentleman general of Virginia." }
     ],
     "attires": [
-      { "countryId": "usa", "caption": "联邦军深蓝夹克与浅蓝长裤，kepi 便帽或毡帽" }
+      { "countryId": "usa", "caption": "联邦军深蓝夹克与浅蓝长裤，kepi 便帽或毡帽", "captionEn": "Union dark blue jacket and light blue trousers, kepi or felt hat" }
     ]
   },
   {
     "id": "franco-prussian",
     "name": "普法战争",
+    "nameEn": "Franco-Prussian War",
     "startYear": 1870,
     "endYear": 1871,
     "location": "法国、普鲁士",
+    "locationEn": "France, Prussia",
     "belligerents": ["普鲁士王国", "法兰西第二帝国"],
+    "belligerentsEn": ["Kingdom of Prussia", "Second French Empire"],
     "casualties": 180000,
     "background": "普鲁士首相俾斯麦以埃姆斯电报激怒法国，借机完成德意志统一。",
+    "backgroundEn": "Prussian Chancellor Bismarck provoked France with the Ems Dispatch and seized the chance to complete German unification.",
     "relatedCountryIds": ["germany", "france"],
     "figures": [
-      { "name": "奥托·冯·俾斯麦", "description": "普鲁士首相，以铁血政策统一德意志。" },
-      { "name": "拿破仑三世", "description": "法兰西第二帝国皇帝，色当战役被俘。" }
+      { "name": "奥托·冯·俾斯麦", "nameEn": "Otto von Bismarck", "description": "普鲁士首相，以铁血政策统一德意志。", "descriptionEn": "Prussian Chancellor who unified Germany through blood-and-iron policy." },
+      { "name": "拿破仑三世", "nameEn": "Napoleon III", "description": "法兰西第二帝国皇帝，色当战役被俘。", "descriptionEn": "Emperor of the Second French Empire, captured at the Battle of Sedan." }
     ],
     "attires": [
-      { "countryId": "germany", "caption": "普鲁士蓝制服，尖顶盔 Pickelhaube，白色 cross-belt" },
-      { "countryId": "france", "caption": "红色长裤与深蓝色上衣，kepi 军帽" }
+      { "countryId": "germany", "caption": "普鲁士蓝制服，尖顶盔 Pickelhaube，白色 cross-belt", "captionEn": "Prussian blue uniform, Pickelhaube spiked helmet, white cross-belt" },
+      { "countryId": "france", "caption": "红色长裤与深蓝色上衣，kepi 军帽", "captionEn": "Red trousers and dark blue tunic, kepi cap" }
     ]
   },
   {
     "id": "first-sino-japanese",
     "name": "甲午战争",
+    "nameEn": "First Sino-Japanese War",
     "startYear": 1894,
     "endYear": 1895,
     "location": "朝鲜半岛、黄海、中国东北",
+    "locationEn": "Korean Peninsula, Yellow Sea, Northeast China",
     "belligerents": ["清朝", "日本帝国"],
+    "belligerentsEn": ["Qing Dynasty", "Empire of Japan"],
     "casualties": 100000,
     "background": "日本明治维新后谋求对外扩张，与清朝争夺朝鲜半岛控制权。",
+    "backgroundEn": "After the Meiji Restoration Japan sought overseas expansion and contested the Qing for control of the Korean Peninsula.",
     "relatedCountryIds": ["china", "japan"],
     "figures": [
-      { "name": "李鸿章", "description": "清朝北洋大臣，战后签订《马关条约》。" },
-      { "name": "伊藤博文", "description": "日本首相，主导战后谈判。" }
+      { "name": "李鸿章", "nameEn": "Li Hongzhang", "description": "清朝北洋大臣，战后签订《马关条约》。", "descriptionEn": "Qing's Beiyang minister who signed the Treaty of Shimonoseki after the war." },
+      { "name": "伊藤博文", "nameEn": "Itō Hirobumi", "description": "日本首相，主导战后谈判。", "descriptionEn": "Japanese Prime Minister who led the postwar negotiations." }
     ],
     "attires": [
-      { "countryId": "china", "caption": "清军勇营号衣，胸前“勇”字，布帽或斗笠" },
-      { "countryId": "japan", "caption": "明治陆军深蓝色毛呢军服，大檐帽，白色绑腿" }
+      { "countryId": "china", "caption": "清军勇营号衣，胸前“勇”字，布帽或斗笠", "captionEn": "Qing army tunic with 'brave' character on the chest, cloth cap or conical hat" },
+      { "countryId": "japan", "caption": "明治陆军深蓝色毛呢军服，大檐帽，白色绑腿", "captionEn": "Meiji army dark blue wool uniform, peaked cap, white puttees" }
     ]
   },
   {
     "id": "russo-japanese",
     "name": "日俄战争",
+    "nameEn": "Russo-Japanese War",
     "startYear": 1904,
     "endYear": 1905,
     "location": "中国东北、朝鲜半岛、黄海、日本海",
+    "locationEn": "Northeast China, Korean Peninsula, Yellow Sea, Sea of Japan",
     "belligerents": ["日本帝国", "俄罗斯帝国"],
+    "belligerentsEn": ["Empire of Japan", "Russian Empire"],
     "casualties": 150000,
     "background": "日俄两国为争夺中国东北和朝鲜利益而爆发，是日本首次击败欧洲列强。",
+    "backgroundEn": "Fought over interests in Northeast China and Korea, it was the first time Japan defeated a European power.",
     "relatedCountryIds": ["japan", "russia", "china"],
     "figures": [
-      { "name": "东乡平八郎", "description": "日本海军大将，对马海战指挥官。" },
-      { "name": "乃木希典", "description": "日本陆军大将，以旅顺攻坚战闻名。" }
+      { "name": "东乡平八郎", "nameEn": "Tōgō Heihachirō", "description": "日本海军大将，对马海战指挥官。", "descriptionEn": "Japanese fleet admiral who commanded at the Battle of Tsushima." },
+      { "name": "乃木希典", "nameEn": "Nogi Maresuke", "description": "日本陆军大将，以旅顺攻坚战闻名。", "descriptionEn": "Japanese army general famed for the siege of Port Arthur." }
     ],
     "attires": [
-      { "countryId": "japan", "caption": "明治三十七年式军服，大檐帽或军帽，白色绑腿" },
-      { "countryId": "russia", "caption": "沙俄卡其色军服，毛皮帽 papakha 或布帽" }
+      { "countryId": "japan", "caption": "明治三十七年式军服，大檐帽或军帽，白色绑腿", "captionEn": "Meiji Type 37 uniform, peaked or field cap, white puttees" },
+      { "countryId": "russia", "caption": "沙俄卡其色军服，毛皮帽 papakha 或布帽", "captionEn": "Tsarist khaki uniform, papakha fur cap or cloth cap" }
     ]
   },
   {
     "id": "peloponnesian",
     "name": "伯罗奔尼撒战争",
+    "nameEn": "Peloponnesian War",
     "startYear": -431,
     "endYear": -404,
     "location": "古希腊城邦",
+    "locationEn": "Ancient Greek city-states",
     "belligerents": ["雅典领导的提洛同盟", "斯巴达领导的伯罗奔尼撒同盟"],
+    "belligerentsEn": ["Delian League led by Athens", "Peloponnesian League led by Sparta"],
     "casualties": 100000,
     "background": "雅典与斯巴达为争夺希腊霸权而进行的长期战争，标志着古典希腊黄金时代的终结。",
+    "backgroundEn": "A protracted war between Athens and Sparta for hegemony over Greece, marking the end of Classical Greece's golden age.",
     "relatedCountryIds": ["greece"],
     "figures": [
-      { "name": "伯里克利", "description": "雅典政治家，战争初期领导雅典。" },
-      { "name": "吕山德", "description": "斯巴达海军统帅，羊河口海战获胜。" }
+      { "name": "伯里克利", "nameEn": "Pericles", "description": "雅典政治家，战争初期领导雅典。", "descriptionEn": "Athenian statesman who led Athens in the early years of the war." },
+      { "name": "吕山德", "nameEn": "Lysander", "description": "斯巴达海军统帅，羊河口海战获胜。", "descriptionEn": "Spartan naval commander who won at the Battle of Aegospotami." }
     ],
     "attires": [
-      { "countryId": "greece", "caption": "希腊重装步兵 hoplite 青铜胸甲与胫甲，圆盾与科林斯头盔" }
+      { "countryId": "greece", "caption": "希腊重装步兵 hoplite 青铜胸甲与胫甲，圆盾与科林斯头盔", "captionEn": "Greek hoplite bronze cuirass and greaves, round shield and Corinthian helmet" }
     ]
   },
   {
     "id": "crusades",
     "name": "十字军东征",
+    "nameEn": "Crusades",
     "startYear": 1096,
     "endYear": 1291,
     "location": "中东、地中海东岸",
+    "locationEn": "Middle East, Eastern Mediterranean",
     "belligerents": ["基督教十字军", "伊斯兰政权"],
+    "belligerentsEn": ["Christian Crusaders", "Islamic states"],
     "casualties": 3000000,
     "background": "西欧基督教国家以收复耶路撒冷为名义对中东发动的一系列宗教战争。",
+    "backgroundEn": "A series of religious wars launched by Western European Christian states, nominally to recapture Jerusalem, across the Middle East.",
     "relatedCountryIds": ["france", "uk", "germany", "italy", "egypt"],
     "figures": [
-      { "name": "理查一世", "description": "英格兰国王，第三次十字军东征领袖。" },
-      { "name": "萨拉丁", "description": "库尔德穆斯林统帅，收复耶路撒冷。" }
+      { "name": "理查一世", "nameEn": "Richard I", "description": "英格兰国王，第三次十字军东征领袖。", "descriptionEn": "King of England and leader of the Third Crusade." },
+      { "name": "萨拉丁", "nameEn": "Saladin", "description": "库尔德穆斯林统帅，收复耶路撒冷。", "descriptionEn": "Kurdish Muslim commander who recaptured Jerusalem." }
     ],
     "attires": [
-      { "countryId": "uk", "caption": "中世纪锁子甲、白色罩袍绣红十字、锥形头盔" },
-      { "countryId": "france", "caption": "骑士锁子甲与 surcoat，鸢尾花纹章" },
-      { "countryId": "egypt", "caption": "马穆鲁克骑兵丝绸长袍、弯刀与圆盾" }
+      { "countryId": "uk", "caption": "中世纪锁子甲、白色罩袍绣红十字、锥形头盔", "captionEn": "Medieval mail hauberk, white surcoat with a red cross, conical helmet" },
+      { "countryId": "france", "caption": "骑士锁子甲与 surcoat，鸢尾花纹章", "captionEn": "Knightly mail and surcoat bearing the fleur-de-lis" },
+      { "countryId": "egypt", "caption": "马穆鲁克骑兵丝绸长袍、弯刀与圆盾", "captionEn": "Mamluk cavalry silk robe, curved sword and round shield" }
     ]
   },
   {
     "id": "hundred-years-war",
     "name": "百年战争",
+    "nameEn": "Hundred Years' War",
     "startYear": 1337,
     "endYear": 1453,
     "location": "法国、英格兰",
+    "locationEn": "France, England",
     "belligerents": ["英格兰王国", "法兰西王国"],
+    "belligerentsEn": ["Kingdom of England", "Kingdom of France"],
     "casualties": 2500000,
     "background": "英法两国因王位继承与领土争端爆发，最终法国完成民族统一。",
+    "backgroundEn": "Fought between England and France over royal succession and territorial disputes, ending with France's national unification.",
     "relatedCountryIds": ["uk", "france"],
     "figures": [
-      { "name": "圣女贞德", "description": "法国民族英雄，推动法军扭转战局。" },
-      { "name": "爱德华三世", "description": "英格兰国王，百年战争主要发起者。" }
+      { "name": "圣女贞德", "nameEn": "Joan of Arc", "description": "法国民族英雄，推动法军扭转战局。", "descriptionEn": "French national heroine who turned the tide for the French army." },
+      { "name": "爱德华三世", "nameEn": "Edward III", "description": "英格兰国王，百年战争主要发起者。", "descriptionEn": "King of England and principal initiator of the Hundred Years' War." }
     ],
     "attires": [
-      { "countryId": "france", "caption": "法国骑士板甲与绣有百合花的罩袍" },
-      { "countryId": "uk", "caption": "英格兰长弓手绿色或棕色短衣，皮甲与便帽" }
+      { "countryId": "france", "caption": "法国骑士板甲与绣有百合花的罩袍", "captionEn": "French knight plate armor and surcoat embroidered with lilies" },
+      { "countryId": "uk", "caption": "英格兰长弓手绿色或棕色短衣，皮甲与便帽", "captionEn": "English longbowman's green or brown tunic, leather jerkin and cap" }
     ]
   },
   {
     "id": "korean-war",
     "name": "朝鲜战争",
+    "nameEn": "Korean War",
     "startYear": 1950,
     "endYear": 1953,
     "location": "朝鲜半岛",
+    "locationEn": "Korean Peninsula",
     "belligerents": ["联合国军 / 韩国", "朝鲜 / 中国志愿军"],
+    "belligerentsEn": ["UN Forces / South Korea", "North Korea / Chinese PVA"],
     "casualties": 3000000,
     "background": "冷战初期热战，朝鲜半岛分裂后爆发，中美苏等大国间接介入。",
+    "backgroundEn": "An early Cold War hot war that broke out after the peninsula's division, with indirect involvement of major powers including the US, China and the USSR.",
     "relatedCountryIds": ["china", "usa"],
     "figures": [
-      { "name": "彭德怀", "description": "中国人民志愿军司令员。" },
-      { "name": "道格拉斯·麦克阿瑟", "description": "联合国军总司令，仁川登陆策划者。" }
+      { "name": "彭德怀", "nameEn": "Peng Dehuai", "description": "中国人民志愿军司令员。", "descriptionEn": "Commander of the Chinese People's Volunteer Army." },
+      { "name": "道格拉斯·麦克阿瑟", "nameEn": "Douglas MacArthur", "description": "联合国军总司令，仁川登陆策划者。", "descriptionEn": "UN Forces commander who planned the Inchon landing." }
     ],
     "attires": [
-      { "countryId": "china", "caption": "志愿军棉军服，解放帽，胶鞋或棉鞋" },
-      { "countryId": "usa", "caption": "美军 M-1951 野战服，钢盔，防寒靴" }
+      { "countryId": "china", "caption": "志愿军棉军服，解放帽，胶鞋或棉鞋", "captionEn": "PVA padded cotton uniform, peaked cap, rubber or cotton shoes" },
+      { "countryId": "usa", "caption": "美军 M-1951 野战服，钢盔，防寒靴", "captionEn": "US M-1951 field uniform, steel helmet, cold-weather boots" }
     ]
   },
   {
     "id": "vietnam-war",
     "name": "越南战争",
+    "nameEn": "Vietnam War",
     "startYear": 1955,
     "endYear": 1975,
     "location": "越南、老挝、柬埔寨",
+    "locationEn": "Vietnam, Laos, Cambodia",
     "belligerents": ["北越 / 越共", "南越 / 美国"],
+    "belligerentsEn": ["North Vietnam / Viet Cong", "South Vietnam / United States"],
     "casualties": 3000000,
     "background": "冷战背景下，美国为防止共产主义扩张而介入越南内战。",
+    "backgroundEn": "Against a Cold War backdrop, the US intervened in the Vietnamese civil war to prevent communist expansion.",
     "relatedCountryIds": ["usa", "vietnam"],
     "figures": [
-      { "name": "胡志明", "description": "越南民主共和国领导人。" },
-      { "name": "林登·约翰逊", "description": "美国总统，大幅升级美军介入。" }
+      { "name": "胡志明", "nameEn": "Ho Chi Minh", "description": "越南民主共和国领导人。", "descriptionEn": "Leader of the Democratic Republic of Vietnam." },
+      { "name": "林登·约翰逊", "nameEn": "Lyndon B. Johnson", "description": "美国总统，大幅升级美军介入。", "descriptionEn": "US President who sharply escalated American involvement." }
     ],
     "attires": [
-      { "countryId": "usa", "caption": "丛林迷彩 M65 野战夹克，M1 钢盔，帆布靴" },
-      { "countryId": "vietnam", "caption": "越共黑色或橄榄绿野战服，斗笠，橡胶凉鞋" }
+      { "countryId": "usa", "caption": "丛林迷彩 M65 野战夹克，M1 钢盔，帆布靴", "captionEn": "Jungle camouflage M65 field jacket, M1 helmet, canvas boots" },
+      { "countryId": "vietnam", "caption": "越共黑色或橄榄绿野战服，斗笠，橡胶凉鞋", "captionEn": "Viet Cong black or olive drab fatigues, conical hat, rubber sandals" }
     ]
   },
   {
     "id": "gulf-war",
     "name": "海湾战争",
+    "nameEn": "Gulf War",
     "startYear": 1990,
     "endYear": 1991,
     "location": "科威特、伊拉克",
+    "locationEn": "Kuwait, Iraq",
     "belligerents": ["多国部队", "伊拉克"],
+    "belligerentsEn": ["Coalition Forces", "Iraq"],
     "casualties": 85000,
     "background": "伊拉克入侵科威特后，美国领导多国部队进行军事干预。",
+    "backgroundEn": "After Iraq invaded Kuwait, a US-led coalition launched military intervention.",
     "relatedCountryIds": ["usa", "uk", "iraq"],
     "figures": [
-      { "name": "诺曼·施瓦茨科普夫", "description": "多国部队总司令，主导“沙漠风暴”行动。" },
-      { "name": "萨达姆·侯赛因", "description": "伊拉克总统，发动入侵科威特。" }
+      { "name": "诺曼·施瓦茨科普夫", "nameEn": "Norman Schwarzkopf", "description": "多国部队总司令，主导“沙漠风暴”行动。", "descriptionEn": "Coalition commander who led Operation Desert Storm." },
+      { "name": "萨达姆·侯赛因", "nameEn": "Saddam Hussein", "description": "伊拉克总统，发动入侵科威特。", "descriptionEn": "President of Iraq who ordered the invasion of Kuwait." }
     ],
     "attires": [
-      { "countryId": "usa", "caption": "六色沙漠迷彩 DBDU 或巧克力片迷彩，PASGT 头盔" },
-      { "countryId": "uk", "caption": "英军沙漠 DPM 迷彩，Mk6 钢盔" },
-      { "countryId": "iraq", "caption": "伊拉克陆军橄榄绿或卡其色棉制服，钢盔" }
+      { "countryId": "usa", "caption": "六色沙漠迷彩 DBDU 或巧克力片迷彩，PASGT 头盔", "captionEn": "Six-color desert DBDU or chocolate-chip camo, PASGT helmet" },
+      { "countryId": "uk", "caption": "英军沙漠 DPM 迷彩，Mk6 钢盔", "captionEn": "British desert DPM camo, Mk6 helmet" },
+      { "countryId": "iraq", "caption": "伊拉克陆军橄榄绿或卡其色棉制服，钢盔", "captionEn": "Iraqi army olive green or khaki cotton uniform, steel helmet" }
     ]
   },
   {
     "id": "chu-han",
     "name": "楚汉战争",
+    "nameEn": "Chu-Han Contention",
     "startYear": -206,
     "endYear": -202,
     "location": "中国中原地区",
+    "locationEn": "Central Plains of China",
     "belligerents": ["汉军", "楚军"],
+    "belligerentsEn": ["Han forces", "Chu forces"],
     "casualties": 500000,
     "background": "秦朝灭亡后，刘邦与项羽争夺天下，最终刘邦建立汉朝。",
+    "backgroundEn": "After the fall of the Qin Dynasty, Liu Bang and Xiang Yu fought for supremacy; Liu Bang ultimately founded the Han Dynasty.",
     "relatedCountryIds": ["china"],
     "figures": [
-      { "name": "刘邦", "description": "汉王，最终击败项羽建立汉朝。" },
-      { "name": "项羽", "description": "西楚霸王，以勇武著称。" }
+      { "name": "刘邦", "nameEn": "Liu Bang", "description": "汉王，最终击败项羽建立汉朝。", "descriptionEn": "King of Han who defeated Xiang Yu and founded the Han Dynasty." },
+      { "name": "项羽", "nameEn": "Xiang Yu", "description": "西楚霸王，以勇武著称。", "descriptionEn": "Hegemon-King of Western Chu, renowned for his valor." }
     ],
     "attires": [
-      { "countryId": "china", "caption": "秦汉时期皮甲与青铜盔，宽袖深衣，长剑" }
+      { "countryId": "china", "caption": "秦汉时期皮甲与青铜盔，宽袖深衣，长剑", "captionEn": "Qin-Han leather armor and bronze helmet, wide-sleeved shenyi robe, long sword" }
     ]
   },
   {
     "id": "six-day-war",
     "name": "六日战争",
+    "nameEn": "Six-Day War",
     "startYear": 1967,
     "endYear": 1967,
     "location": "中东",
+    "locationEn": "Middle East",
     "belligerents": ["以色列", "埃及、叙利亚、约旦"],
+    "belligerentsEn": ["Israel", "Egypt, Syria, Jordan"],
     "casualties": 20000,
     "background": "第三次中东战争，以色列在六天内击败阿拉伯联军，大幅改变中东版图。",
+    "backgroundEn": "The Third Arab-Israeli War: Israel defeated the Arab coalition in six days, dramatically reshaping the Middle Eastern map.",
     "relatedCountryIds": ["israel", "egypt"],
     "figures": [
-      { "name": "摩西·达扬", "description": "以色列国防部长，独眼将军。" },
-      { "name": "贾马尔·阿卜杜勒·纳赛尔", "description": "埃及总统，阿拉伯民族主义领袖。" }
+      { "name": "摩西·达扬", "nameEn": "Moshe Dayan", "description": "以色列国防部长，独眼将军。", "descriptionEn": "Israeli Defense Minister, the one-eyed general." },
+      { "name": "贾马尔·阿卜杜勒·纳赛尔", "nameEn": "Gamal Abdel Nasser", "description": "埃及总统，阿拉伯民族主义领袖。", "descriptionEn": "President of Egypt and leader of Arab nationalism." }
     ],
     "attires": [
-      { "countryId": "israel", "caption": "以军橄榄褐 1950 式野战服，英式钢盔，Uzi 冲锋枪" },
-      { "countryId": "egypt", "caption": "埃军卡其色棉制服，苏式钢盔，AK-47" }
+      { "countryId": "israel", "caption": "以军橄榄褐 1950 式野战服，英式钢盔，Uzi 冲锋枪", "captionEn": "IDF olive drab 1950-pattern fatigues, British-style helmet, Uzi SMG" },
+      { "countryId": "egypt", "caption": "埃军卡其色棉制服，苏式钢盔，AK-47", "captionEn": "Egyptian khaki cotton uniform, Soviet-style helmet, AK-47" }
     ]
   },
   {
     "id": "iran-iraq-war",
     "name": "两伊战争",
+    "nameEn": "Iran-Iraq War",
     "startYear": 1980,
     "endYear": 1988,
     "location": "伊朗、伊拉克边境",
+    "locationEn": "Iran-Iraq border",
     "belligerents": ["伊拉克", "伊朗"],
+    "belligerentsEn": ["Iraq", "Iran"],
     "casualties": 1000000,
     "background": "萨达姆入侵伊朗，引发长达八年的边境战争，使用化学武器与人海战术。",
+    "backgroundEn": "Saddam invaded Iran, igniting an eight-year border war that saw chemical weapons and human-wave tactics.",
     "relatedCountryIds": ["iraq", "iran"],
     "figures": [
-      { "name": "萨达姆·侯赛因", "description": "伊拉克总统，发动战争。" },
-      { "name": "鲁霍拉·霍梅尼", "description": "伊朗最高领袖，领导伊朗抗战。" }
+      { "name": "萨达姆·侯赛因", "nameEn": "Saddam Hussein", "description": "伊拉克总统，发动战争。", "descriptionEn": "President of Iraq who launched the war." },
+      { "name": "鲁霍拉·霍梅尼", "nameEn": "Ruhollah Khomeini", "description": "伊朗最高领袖，领导伊朗抗战。", "descriptionEn": "Supreme Leader of Iran who led the war effort." }
     ],
     "attires": [
-      { "countryId": "iraq", "caption": "伊拉克陆军橄榄绿棉制服，苏式钢盔与 AK-47" },
-      { "countryId": "iran", "caption": "伊朗陆军美式橄榄褐制服，M1 钢盔，部分民兵着平民装" }
+      { "countryId": "iraq", "caption": "伊拉克陆军橄榄绿棉制服，苏式钢盔与 AK-47", "captionEn": "Iraqi army olive green cotton uniform, Soviet helmet and AK-47" },
+      { "countryId": "iran", "caption": "伊朗陆军美式橄榄褐制服，M1 钢盔，部分民兵着平民装", "captionEn": "Iranian army US-style olive drab uniform, M1 helmet; some militia in civilian dress" }
     ]
   },
   {
     "id": "soviet-afghan-war",
     "name": "苏联阿富汗战争",
+    "nameEn": "Soviet-Afghan War",
     "startYear": 1979,
     "endYear": 1989,
     "location": "阿富汗",
+    "locationEn": "Afghanistan",
     "belligerents": ["苏联", "阿富汗圣战者"],
+    "belligerentsEn": ["Soviet Union", "Afghan Mujahideen"],
     "casualties": 1000000,
     "background": "苏联入侵阿富汗扶持亲苏政权，圣战者在西方与伊斯兰国家支持下长期抵抗。",
+    "backgroundEn": "The USSR invaded Afghanistan to prop up a pro-Soviet regime; the Mujahideen resisted for years backed by Western and Islamic states.",
     "relatedCountryIds": ["russia", "afghanistan"],
     "figures": [
-      { "name": "鲍里斯·格罗莫夫", "description": "苏军第四十集团军最后一任司令。" },
-      { "name": "艾哈迈德·沙阿·马苏德", "description": "“潘杰希尔雄狮”，圣战者领袖。" }
+      { "name": "鲍里斯·格罗莫夫", "nameEn": "Boris Gromov", "description": "苏军第四十集团军最后一任司令。", "descriptionEn": "Last commander of the Soviet 40th Army." },
+      { "name": "艾哈迈德·沙阿·马苏德", "nameEn": "Ahmed Shah Massoud", "description": "“潘杰希尔雄狮”，圣战者领袖。", "descriptionEn": "The 'Lion of Panjshir', a Mujahideen leader." }
     ],
     "attires": [
-      { "countryId": "russia", "caption": "苏军卡其色 M1969 制服，SSH-40 钢盔，AK-74" },
-      { "countryId": "afghanistan", "caption": "圣战者传统 perahan tunban 长袍，羊毛背心，背 AK-47" }
+      { "countryId": "russia", "caption": "苏军卡其色 M1969 制服，SSH-40 钢盔，AK-74", "captionEn": "Soviet khaki M1969 uniform, SSH-40 helmet, AK-74" },
+      { "countryId": "afghanistan", "caption": "圣战者传统 perahan tunban 长袍，羊毛背心，背 AK-47", "captionEn": "Mujahideen traditional perahan tunban robe, wool vest, AK-47" }
     ]
   },
   {
     "id": "911-attacks",
     "name": "9·11 恐怖袭击",
+    "nameEn": "September 11 Attacks",
     "startYear": 2001,
     "endYear": 2001,
     "location": "美国纽约、华盛顿",
+    "locationEn": "New York and Washington, USA",
     "belligerents": ["基地组织", "美国"],
+    "belligerentsEn": ["Al-Qaeda", "United States"],
     "casualties": 2996,
     "background": "基地组织劫持民航客机撞击世贸中心与五角大楼，引发全球反恐战争。",
+    "backgroundEn": "Al-Qaeda hijacked airliners and crashed them into the World Trade Center and the Pentagon, triggering the global war on terror.",
     "relatedCountryIds": ["usa"],
     "figures": [
-      { "name": "奥萨马·本·拉登", "description": "基地组织创始人，9·11 袭击幕后策划者。" },
-      { "name": "乔治·W·布什", "description": "美国总统，发起全球反恐战争。" }
+      { "name": "奥萨马·本·拉登", "nameEn": "Osama bin Laden", "description": "基地组织创始人，9·11 袭击幕后策划者。", "descriptionEn": "Founder of Al-Qaeda and mastermind of the 9/11 attacks." },
+      { "name": "乔治·W·布什", "nameEn": "George W. Bush", "description": "美国总统，发起全球反恐战争。", "descriptionEn": "US President who launched the global war on terror." }
     ],
     "attires": [
-      { "countryId": "usa", "caption": "纽约消防局 FDNY 棕色防火服与头盔，警员蓝色制服" },
-      { "countryId": "afghanistan", "caption": "基地组织成员阿拉伯式白色长袍与头巾" }
+      { "countryId": "usa", "caption": "纽约消防局 FDNY 棕色防火服与头盔，警员蓝色制服", "captionEn": "FDNY brown turnout gear and helmet, police blue uniform" },
+      { "countryId": "afghanistan", "caption": "基地组织成员阿拉伯式白色长袍与头巾", "captionEn": "Al-Qaeda members' Arab-style white robe and headdress" }
     ]
   },
   {
     "id": "afghanistan-war",
     "name": "阿富汗战争",
+    "nameEn": "War in Afghanistan",
     "startYear": 2001,
     "endYear": 2021,
     "location": "阿富汗",
+    "locationEn": "Afghanistan",
     "belligerents": ["美国及北约", "塔利班、基地组织"],
+    "belligerentsEn": ["US and NATO", "Taliban, Al-Qaeda"],
     "casualties": 240000,
     "background": "9·11 后美国推翻塔利班政权，长达 20 年的战争最终以塔利班重新掌权告终。",
+    "backgroundEn": "After 9/11 the US toppled the Taliban; a 20-year war ended with the Taliban returning to power.",
     "relatedCountryIds": ["usa", "uk", "afghanistan"],
     "figures": [
-      { "name": "戴维·彼得雷乌斯", "description": "驻阿美军司令，主导增兵战略。" },
-      { "name": "毛拉·奥马尔", "description": "塔利班创始人及精神领袖。" }
+      { "name": "戴维·彼得雷乌斯", "nameEn": "David Petraeus", "description": "驻阿美军司令，主导增兵战略。", "descriptionEn": "US commander in Afghanistan who led the surge strategy." },
+      { "name": "毛拉·奥马尔", "nameEn": "Mullah Omar", "description": "塔利班创始人及精神领袖。", "descriptionEn": "Founder and spiritual leader of the Taliban." }
     ],
     "attires": [
-      { "countryId": "usa", "caption": "多地形迷彩 OCP/Scorpion W2 制服，ACH 头盔，OTV 防弹衣" },
-      { "countryId": "uk", "caption": "英军多地形模式 MTP 制服，Mk7 头盔" },
-      { "countryId": "afghanistan", "caption": "塔利班战士黑色或白色长袍 perahan tunban，头巾，背 AK-47" }
+      { "countryId": "usa", "caption": "多地形迷彩 OCP/Scorpion W2 制服，ACH 头盔，OTV 防弹衣", "captionEn": "OCP/Scorpion W2 multi-terrain camo uniform, ACH helmet, OTV vest" },
+      { "countryId": "uk", "caption": "英军多地形模式 MTP 制服，Mk7 头盔", "captionEn": "British MTP multi-terrain uniform, Mk7 helmet" },
+      { "countryId": "afghanistan", "caption": "塔利班战士黑色或白色长袍 perahan tunban，头巾，背 AK-47", "captionEn": "Taliban fighter's black or white perahan tunban robe, turban, AK-47" }
     ]
   },
   {
     "id": "iraq-war",
     "name": "伊拉克战争",
+    "nameEn": "Iraq War",
     "startYear": 2003,
     "endYear": 2011,
     "location": "伊拉克",
+    "locationEn": "Iraq",
     "belligerents": ["美国及联军", "伊拉克"],
+    "belligerentsEn": ["US and Coalition", "Iraq"],
     "casualties": 500000,
     "background": "美国以伊拉克拥有大规模杀伤性武器为由发动战争，推翻萨达姆政权，引发长期叛乱。",
+    "backgroundEn": "The US launched the war alleging Iraq possessed WMDs, toppled Saddam's regime, and triggered a prolonged insurgency.",
     "relatedCountryIds": ["usa", "uk", "iraq"],
     "figures": [
-      { "name": "乔治·W·布什", "description": "美国总统，发动伊拉克战争。" },
-      { "name": "萨达姆·侯赛因", "description": "伊拉克总统，被推翻并被处决。" }
+      { "name": "乔治·W·布什", "nameEn": "George W. Bush", "description": "美国总统，发动伊拉克战争。", "descriptionEn": "US President who launched the Iraq War." },
+      { "name": "萨达姆·侯赛因", "nameEn": "Saddam Hussein", "description": "伊拉克总统，被推翻并被处决。", "descriptionEn": "President of Iraq, overthrown and executed." }
     ],
     "attires": [
-      { "countryId": "usa", "caption": "三色沙漠迷彩 DCU 制服，PASGT 头盔与防弹衣" },
-      { "countryId": "uk", "caption": "英军沙漠 DPM 迷彩，Mk6/Mk7 头盔" },
-      { "countryId": "iraq", "caption": "伊拉克陆军橄榄绿或卡其色棉制服，钢盔" }
+      { "countryId": "usa", "caption": "三色沙漠迷彩 DCU 制服，PASGT 头盔与防弹衣", "captionEn": "Three-color desert DCU uniform, PASGT helmet and vest" },
+      { "countryId": "uk", "caption": "英军沙漠 DPM 迷彩，Mk6/Mk7 头盔", "captionEn": "British desert DPM camo, Mk6/Mk7 helmet" },
+      { "countryId": "iraq", "caption": "伊拉克陆军橄榄绿或卡其色棉制服，钢盔", "captionEn": "Iraqi army olive green or khaki cotton uniform, steel helmet" }
     ]
   },
   {
     "id": "syrian-civil-war",
     "name": "叙利亚内战",
+    "nameEn": "Syrian Civil War",
     "startYear": 2011,
     "endYear": 2024,
     "location": "叙利亚",
+    "locationEn": "Syria",
     "belligerents": ["叙利亚政府", "反对派、ISIS、库尔德武装"],
+    "belligerentsEn": ["Syrian government", "Rebels, ISIS, Kurdish forces"],
     "casualties": 600000,
     "background": "阿拉伯之春引发的叙利亚抗议升级为全面内战，多方势力介入，造成大规模难民危机。",
+    "backgroundEn": "Protests from the Arab Spring escalated into a full civil war; intervention by multiple parties caused a massive refugee crisis.",
     "relatedCountryIds": ["russia", "iran", "iraq"],
     "figures": [
-      { "name": "巴沙尔·阿萨德", "description": "叙利亚总统，依靠俄伊支持维持政权。" },
-      { "name": "阿布·贝克尔·巴格达迪", "description": "ISIS 首领，自称哈里发。" }
+      { "name": "巴沙尔·阿萨德", "nameEn": "Bashar al-Assad", "description": "叙利亚总统，依靠俄伊支持维持政权。", "descriptionEn": "President of Syria who held power with Russian and Iranian support." },
+      { "name": "阿布·贝克尔·巴格达迪", "nameEn": "Abu Bakr al-Baghdadi", "description": "ISIS 首领，自称哈里发。", "descriptionEn": "Leader of ISIS who proclaimed himself caliph." }
     ],
     "attires": [
-      { "countryId": "russia", "caption": "俄军 EMR 数字迷彩制服，6B45 防弹衣，AK-74M" },
-      { "countryId": "iran", "caption": "伊斯兰革命卫队橄榄绿制服，黑色头巾" },
-      { "countryId": "iraq", "caption": "ISIS 武装分子黑色长袍与头巾，自杀背心" }
+      { "countryId": "russia", "caption": "俄军 EMR 数字迷彩制服，6B45 防弹衣，AK-74M", "captionEn": "Russian EMR digital camo uniform, 6B45 vest, AK-74M" },
+      { "countryId": "iran", "caption": "伊斯兰革命卫队橄榄绿制服，黑色头巾", "captionEn": "IRGC olive green uniform, black turban" },
+      { "countryId": "iraq", "caption": "ISIS 武装分子黑色长袍与头巾，自杀背心", "captionEn": "ISIS militant's black robe and turban, suicide vest" }
     ]
   },
   {
     "id": "us-iran-conflict",
     "name": "美伊冲突",
+    "nameEn": "Iran-US Conflict",
     "startYear": 2020,
     "endYear": 2024,
     "location": "中东",
+    "locationEn": "Middle East",
     "belligerents": ["美国", "伊朗"],
+    "belligerentsEn": ["United States", "Iran"],
     "casualties": 1500,
     "background": "美国刺杀苏莱曼尼后，伊朗及其代理人与美国及盟友在中东多次交锋。",
+    "backgroundEn": "After the US assassinated Soleimani, Iran and its proxies clashed repeatedly with the US and its allies across the Middle East.",
     "relatedCountryIds": ["usa", "iran", "israel"],
     "figures": [
-      { "name": "卡西姆·苏莱曼尼", "description": "伊朗圣城旅指挥官，被美军无人机刺杀。" },
-      { "name": "唐纳德·特朗普", "description": "美国总统，下令刺杀苏莱曼尼。" }
+      { "name": "卡西姆·苏莱曼尼", "nameEn": "Qasem Soleimani", "description": "伊朗圣城旅指挥官，被美军无人机刺杀。", "descriptionEn": "Commander of Iran's Quds Force, killed by a US drone strike." },
+      { "name": "唐纳德·特朗普", "nameEn": "Donald Trump", "description": "美国总统，下令刺杀苏莱曼尼。", "descriptionEn": "US President who ordered the strike on Soleimani." }
     ],
     "attires": [
-      { "countryId": "usa", "caption": "美军多地形迷彩 OCP 制服，ACH 头盔与防弹衣" },
-      { "countryId": "iran", "caption": "伊斯兰革命卫队橄榄绿制服，黑色头巾，背步枪" },
-      { "countryId": "israel", "caption": "以军橄榄褐制服，Tavor 步枪，防弹背心" }
+      { "countryId": "usa", "caption": "美军多地形迷彩 OCP 制服，ACH 头盔与防弹衣", "captionEn": "US OCP multi-terrain camo uniform, ACH helmet and vest" },
+      { "countryId": "iran", "caption": "伊斯兰革命卫队橄榄绿制服，黑色头巾，背步枪", "captionEn": "IRGC olive green uniform, black turban, rifle" },
+      { "countryId": "israel", "caption": "以军橄榄褐制服，Tavor 步枪，防弹背心", "captionEn": "IDF olive drab uniform, Tavor rifle, plate carrier" }
     ]
   },
   {
     "id": "russia-ukraine-war",
     "name": "俄乌冲突",
+    "nameEn": "Russo-Ukrainian War",
     "startYear": 2022,
     "endYear": 2025,
     "location": "乌克兰",
+    "locationEn": "Ukraine",
     "belligerents": ["俄罗斯", "乌克兰"],
+    "belligerentsEn": ["Russia", "Ukraine"],
     "casualties": 500000,
     "background": "俄罗斯对乌克兰发动全面入侵，是二战后欧洲最大规模常规战争，引发全球能源与粮食危机。",
+    "backgroundEn": "Russia launched a full-scale invasion of Ukraine, the largest conventional war in Europe since WWII, triggering a global energy and food crisis.",
     "relatedCountryIds": ["russia", "ukraine"],
     "figures": [
-      { "name": "弗拉基米尔·普京", "description": "俄罗斯总统，发动入侵。" },
-      { "name": "弗拉基米尔·泽连斯基", "description": "乌克兰总统，战时领导国家抵抗。" }
+      { "name": "弗拉基米尔·普京", "nameEn": "Vladimir Putin", "description": "俄罗斯总统，发动入侵。", "descriptionEn": "President of Russia who ordered the invasion." },
+      { "name": "弗拉基米尔·泽连斯基", "nameEn": "Volodymyr Zelenskyy", "description": "乌克兰总统，战时领导国家抵抗。", "descriptionEn": "President of Ukraine who led the wartime resistance." }
     ],
     "attires": [
-      { "countryId": "russia", "caption": "俄军 EMR 数字迷彩制服，6B45 防弹衣，AK-12" },
-      { "countryId": "ukraine", "caption": "乌军 MM-14 迷彩制服，凯夫拉头盔，西方援助武器" }
+      { "countryId": "russia", "caption": "俄军 EMR 数字迷彩制服，6B45 防弹衣，AK-12", "captionEn": "Russian EMR digital camo uniform, 6B45 vest, AK-12" },
+      { "countryId": "ukraine", "caption": "乌军 MM-14 迷彩制服，凯夫拉头盔，西方援助武器", "captionEn": "Ukrainian MM-14 camo uniform, Kevlar helmet, Western-supplied weapons" }
     ]
   },
   {
     "id": "sino-vietnamese-war",
     "name": "中越边境战争",
+    "nameEn": "Sino-Vietnamese War",
     "startYear": 1979,
     "endYear": 1979,
     "location": "中越边境",
+    "locationEn": "China-Vietnam border",
     "belligerents": ["中国", "越南"],
+    "belligerentsEn": ["China", "Vietnam"],
     "casualties": 60000,
     "background": "中苏交恶与越南入侵柬埔寨后，中国发动“自卫反击战”，双方均宣称胜利。",
+    "backgroundEn": "After the Sino-Soviet split and Vietnam's invasion of Cambodia, China launched a 'self-defensive counterattack'; both sides claimed victory.",
     "relatedCountryIds": ["china", "vietnam"],
     "figures": [
-      { "name": "邓小平", "description": "中国实际最高领导人，决策发动战争。" },
-      { "name": "武元甲", "description": "越南大将，指挥越北防御。" }
+      { "name": "邓小平", "nameEn": "Deng Xiaoping", "description": "中国实际最高领导人，决策发动战争。", "descriptionEn": "China's de facto paramount leader who decided to launch the war." },
+      { "name": "武元甲", "nameEn": "Võ Nguyên Giáp", "description": "越南大将，指挥越北防御。", "descriptionEn": "Vietnamese general who commanded the defense of northern Vietnam." }
     ],
     "attires": [
-      { "countryId": "china", "caption": "解放军 65 式草绿色军服，红领章，解放帽，胶鞋" },
-      { "countryId": "vietnam", "caption": "越军橄榄绿野战服，苏式钢盔，AK-47" }
+      { "countryId": "china", "caption": "解放军 65 式草绿色军服，红领章，解放帽，胶鞋", "captionEn": "PLA Type 65 grass-green uniform, red collar tabs, peaked cap, rubber shoes" },
+      { "countryId": "vietnam", "caption": "越军橄榄绿野战服，苏式钢盔，AK-47", "captionEn": "Vietnamese olive drab fatigues, Soviet-style helmet, AK-47" }
     ]
   },
   {
     "id": "punic-wars",
     "name": "布匿战争",
+    "nameEn": "Punic Wars",
     "startYear": -264,
     "endYear": -146,
     "location": "地中海西部、西西里、北非",
+    "locationEn": "Western Mediterranean, Sicily, North Africa",
     "belligerents": ["罗马共和国", "迦太基共和国"],
+    "belligerentsEn": ["Roman Republic", "Carthaginian Republic"],
     "casualties": 1500000,
     "background": "罗马与迦太基为争夺地中海西部霸权与贸易控制权爆发三次战争，最终迦太基被夷为平地，罗马确立了地中海霸主地位，却也埋下了穷兵黩武的种子。",
+    "backgroundEn": "Rome and Carthage fought three wars for hegemony and trade control in the western Mediterranean; Carthage was ultimately razed and Rome became the Mediterranean's dominant power, yet the seeds of militarism were sown.",
     "relatedCountryIds": ["italy"],
     "figures": [
-      { "name": "汉尼拔·巴卡", "description": "迦太基名将，率军翻越阿尔卑斯山奇袭意大利。" },
-      { "name": "大西庇阿", "description": "罗马名将，扎马战役击败汉尼拔。" }
+      { "name": "汉尼拔·巴卡", "nameEn": "Hannibal Barca", "description": "迦太基名将，率军翻越阿尔卑斯山奇袭意大利。", "descriptionEn": "Carthaginian general who crossed the Alps to strike at Italy." },
+      { "name": "大西庇阿", "nameEn": "Scipio Africanus", "description": "罗马名将，扎马战役击败汉尼拔。", "descriptionEn": "Roman general who defeated Hannibal at the Battle of Zama." }
     ],
     "attires": [
-      { "countryId": "italy", "caption": "罗马军团环状胸甲与青铜盔，方形大盾 scutum 与短剑 gladius" }
+      { "countryId": "italy", "caption": "罗马军团环状胸甲与青铜盔，方形大盾 scutum 与短剑 gladius", "captionEn": "Roman legionary ring cuirass and bronze helmet, scutum shield and gladius short sword" }
     ]
   },
   {
     "id": "qin-unification",
     "name": "秦统一战争",
+    "nameEn": "Qin Wars of Unification",
     "startYear": -230,
     "endYear": -221,
     "location": "中国中原地区",
+    "locationEn": "Central Plains of China",
     "belligerents": ["秦国", "韩、赵、魏、楚、燕、齐六国"],
+    "belligerentsEn": ["State of Qin", "Six states: Han, Zhao, Wei, Chu, Yan, Qi"],
     "casualties": 1000000,
     "background": "战国末期，秦王嬴政以远交近攻之策十年内依次吞并六国，结束五百余年分裂，却以严刑峻法与沉重徭役为代价，统一仅十五年便土崩瓦解。",
+    "backgroundEn": "In the late Warring States period, King Zheng of Qin used a 'befriend the distant, attack the near' strategy to annex the six states within ten years, ending over five centuries of division; yet harsh laws and corvée labor caused his empire to collapse in just fifteen years.",
     "relatedCountryIds": ["china"],
     "figures": [
-      { "name": "嬴政", "description": "秦王政，即秦始皇，完成统一大业。" },
-      { "name": "王翦", "description": "秦国名将，灭楚之战主帅。" }
+      { "name": "嬴政", "nameEn": "Ying Zheng", "description": "秦王政，即秦始皇，完成统一大业。", "descriptionEn": "King Zheng of Qin, later Qin Shi Huang, who completed the unification." },
+      { "name": "王翦", "nameEn": "Wang Jian", "description": "秦国名将，灭楚之战主帅。", "descriptionEn": "Qin general who commanded the war that destroyed Chu." }
     ],
     "attires": [
-      { "countryId": "china", "caption": "秦军鱼鳞甲与铁盔，黑色战袍，长戈与弩机" }
+      { "countryId": "china", "caption": "秦军鱼鳞甲与铁盔，黑色战袍，长戈与弩机", "captionEn": "Qin army scale armor and iron helmet, black war robe, dagger-axe and crossbow" }
     ]
   },
   {
     "id": "three-kingdoms",
     "name": "三国战争",
+    "nameEn": "Wars of the Three Kingdoms",
     "startYear": 220,
     "endYear": 280,
     "location": "中国",
+    "locationEn": "China",
     "belligerents": ["魏", "蜀", "吴"],
+    "belligerentsEn": ["Wei", "Shu", "Wu"],
     "casualties": 3000000,
     "background": "东汉末年群雄割据，最终形成魏蜀吴三国鼎立，连年征战使人口锐减，却也成为英雄辈出的传奇时代，最终由司马氏一统三国。",
+    "backgroundEn": "Warlords carved up the realm in the late Eastern Han, eventually forming the three kingdoms of Wei, Shu and Wu. Endless war slashed the population, yet it became a legendary age of heroes, until the Sima clan reunified the three.",
     "relatedCountryIds": ["china"],
     "figures": [
-      { "name": "曹操", "description": "魏国奠基者，统一北方的政治家与军事家。" },
-      { "name": "诸葛亮", "description": "蜀汉丞相，六出祁山北伐。" }
+      { "name": "曹操", "nameEn": "Cao Cao", "description": "魏国奠基者，统一北方的政治家与军事家。", "descriptionEn": "Founder of Wei, a statesman and strategist who unified the north." },
+      { "name": "诸葛亮", "nameEn": "Zhuge Liang", "description": "蜀汉丞相，六出祁山北伐。", "descriptionEn": "Chancellor of Shu Han who led six northern expeditions." }
     ],
     "attires": [
-      { "countryId": "china", "caption": "汉末魏晋札甲与筒袖铠，铁盔或帻，环首刀与长矛" }
+      { "countryId": "china", "caption": "汉末魏晋札甲与筒袖铠，铁盔或帻，环首刀与长矛", "captionEn": "Late Han-Wei-Jin laminate armor and sleeved armor, iron helmet or ze cap, ring-pommel sword and spear" }
     ]
   },
   {
     "id": "an-shi-rebellion",
     "name": "安史之乱",
+    "nameEn": "An Lushan Rebellion",
     "startYear": 755,
     "endYear": 763,
     "location": "中国北方",
+    "locationEn": "Northern China",
     "belligerents": ["唐朝官军", "安史叛军"],
+    "belligerentsEn": ["Tang imperial army", "An-Shi rebel forces"],
     "casualties": 13000000,
     "background": "盛唐之际，节度使安禄山与史思明以清君侧为名发动叛乱，八年战火使大唐由盛转衰，人口骤减，成为中华文明由开放转向内敛的转折点。",
+    "backgroundEn": "At the height of the Tang, jiedushi An Lushan and Shi Siming rebelled under the pretext of 'purging the emperor's court.' Eight years of war turned the Tang from peak to decline, slashed the population, and marked the moment Chinese civilization turned from outward to inward.",
     "relatedCountryIds": ["china"],
     "figures": [
-      { "name": "安禄山", "description": "范阳节度使，叛乱发动者。" },
-      { "name": "郭子仪", "description": "唐朝名将，平定安史之乱的主帅。" }
+      { "name": "安禄山", "nameEn": "An Lushan", "description": "范阳节度使，叛乱发动者。", "descriptionEn": "Jiedushi of Fanyang and initiator of the rebellion." },
+      { "name": "郭子仪", "nameEn": "Guo Ziyi", "description": "唐朝名将，平定安史之乱的主帅。", "descriptionEn": "Tang general who commanded the suppression of the rebellion." }
     ],
     "attires": [
-      { "countryId": "china", "caption": "唐军明光铠与圆护，皮盔或铁兜鍪，横刀与长槊" }
+      { "countryId": "china", "caption": "唐军明光铠与圆护，皮盔或铁兜鍪，横刀与长槊", "captionEn": "Tang mingguang armor with round plates, leather or iron helmet, hengdao saber and long spear" }
     ]
   },
   {
     "id": "thirty-years-war",
     "name": "三十年战争",
+    "nameEn": "Thirty Years' War",
     "startYear": 1618,
     "endYear": 1648,
     "location": "神圣罗马帝国、欧洲",
+    "locationEn": "Holy Roman Empire, Europe",
     "belligerents": ["新教阵营", "天主教阵营"],
+    "belligerentsEn": ["Protestant side", "Catholic side"],
     "casualties": 8000000,
     "background": "宗教改革后，神圣罗马帝国境内新教与天主教诸侯的矛盾引爆全欧大战，最终以威斯特伐利亚和约结束，确立了现代国家主权体系，却使德意志人口减半。",
+    "backgroundEn": "After the Reformation, conflicts between Protestant and Catholic princes within the Holy Roman Empire ignited a pan-European war; the Peace of Westphalia ended it and established the modern system of state sovereignty, but halved the German population.",
     "relatedCountryIds": ["germany", "france", "uk"],
     "figures": [
-      { "name": "古斯塔夫二世·阿道夫", "description": "瑞典国王，新教阵营英雄。" },
-      { "name": "阿尔布雷希特·冯·华伦斯坦", "description": "神圣罗马帝国名将。" }
+      { "name": "古斯塔夫二世·阿道夫", "nameEn": "Gustavus Adolphus", "description": "瑞典国王，新教阵营英雄。", "descriptionEn": "King of Sweden and hero of the Protestant side." },
+      { "name": "阿尔布雷希特·冯·华伦斯坦", "nameEn": "Albrecht von Wallenstein", "description": "神圣罗马帝国名将。", "descriptionEn": "A celebrated commander of the Holy Roman Empire." }
     ],
     "attires": [
-      { "countryId": "germany", "caption": "德意志雇佣兵皮甲与胸甲，宽檐帽与羽毛，长矛或火绳枪" },
-      { "countryId": "france", "caption": "法国近卫军白色十字罩袍，胸甲与铁盔" }
+      { "countryId": "germany", "caption": "德意志雇佣兵皮甲与胸甲，宽檐帽与羽毛，长矛或火绳枪", "captionEn": "German mercenary leather and breastplate, broad-brimmed hat with feather, pike or matchlock" },
+      { "countryId": "france", "caption": "法国近卫军白色十字罩袍，胸甲与铁盔", "captionEn": "French guards' white-cross surcoat, breastplate and helmet" }
     ]
   },
   {
     "id": "seven-years-war",
     "name": "七年战争",
+    "nameEn": "Seven Years' War",
     "startYear": 1756,
     "endYear": 1763,
     "location": "欧洲、北美、印度、加勒比",
+    "locationEn": "Europe, North America, India, Caribbean",
     "belligerents": ["英国-普鲁士联盟", "法国-奥地利-俄国联盟"],
+    "belligerentsEn": ["Britain-Prussia alliance", "France-Austria-Russia alliance"],
     "casualties": 1000000,
     "background": "列强为争夺殖民地与欧洲霸权爆发全球性战争，英国由此奠定海上霸权，普鲁士则跻身欧洲强国，战争规模之广被称为“第一次世界大战”。",
+    "backgroundEn": "Powers clashed globally for colonies and European hegemony: Britain established naval supremacy and Prussia rose among the great powers. Its scope earned it the name 'the first world war.'",
     "relatedCountryIds": ["uk", "france", "germany", "russia"],
     "figures": [
-      { "name": "腓特烈大帝", "description": "普鲁士国王，以弱胜强的军事天才。" },
-      { "name": "威廉·皮特", "description": "英国首相，主导英国全球战略。" }
+      { "name": "腓特烈大帝", "nameEn": "Frederick the Great", "description": "普鲁士国王，以弱胜强的军事天才。", "descriptionEn": "King of Prussia and a military genius who triumphed against the odds." },
+      { "name": "威廉·皮特", "nameEn": "William Pitt", "description": "英国首相，主导英国全球战略。", "descriptionEn": "British Prime Minister who steered Britain's global strategy." }
     ],
     "attires": [
-      { "countryId": "uk", "caption": "英军红色上衣与白色马裤，三角帽，布朗贝斯火枪" },
-      { "countryId": "france", "caption": "法军白色制服与彩色翻领，三角帽，刺刀" },
-      { "countryId": "germany", "caption": "普鲁士深蓝制服与白色绑腿，斜挎弹药盒" }
+      { "countryId": "uk", "caption": "英军红色上衣与白色马裤，三角帽，布朗贝斯火枪", "captionEn": "British red coat and white breeches, tricorn, Brown Bess musket" },
+      { "countryId": "france", "caption": "法军白色制服与彩色翻领，三角帽，刺刀", "captionEn": "French white uniform with colored facings, tricorn, bayonet" },
+      { "countryId": "germany", "caption": "普鲁士深蓝制服与白色绑腿，斜挎弹药盒", "captionEn": "Prussian dark blue uniform and white gaiters, cross-body cartridge box" }
     ]
   },
   {
     "id": "american-revolution",
     "name": "美国独立战争",
+    "nameEn": "American Revolutionary War",
     "startYear": 1775,
     "endYear": 1783,
     "location": "北美十三州",
+    "locationEn": "Thirteen Colonies, North America",
     "belligerents": ["北美十三州", "英国"],
+    "belligerentsEn": ["Thirteen Colonies", "Great Britain"],
     "casualties": 50000,
     "background": "北美殖民地不堪英国苛税与无代表之治，揭竿而起寻求独立，在法国援助下以弱胜强，建立了世界上第一个现代共和制国家，鼓舞了全球反殖民浪潮。",
+    "backgroundEn": "Unable to bear British taxes and taxation without representation, the North American colonies rose for independence; with French aid they triumphed against the odds, founding the world's first modern republic and inspiring anti-colonial movements worldwide.",
     "relatedCountryIds": ["usa", "uk", "france"],
     "figures": [
-      { "name": "乔治·华盛顿", "description": "大陆军总司令，美国国父。" },
-      { "name": "拉法耶特侯爵", "description": "法国贵族，援助美军独立。" }
+      { "name": "乔治·华盛顿", "nameEn": "George Washington", "description": "大陆军总司令，美国国父。", "descriptionEn": "Commander of the Continental Army and Founding Father." },
+      { "name": "拉法耶特侯爵", "nameEn": "Marquis de Lafayette", "description": "法国贵族，援助美军独立。", "descriptionEn": "French nobleman who aided American independence." }
     ],
     "attires": [
-      { "countryId": "usa", "caption": "大陆军蓝色上衣与白色或鹿皮裤，三角帽，帆布绑腿" },
-      { "countryId": "uk", "caption": "英军红色上衣与白色马裤，熊皮帽或三角帽" },
-      { "countryId": "france", "caption": "法军白色制服与蓝色翻领，金色纽扣，三角帽" }
+      { "countryId": "usa", "caption": "大陆军蓝色上衣与白色或鹿皮裤，三角帽，帆布绑腿", "captionEn": "Continental blue coat and white or buckskin breeches, tricorn, canvas leggings" },
+      { "countryId": "uk", "caption": "英军红色上衣与白色马裤，熊皮帽或三角帽", "captionEn": "British red coat and white breeches, bearskin or tricorn" },
+      { "countryId": "france", "caption": "法军白色制服与蓝色翻领，金色纽扣，三角帽", "captionEn": "French white uniform with blue facings, gold buttons, tricorn" }
     ]
   },
   {
     "id": "opium-war",
     "name": "鸦片战争",
+    "nameEn": "Opium War",
     "startYear": 1840,
     "endYear": 1842,
     "location": "中国东南沿海",
+    "locationEn": "Southeast coast of China",
     "belligerents": ["清朝", "英国"],
+    "belligerentsEn": ["Qing Dynasty", "Great Britain"],
     "casualties": 30000,
     "background": "英国为扭转对华贸易逆差向中国走私鸦片，清政府禁烟后英军以坚船利炮叩关，中国战败签订《南京条约》，开启了百年屈辱的半殖民地历史。",
+    "backgroundEn": "Britain smuggled opium into China to reverse its trade deficit; after the Qing banned opium, the Royal Navy forced the door open. China's defeat and the Treaty of Nanking began a century of semi-colonial humiliation.",
     "relatedCountryIds": ["china", "uk"],
     "figures": [
-      { "name": "林则徐", "description": "钦差大臣，虎门销烟的民族英雄。" },
-      { "name": "义律", "description": "英国驻华商务监督，挑起战争。" }
+      { "name": "林则徐", "nameEn": "Lin Zexu", "description": "钦差大臣，虎门销烟的民族英雄。", "descriptionEn": "Imperial commissioner and national hero of the Humen opium destruction." },
+      { "name": "义律", "nameEn": "Charles Elliot", "description": "英国驻华商务监督，挑起战争。", "descriptionEn": "British Superintendent of Trade in China who provoked the war." }
     ],
     "attires": [
-      { "countryId": "china", "caption": "清军勇营号衣与补子，顶戴花翎，大刀与鸟枪" },
-      { "countryId": "uk", "caption": "英军红色上衣与白色十字带，shako 军帽，布朗贝斯火枪" }
+      { "countryId": "china", "caption": "清军勇营号衣与补子，顶戴花翎，大刀与鸟枪", "captionEn": "Qing army tunic with rank badge, buttoned hat with peacock feather, dao saber and matchlock" },
+      { "countryId": "uk", "caption": "英军红色上衣与白色十字带，shako 军帽，布朗贝斯火枪", "captionEn": "British red coat and white cross-belt, shako, Brown Bess musket" }
     ]
   },
   {
     "id": "taiping-rebellion",
     "name": "太平天国运动",
+    "nameEn": "Taiping Rebellion",
     "startYear": 1851,
     "endYear": 1864,
     "location": "中国南方",
+    "locationEn": "Southern China",
     "belligerents": ["太平天国", "清朝"],
+    "belligerentsEn": ["Taiping Heavenly Kingdom", "Qing Dynasty"],
     "casualties": 20000000,
     "background": "洪秀全以拜上帝教号召农民起义，建立太平天国与清廷对峙十四年，是中国历史上最惨烈的内战，死亡人数超过一战，深刻动摇了清朝统治根基。",
+    "backgroundEn": "Hong Xiuquan rallied peasants with a God-worshipping sect and founded the Taiping Heavenly Kingdom, which stood against the Qing for fourteen years. China's bloodiest civil war killed more than WWI and shook the Qing to its foundations.",
     "relatedCountryIds": ["china"],
     "figures": [
-      { "name": "洪秀全", "description": "太平天国天王，自称上帝次子。" },
-      { "name": "曾国藩", "description": "湘军统帅，平定太平天国。" }
+      { "name": "洪秀全", "nameEn": "Hong Xiuquan", "description": "太平天国天王，自称上帝次子。", "descriptionEn": "Heavenly King of the Taiping who claimed to be God's second son." },
+      { "name": "曾国藩", "nameEn": "Zeng Guofan", "description": "湘军统帅，平定太平天国。", "descriptionEn": "Commander of the Xiang Army who suppressed the Taiping." }
     ],
     "attires": [
-      { "countryId": "china", "caption": "太平军黄红头巾与长发，短衣束带，长矛与刀" }
+      { "countryId": "china", "caption": "太平军黄红头巾与长发，短衣束带，长矛与刀", "captionEn": "Taiping yellow-red headband and long hair, short tunic with sash, spear and sword" }
     ]
   },
   {
     "id": "chinese-civil-war",
     "name": "中国内战",
+    "nameEn": "Chinese Civil War",
     "startYear": 1927,
     "endYear": 1949,
     "location": "中国",
+    "locationEn": "China",
     "belligerents": ["国民党", "共产党"],
+    "belligerentsEn": ["Nationalists", "Communists"],
     "casualties": 8000000,
     "background": "国共两党因意识形态与权力之争爆发长期内战，中间因抗日战争而短暂合作，战后再度全面开战，最终共产党胜出建立新中国，国民党退守台湾，两岸分治延续至今。",
+    "backgroundEn": "The KMT and CCP fought a long civil war over ideology and power, briefly uniting against Japan before resuming full-scale war. The Communists won and founded the People's Republic; the KMT retreated to Taiwan, and the Strait divide continues today.",
     "relatedCountryIds": ["china"],
     "figures": [
-      { "name": "蒋介石", "description": "国民政府领导人，败退台湾。" },
-      { "name": "毛泽东", "description": "中国共产党领袖，建立新中国。" }
+      { "name": "蒋介石", "nameEn": "Chiang Kai-shek", "description": "国民政府领导人，败退台湾。", "descriptionEn": "Leader of the Nationalist government who retreated to Taiwan." },
+      { "name": "毛泽东", "nameEn": "Mao Zedong", "description": "中国共产党领袖，建立新中国。", "descriptionEn": "Leader of the Chinese Communist Party who founded the People's Republic." }
     ],
     "attires": [
-      { "countryId": "china", "caption": "国军黄绿色军服与德式或美式钢盔；解放军土黄色军服与八一帽徽" }
+      { "countryId": "china", "caption": "国军黄绿色军服与德式或美式钢盔；解放军土黄色军服与八一帽徽", "captionEn": "Nationalist yellow-green uniform with German or US helmet; PLA earth-yellow uniform with August 1st cap star" }
     ]
   },
   {
     "id": "cuban-missile-crisis",
     "name": "古巴导弹危机",
+    "nameEn": "Cuban Missile Crisis",
     "startYear": 1962,
     "endYear": 1962,
     "location": "古巴、加勒比海",
+    "locationEn": "Cuba, Caribbean Sea",
     "belligerents": ["美国", "苏联"],
+    "belligerentsEn": ["United States", "Soviet Union"],
     "casualties": 0,
     "background": "苏联在古巴部署核导弹，美国海上封锁，十三天对峙险些引发核战争，是人类距离自我毁灭最近的一刻，最终以双方妥协化解，开启了美苏缓和。",
+    "backgroundEn": "The USSR placed nuclear missiles in Cuba; the US imposed a naval blockade. Thirteen days of brinkmanship nearly triggered nuclear war—the closest humanity has come to self-destruction—before compromise ended the crisis and opened a US-Soviet détente.",
     "relatedCountryIds": ["usa", "russia", "cuba"],
     "figures": [
-      { "name": "约翰·F·肯尼迪", "description": "美国总统，冷静应对危机。" },
-      { "name": "尼基塔·赫鲁晓夫", "description": "苏联领导人，最终撤回导弹。" }
+      { "name": "约翰·F·肯尼迪", "nameEn": "John F. Kennedy", "description": "美国总统，冷静应对危机。", "descriptionEn": "US President who managed the crisis with composure." },
+      { "name": "尼基塔·赫鲁晓夫", "nameEn": "Nikita Khrushchev", "description": "苏联领导人，最终撤回导弹。", "descriptionEn": "Soviet leader who ultimately withdrew the missiles." }
     ],
     "attires": [
-      { "countryId": "usa", "caption": "美军橄榄绿常服与钢盔，海军卡其色制服" },
-      { "countryId": "russia", "caption": "苏军卡其色军服与大檐帽" },
-      { "countryId": "cuba", "caption": "古巴军绿色橄榄帽与胡须，平民装束" }
+      { "countryId": "usa", "caption": "美军橄榄绿常服与钢盔，海军卡其色制服", "captionEn": "US olive green service dress and helmet, naval khaki uniform" },
+      { "countryId": "russia", "caption": "苏军卡其色军服与大檐帽", "captionEn": "Soviet khaki uniform and peaked cap" },
+      { "countryId": "cuba", "caption": "古巴军绿色橄榄帽与胡须，平民装束", "captionEn": "Cuban olive green cap and beard, civilian dress" }
     ]
   },
   {
     "id": "indo-pakistani-war",
     "name": "印巴战争",
+    "nameEn": "Indo-Pakistani War",
     "startYear": 1965,
     "endYear": 1965,
     "location": "克什米尔、印巴边境",
+    "locationEn": "Kashmir, India-Pakistan border",
     "belligerents": ["印度", "巴基斯坦"],
+    "belligerentsEn": ["India", "Pakistan"],
     "casualties": 20000,
     "background": "英国殖民者撤离后，印巴因克什米尔归属爆发多次战争，宗教仇恨与领土争端交织，成为南亚持续至今的火药桶，两国均发展出核武器相互威慑。",
+    "backgroundEn": "After the British left, India and Pakistan fought repeatedly over Kashmir; religious animosity and territorial disputes intertwined into a South Asian powder keg that persists today, with both nations developing nuclear weapons to deter each other.",
     "relatedCountryIds": ["india"],
     "figures": [
-      { "name": "拉尔·巴哈杜尔·夏斯特里", "description": "印度总理，领导1965年战争。" },
-      { "name": "阿尤布·汗", "description": "巴基斯坦总统，发动反攻。" }
+      { "name": "拉尔·巴哈杜尔·夏斯特里", "nameEn": "Lal Bahadur Shastri", "description": "印度总理，领导1965年战争。", "descriptionEn": "Indian Prime Minister who led the 1965 war." },
+      { "name": "阿尤布·汗", "nameEn": "Ayub Khan", "description": "巴基斯坦总统，发动反攻。", "descriptionEn": "President of Pakistan who launched the counteroffensive." }
     ],
     "attires": [
-      { "countryId": "india", "caption": "印军橄榄绿丛林迷彩与钢盔，英式装备" }
+      { "countryId": "india", "caption": "印军橄榄绿丛林迷彩与钢盔，英式装备", "captionEn": "Indian olive green jungle camo and helmet, British-style kit" }
     ]
   },
   {
     "id": "rwandan-genocide",
     "name": "卢旺达种族灭绝",
+    "nameEn": "Rwandan Genocide",
     "startYear": 1994,
     "endYear": 1994,
     "location": "卢旺达",
+    "locationEn": "Rwanda",
     "belligerents": ["胡图族极端派", "图西族"],
+    "belligerentsEn": ["Hutu extremists", "Tutsi"],
     "casualties": 1000000,
     "background": "胡图族极端分子百日内屠杀近百万图西族人，国际社会袖手旁观，是人类历史上最迅速、最密集的种族灭绝之一，揭露了文明外衣下的人性深渊。",
+    "backgroundEn": "Hutu extremists slaughtered nearly a million Tutsi within a hundred days while the international community stood by—one of the swiftest and densest genocides in history, exposing the abyss of human nature beneath the veneer of civilization.",
     "relatedCountryIds": ["rwanda"],
     "figures": [
-      { "name": "保罗·卡加梅", "description": "卢旺达爱国阵线领袖，终结种族灭绝。" },
-      { "name": "西奥内斯特·巴戈索拉", "description": "种族灭绝主要策划者。" }
+      { "name": "保罗·卡加梅", "nameEn": "Paul Kagame", "description": "卢旺达爱国阵线领袖，终结种族灭绝。", "descriptionEn": "Leader of the Rwandan Patriotic Front who ended the genocide." },
+      { "name": "西奥内斯特·巴戈索拉", "nameEn": "Théoneste Bagosora", "description": "种族灭绝主要策划者。", "descriptionEn": "Chief architect of the genocide." }
     ],
     "attires": [
-      { "countryId": "rwanda", "caption": "民兵平民装束与彩色印花布，手持砍刀 machete" }
+      { "countryId": "rwanda", "caption": "民兵平民装束与彩色印花布，手持砍刀 machete", "captionEn": "Militia civilian dress and colorful printed cloth, machete in hand" }
     ]
   },
   {
     "id": "kosovo-war",
     "name": "科索沃战争",
+    "nameEn": "Kosovo War",
     "startYear": 1998,
     "endYear": 1999,
     "location": "科索沃、南联盟",
+    "locationEn": "Kosovo, Federal Republic of Yugoslavia",
     "belligerents": ["南联盟", "北约 / 科索沃解放军"],
+    "belligerentsEn": ["FR Yugoslavia", "NATO / KLA"],
     "casualties": 13000,
     "background": "南联盟镇压科索沃阿族分离运动，北约以人道主义干预为由轰炸南联盟78天，开启了未经联合国授权的先例，也暴露了冷战后国际秩序的脆弱。",
+    "backgroundEn": "As Yugoslavia suppressed Kosovo Albanian separatism, NATO bombed Yugoslavia for 78 days on humanitarian grounds—a precedent of acting without UN authorization that exposed the fragility of the post-Cold War order.",
     "relatedCountryIds": ["serbia", "usa", "uk"],
     "figures": [
-      { "name": "斯洛博丹·米洛舍维奇", "description": "南联盟总统，被西方称为“巴尔干屠夫”。" },
-      { "name": "韦斯利·克拉克", "description": "北约盟军最高司令。" }
+      { "name": "斯洛博丹·米洛舍维奇", "nameEn": "Slobodan Milošević", "description": "南联盟总统，被西方称为“巴尔干屠夫”。", "descriptionEn": "President of Yugoslavia, dubbed the 'Butcher of the Balkans' by the West." },
+      { "name": "韦斯利·克拉克", "nameEn": "Wesley Clark", "description": "北约盟军最高司令。", "descriptionEn": "Supreme Allied Commander of NATO." }
     ],
     "attires": [
-      { "countryId": "serbia", "caption": "南联盟军橄榄绿迷彩与钢盔，AK-47" },
-      { "countryId": "usa", "caption": "美军飞行员飞行服与飞行头盔，或沙漠迷彩" },
-      { "countryId": "uk", "caption": "英军沙漠迷彩与钢盔" }
+      { "countryId": "serbia", "caption": "南联盟军橄榄绿迷彩与钢盔，AK-47", "captionEn": "Yugoslav army olive green camo and helmet, AK-47" },
+      { "countryId": "usa", "caption": "美军飞行员飞行服与飞行头盔，或沙漠迷彩", "captionEn": "US pilot flight suit and helmet, or desert camo" },
+      { "countryId": "uk", "caption": "英军沙漠迷彩与钢盔", "captionEn": "British desert camo and helmet" }
     ]
   },
   {
     "id": "yemen-civil-war",
     "name": "也门内战",
+    "nameEn": "Yemeni Civil War",
     "startYear": 2014,
     "endYear": 2025,
     "location": "也门",
+    "locationEn": "Yemen",
     "belligerents": ["胡塞武装", "也门政府 / 沙特联军"],
+    "belligerentsEn": ["Houthi forces", "Yemeni government / Saudi-led coalition"],
     "casualties": 377000,
     "background": "胡塞武装夺取首都后，沙特领导联军干预，演变为沙特与伊朗的代理人战争，封锁与饥荒造成大量平民死亡，被联合国称为当代最严重的人道主义灾难。",
+    "backgroundEn": "After the Houthis seized the capital, a Saudi-led coalition intervened; the war devolved into a Saudi-Iran proxy conflict. Blockade and famine killed vast numbers of civilians, with the UN calling it the worst humanitarian disaster of our time.",
     "relatedCountryIds": ["yemen"],
     "figures": [
-      { "name": "阿卜杜勒-马利克·胡塞", "description": "胡塞武装领袖。" },
-      { "name": "阿卜杜拉布·曼苏尔·哈迪", "description": "也门流亡总统。" }
+      { "name": "阿卜杜勒-马利克·胡塞", "nameEn": "Abdul-Malik al-Houthi", "description": "胡塞武装领袖。", "descriptionEn": "Leader of the Houthi movement." },
+      { "name": "阿卜杜拉布·曼苏尔·哈迪", "nameEn": "Abdrabbuh Mansur Hadi", "description": "也门流亡总统。", "descriptionEn": "Exiled president of Yemen." }
     ],
     "attires": [
-      { "countryId": "yemen", "caption": "胡塞战士传统长裙与头巾，背 AK-47 与凉鞋" }
+      { "countryId": "yemen", "caption": "胡塞战士传统长裙与头巾，背 AK-47 与凉鞋", "captionEn": "Houthi fighter's traditional skirt and turban, AK-47 and sandals" }
     ]
   },
   {
     "id": "fall-of-rome",
     "name": "罗马帝国灭亡",
+    "nameEn": "Fall of the Western Roman Empire",
     "startYear": 376,
     "endYear": 476,
     "location": "欧洲、地中海",
+    "locationEn": "Europe, Mediterranean",
     "belligerents": ["西罗马帝国", "日耳曼诸部族"],
+    "belligerentsEn": ["Western Roman Empire", "Germanic tribes"],
     "casualties": 5000000,
     "background": "匈奴西迁引发日耳曼民族大迁徙，哥特人、汪达尔人、匈人相继冲击罗马边境，476年西罗马末帝被废，古典文明落幕，欧洲进入中世纪，文明的脆弱在蛮族铁蹄下显露无遗。",
+    "backgroundEn": "The Huns' westward migration triggered the Germanic Völkerwanderung; Goths, Vandals and Huns battered Rome's frontiers. The last Western emperor was deposed in 476, classical civilization closed, and Europe entered the Middle Ages—the fragility of civilization laid bare beneath barbarian hooves.",
     "relatedCountryIds": ["italy", "germany"],
     "figures": [
-      { "name": "阿拉里克", "description": "西哥特王，410年攻陷罗马。" },
-      { "name": "奥多亚塞", "description": "日耳曼雇佣军首领，废黜西罗马末帝。" }
+      { "name": "阿拉里克", "nameEn": "Alaric", "description": "西哥特王，410年攻陷罗马。", "descriptionEn": "King of the Visigoths who sacked Rome in 410." },
+      { "name": "奥多亚塞", "nameEn": "Odoacer", "description": "日耳曼雇佣军首领，废黜西罗马末帝。", "descriptionEn": "Germanic mercenary chief who deposed the last Western Roman emperor." }
     ],
     "attires": [
-      { "countryId": "italy", "caption": "晚期罗马军团鳞甲与圆盾，spatha 长剑" },
-      { "countryId": "germany", "caption": "日耳曼战士皮甲或无甲，毛皮与粗布长袍，长矛与斧" }
+      { "countryId": "italy", "caption": "晚期罗马军团鳞甲与圆盾，spatha 长剑", "captionEn": "Late Roman legionary scale armor and round shield, spatha longsword" },
+      { "countryId": "germany", "caption": "日耳曼战士皮甲或无甲，毛皮与粗布长袍，长矛与斧", "captionEn": "Germanic warrior leather or no armor, fur and coarse robe, spear and axe" }
     ]
   },
   {
     "id": "fall-of-constantinople",
     "name": "君士坦丁堡陷落",
+    "nameEn": "Fall of Constantinople",
     "startYear": 1453,
     "endYear": 1453,
     "location": "君士坦丁堡",
+    "locationEn": "Constantinople",
     "belligerents": ["奥斯曼帝国", "拜占庭帝国"],
+    "belligerentsEn": ["Ottoman Empire", "Byzantine Empire"],
     "casualties": 80000,
     "background": "奥斯曼苏丹穆罕默德二世以巨炮轰击千年城墙，攻克君士坦丁堡，延续千年的拜占庭帝国终结，标志着中世纪结束，也切断了东西方贸易促使大航海时代到来。",
+    "backgroundEn": "Ottoman Sultan Mehmed II battered the millennial walls with giant cannons and took Constantinople, ending the thousand-year Byzantine Empire, closing the Middle Ages, and severing East-West trade—prompting the Age of Discovery.",
     "relatedCountryIds": ["turkey", "greece"],
     "figures": [
-      { "name": "穆罕默德二世", "description": "奥斯曼苏丹，“征服者”。" },
-      { "name": "君士坦丁十一世", "description": "末代拜占庭皇帝，城破战死。" }
+      { "name": "穆罕默德二世", "nameEn": "Mehmed II", "description": "奥斯曼苏丹，“征服者”。", "descriptionEn": "Ottoman sultan, 'the Conqueror'." },
+      { "name": "君士坦丁十一世", "nameEn": "Constantine XI", "description": "末代拜占庭皇帝，城破战死。", "descriptionEn": "Last Byzantine emperor, who died in the city's fall." }
     ],
     "attires": [
-      { "countryId": "turkey", "caption": "奥斯曼近卫军白色帽与长袍，链甲与弯刀" },
-      { "countryId": "greece", "caption": "拜占庭士兵链甲与圆盾，紫袍与十字徽" }
+      { "countryId": "turkey", "caption": "奥斯曼近卫军白色帽与长袍，链甲与弯刀", "captionEn": "Ottoman Janissary white cap and robe, mail and curved sword" },
+      { "countryId": "greece", "caption": "拜占庭士兵链甲与圆盾，紫袍与十字徽", "captionEn": "Byzantine soldier mail and round shield, purple robe with cross emblem" }
     ]
   },
   {
     "id": "spanish-civil-war",
     "name": "西班牙内战",
+    "nameEn": "Spanish Civil War",
     "startYear": 1936,
     "endYear": 1939,
     "location": "西班牙",
+    "locationEn": "Spain",
     "belligerents": ["国民军", "共和军"],
+    "belligerentsEn": ["Nationalists", "Republicans"],
     "casualties": 500000,
     "background": "左右翼矛盾激化引发内战，德国与意大利支持佛朗哥，苏联与国际纵队支持共和政府，格尔尼卡首次展示了对平民的无差别轰炸，成为二战的预演。",
+    "backgroundEn": "Polarized left-right tensions ignited civil war: Germany and Italy backed Franco, the USSR and International Brigades backed the Republic. Guernica first showcased indiscriminate bombing of civilians—a rehearsal for WWII.",
     "relatedCountryIds": ["spain", "germany", "italy", "russia"],
     "figures": [
-      { "name": "弗朗西斯科·佛朗哥", "description": "国民军领袖，建立独裁统治。" },
-      { "name": "多洛雷斯·伊巴露丽", "description": "“热情之花”，共和派宣传家。" }
+      { "name": "弗朗西斯科·佛朗哥", "nameEn": "Francisco Franco", "description": "国民军领袖，建立独裁统治。", "descriptionEn": "Nationalist leader who established a dictatorship." },
+      { "name": "多洛雷斯·伊巴露丽", "nameEn": "Dolores Ibárruri", "description": "“热情之花”，共和派宣传家。", "descriptionEn": "'La Pasionaria', Republican propagandist." }
     ],
     "attires": [
-      { "countryId": "spain", "caption": "国民军卡其色军服与侧帽，皮弹药带" },
-      { "countryId": "germany", "caption": "秃鹰军团原野灰制服与钢盔" },
-      { "countryId": "italy", "caption": "志愿军黑衬衫与钢盔，“黑衫军”" }
+      { "countryId": "spain", "caption": "国民军卡其色军服与侧帽，皮弹药带", "captionEn": "Nationalist khaki uniform and side cap, leather ammo belt" },
+      { "countryId": "germany", "caption": "秃鹰军团原野灰制服与钢盔", "captionEn": "Condor Legion field grey uniform and helmet" },
+      { "countryId": "italy", "caption": "志愿军黑衬衫与钢盔，“黑衫军”", "captionEn": "Volunteer black shirt and helmet, 'Blackshirts'" }
     ]
   },
   {
     "id": "first-indochina-war",
     "name": "越南抗法战争",
+    "nameEn": "First Indochina War",
     "startYear": 1946,
     "endYear": 1954,
     "location": "越南、老挝、柬埔寨",
+    "locationEn": "Vietnam, Laos, Cambodia",
     "belligerents": ["越南民主共和国", "法国"],
+    "belligerentsEn": ["Democratic Republic of Vietnam", "France"],
     "casualties": 500000,
     "background": "二战后法国企图恢复印度支那殖民统治，越南人民在胡志明领导下展开九年抗战，奠边府战役全歼法军，迫使法国撤出，却引来美国介入，埋下越战祸根。",
+    "backgroundEn": "After WWII France tried to restore colonial rule over Indochina; the Vietnamese fought for nine years under Ho Chi Minh. The Battle of Dien Bien Phu annihilated the French force, forcing France's withdrawal—but drew the US in, planting the seeds of the Vietnam War.",
     "relatedCountryIds": ["vietnam", "france", "usa"],
     "figures": [
-      { "name": "武元甲", "description": "越军大将，奠边府战役总指挥。" },
-      { "name": "纳瓦尔", "description": "法军总司令，奠边府战败。" }
+      { "name": "武元甲", "nameEn": "Võ Nguyên Giáp", "description": "越军大将，奠边府战役总指挥。", "descriptionEn": "Vietnamese general who commanded at Dien Bien Phu." },
+      { "name": "纳瓦尔", "nameEn": "Henri Navarre", "description": "法军总司令，奠边府战败。", "descriptionEn": "French commander-in-chief, defeated at Dien Bien Phu." }
     ],
     "attires": [
-      { "countryId": "vietnam", "caption": "越盟橄榄绿野战服与斗笠，橡胶凉鞋" },
-      { "countryId": "france", "caption": "法军丛林迷彩与豹纹帽，M1 钢盔" }
+      { "countryId": "vietnam", "caption": "越盟橄榄绿野战服与斗笠，橡胶凉鞋", "captionEn": "Viet Minh olive drab fatigues and conical hat, rubber sandals" },
+      { "countryId": "france", "caption": "法军丛林迷彩与豹纹帽，M1 钢盔", "captionEn": "French jungle camo and leopard-print hat, M1 helmet" }
     ]
   }
 ]

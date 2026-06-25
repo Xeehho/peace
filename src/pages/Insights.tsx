@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { motion, useMotionValue, animate, useInView } from 'framer-motion';
 import {
   Skull,
@@ -14,49 +14,7 @@ import { useWars } from '@/hooks/useWars';
 import { useCountries } from '@/hooks/useCountries';
 import { formatCasualties } from '@/utils/format';
 import { CallToAction } from '@/components/CallToAction';
-
-// 时代划分：古代 / 中世纪 / 近代 / 现代
-const ERAS = [
-  {
-    key: 'ancient',
-    label: '古代',
-    subtitle: '公元前 — 476',
-    min: -Infinity,
-    max: 476,
-    from: '#7A8B7A',
-    to: '#A6B2A6',
-  },
-  {
-    key: 'medieval',
-    label: '中世纪',
-    subtitle: '476 — 1453',
-    min: 476,
-    max: 1453,
-    from: '#C88A3D',
-    to: '#E0AB5C',
-  },
-  {
-    key: 'early-modern',
-    label: '近代',
-    subtitle: '1453 — 1900',
-    min: 1453,
-    max: 1900,
-    from: '#B85C4F',
-    to: '#D17A6E',
-  },
-  {
-    key: 'contemporary',
-    label: '现代',
-    subtitle: '1900 — 至今',
-    min: 1900,
-    max: Infinity,
-    from: '#3A3A3A',
-    to: '#6B6B6B',
-  },
-];
-
-const formatPlain = (n: number) => n.toLocaleString('zh-CN');
-const formatCasualty = (n: number) => formatCasualties(n);
+import { useT, localized } from '@/i18n/useT';
 
 interface AnimatedCounterProps {
   value: number;
@@ -87,6 +45,59 @@ function AnimatedCounter({ value, format }: AnimatedCounterProps) {
 export default function Insights() {
   const { wars, loading } = useWars();
   const { countries } = useCountries();
+  const { t, lang } = useT();
+
+  // 时代划分：古代 / 中世纪 / 近代 / 现代（label/subtitle 走 i18n，颜色保持不变）
+  const ERAS = useMemo(
+    () => [
+      {
+        key: 'ancient',
+        label: t('insights.eras.ancient.label'),
+        subtitle: t('insights.eras.ancient.subtitle'),
+        min: -Infinity,
+        max: 476,
+        from: '#7A8B7A',
+        to: '#A6B2A6',
+      },
+      {
+        key: 'medieval',
+        label: t('insights.eras.medieval.label'),
+        subtitle: t('insights.eras.medieval.subtitle'),
+        min: 476,
+        max: 1453,
+        from: '#C88A3D',
+        to: '#E0AB5C',
+      },
+      {
+        key: 'early-modern',
+        label: t('insights.eras.earlyModern.label'),
+        subtitle: t('insights.eras.earlyModern.subtitle'),
+        min: 1453,
+        max: 1900,
+        from: '#B85C4F',
+        to: '#D17A6E',
+      },
+      {
+        key: 'contemporary',
+        label: t('insights.eras.contemporary.label'),
+        subtitle: t('insights.eras.contemporary.subtitle'),
+        min: 1900,
+        max: Infinity,
+        from: '#3A3A3A',
+        to: '#6B6B6B',
+      },
+    ],
+    [t]
+  );
+
+  const formatPlain = useCallback(
+    (n: number) => n.toLocaleString(lang === 'en' ? 'en-US' : 'zh-CN'),
+    [lang]
+  );
+  const formatCasualty = useCallback(
+    (n: number) => formatCasualties(n, lang),
+    [lang]
+  );
 
   // 核心统计
   const stats = useMemo(() => {
@@ -109,7 +120,7 @@ export default function Insights() {
       const casualties = eraWars.reduce((sum, w) => sum + w.casualties, 0);
       return { ...era, count: eraWars.length, casualties };
     });
-  }, [wars]);
+  }, [wars, ERAS]);
 
   // 伤亡 TOP 10
   const topWars = useMemo(() => {
@@ -140,7 +151,7 @@ export default function Insights() {
       <div className="flex min-h-screen items-center justify-center bg-archive-cream pt-16">
         <div className="text-center">
           <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-2 border-archive-border border-t-archive-amber" />
-          <p className="text-sm text-archive-muted">正在加载数据洞察...</p>
+          <p className="text-sm text-archive-muted">{t('insights.loading')}</p>
         </div>
       </div>
     );
@@ -153,28 +164,28 @@ export default function Insights() {
   const statCards = [
     {
       icon: Swords,
-      label: '记录战争总数',
+      label: t('insights.statTotalWars'),
       value: stats.totalWars,
       format: formatPlain,
       accent: '#B85C4F',
     },
     {
       icon: Skull,
-      label: '累计伤亡人数',
+      label: t('insights.statTotalCasualties'),
       value: stats.totalCasualties,
       format: formatCasualty,
       accent: '#C88A3D',
     },
     {
       icon: Globe,
-      label: '涉及国家数',
+      label: t('insights.statInvolvedCountries'),
       value: stats.involvedCountries,
       format: formatPlain,
       accent: '#7A8B7A',
     },
     {
       icon: CalendarDays,
-      label: '跨越年数',
+      label: t('insights.statYearSpan'),
       value: stats.yearSpan,
       format: formatPlain,
       accent: '#1F1F1F',
@@ -187,13 +198,13 @@ export default function Insights() {
       <section className="px-6 pb-10 pt-12 md:pt-16">
         <div className="mx-auto max-w-6xl">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-sage">
-            Insights
+            {t('insights.badge')}
           </p>
           <h1 className="font-serif text-4xl font-medium text-archive-ink md:text-5xl">
-            数据洞察
+            {t('insights.title')}
           </h1>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-archive-muted md:text-base">
-            每一个数字背后，都是一段无法挽回的生命记忆。透过数据的棱镜，我们重新审视人类冲突的规模与代价。
+            {t('insights.subtitle')}
           </p>
         </div>
       </section>
@@ -239,11 +250,11 @@ export default function Insights() {
           <div className="mb-6 flex items-center gap-2">
             <TrendingUp className="h-4 w-4 text-archive-terracotta" />
             <h2 className="font-serif text-2xl font-medium text-archive-ink md:text-3xl">
-              伤亡人数时代趋势
+              {t('insights.eraTrendTitle')}
             </h2>
           </div>
           <p className="mb-8 max-w-2xl text-sm leading-relaxed text-archive-muted">
-            按时代分组统计累计伤亡，观察人类冲突规模随文明演进的变迁。
+            {t('insights.eraTrendSubtitle')}
           </p>
           <div className="rounded-2xl border border-archive-border bg-white p-6 shadow-soft md:p-8">
             <div className="flex items-end justify-around gap-4">
@@ -266,7 +277,7 @@ export default function Insights() {
                       </div>
                       {/* 悬浮提示 */}
                       <div className="pointer-events-none absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-full whitespace-nowrap rounded-md border border-archive-border bg-archive-ink px-2.5 py-1 text-[11px] text-white opacity-0 shadow-soft transition-opacity duration-200 group-hover:opacity-100">
-                        {formatCasualties(era.casualties)} · {era.count} 场
+                        {t('insights.eraTooltip', formatCasualties(era.casualties, lang), era.count)}
                       </div>
                       {/* 柱子 */}
                       <motion.div
@@ -304,11 +315,11 @@ export default function Insights() {
           <div className="mb-6 flex items-center gap-2">
             <BarChart3 className="h-4 w-4 text-archive-terracotta" />
             <h2 className="font-serif text-2xl font-medium text-archive-ink md:text-3xl">
-              伤亡最惨重的战争 TOP 10
+              {t('insights.topWarsTitle')}
             </h2>
           </div>
           <p className="mb-8 max-w-2xl text-sm leading-relaxed text-archive-muted">
-            按伤亡人数排序，十场代价最为沉重的战争，每一场都改写了历史的走向。
+            {t('insights.topWarsSubtitle')}
           </p>
           <div className="space-y-3 rounded-2xl border border-archive-border bg-white p-6 shadow-soft md:p-8">
             {topWars.map((war, idx) => {
@@ -320,9 +331,9 @@ export default function Insights() {
                   </span>
                   <span
                     className="w-28 shrink-0 truncate text-xs font-medium text-archive-ink md:w-44 md:text-sm"
-                    title={war.name}
+                    title={localized(war, 'name', lang)}
                   >
-                    {war.name}
+                    {localized(war, 'name', lang)}
                   </span>
                   <div className="relative h-7 flex-1 overflow-hidden rounded-md bg-archive-border/40">
                     <motion.div
@@ -340,12 +351,12 @@ export default function Insights() {
                       }}
                     >
                       <span className="whitespace-nowrap font-mono text-[10px] font-medium text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                        {formatCasualties(war.casualties)}
+                        {formatCasualties(war.casualties, lang)}
                       </span>
                     </motion.div>
                   </div>
                   <span className="w-16 shrink-0 text-right font-mono text-xs font-medium text-archive-terracotta">
-                    {formatCasualties(war.casualties)}
+                    {formatCasualties(war.casualties, lang)}
                   </span>
                 </div>
               );
@@ -360,11 +371,11 @@ export default function Insights() {
           <div className="mb-6 flex items-center gap-2">
             <Users className="h-4 w-4 text-archive-terracotta" />
             <h2 className="font-serif text-2xl font-medium text-archive-ink md:text-3xl">
-              国家参与战争热度
+              {t('insights.participationTitle')}
             </h2>
           </div>
           <p className="mb-8 max-w-2xl text-sm leading-relaxed text-archive-muted">
-            按参与战争数量排序的前 15 个国家，圆点大小代表参与程度。
+            {t('insights.participationSubtitle')}
           </p>
           <div className="rounded-2xl border border-archive-border bg-white p-6 shadow-soft md:p-8">
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -398,10 +409,10 @@ export default function Insights() {
                     </div>
                     <div className="min-w-0 flex-1">
                       <p className="truncate text-sm font-medium text-archive-ink">
-                        {item.country.name}
+                        {localized(item.country, 'name', lang)}
                       </p>
                       <p className="text-[10px] text-archive-muted">
-                        {item.country.nameEn}
+                        {localized(item.country, 'name', lang === 'en' ? 'zh' : 'en')}
                       </p>
                     </div>
                     <span className="font-mono text-sm font-semibold text-archive-terracotta">
@@ -427,13 +438,12 @@ export default function Insights() {
             <div className="mx-auto mb-6 h-px w-16 bg-archive-border" />
             <Award className="mx-auto mb-6 h-8 w-8 text-archive-sage" />
             <p className="font-serif text-xl font-medium leading-relaxed text-archive-ink md:text-2xl">
-              当我们把战争的代价折算成数字，
+              {t('insights.reflection1a')}
               <br />
-              看到的不是冷峻的统计，而是无数个未及告别的人生。
+              {t('insights.reflection1b')}
             </p>
             <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-archive-muted">
-              每一次冲突都在历史的岩层上留下裂痕。愿这些数字不仅记录过去，更能提醒未来——
-              和平从来不是理所当然，它是每一代人都必须守护的承诺。
+              {t('insights.reflection2')}
             </p>
           </motion.div>
         </div>

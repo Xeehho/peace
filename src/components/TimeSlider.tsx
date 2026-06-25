@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { useAppStore } from '@/stores/appStore';
 import { formatYear } from '@/utils/format';
+import { useT } from '@/i18n/useT';
 
 const MIN_YEAR = -500;
 const MAX_YEAR = 2025;
 
 export function TimeSlider() {
   const { timeRange, setTimeRange } = useAppStore();
+  const { t, lang } = useT();
   const containerRef = useRef<HTMLDivElement>(null);
   const [opacity, setOpacity] = useState(1);
 
@@ -58,9 +60,9 @@ export function TimeSlider() {
       style={{ opacity, pointerEvents: opacity < 0.1 ? 'none' : 'auto' }}
     >
       <div className="mb-3 flex items-center justify-between text-xs text-archive-muted">
-        <span className="font-mono">{formatYear(timeRange[0])}</span>
-        <span className="font-serif text-sm text-archive-amber">时间筛选</span>
-        <span className="font-mono">{formatYear(timeRange[1])}</span>
+        <span className="font-mono">{formatYear(timeRange[0], lang)}</span>
+        <span className="font-serif text-sm text-archive-amber">{t('timeSlider.label')}</span>
+        <span className="font-mono">{formatYear(timeRange[1], lang)}</span>
       </div>
       <div className="relative h-1.5">
         <div className="absolute inset-0 rounded-full bg-archive-border" />

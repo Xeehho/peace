@@ -4,9 +4,10 @@ import { MapPin, ChevronLeft, ChevronRight, Skull } from 'lucide-react';
 import { useWars } from '@/hooks/useWars';
 import { useCountries } from '@/hooks/useCountries';
 import { useAppStore } from '@/stores/appStore';
-import { formatYearRange, formatCasualties } from '@/utils/format';
+import { formatYear, formatYearRange, formatCasualties } from '@/utils/format';
 import { generateWarImageUrl } from '@/utils/image';
 import { CallToAction } from '@/components/CallToAction';
+import { useT, localized } from '@/i18n/useT';
 import type { War } from '@/types';
 
 const CARD_WIDTH = 280;
@@ -21,6 +22,7 @@ export default function Timeline() {
   const { wars, loading } = useWars();
   const { countries } = useCountries();
   const { setSelectedWar } = useAppStore();
+  const { t, lang } = useT();
   const scrollRef = useRef<HTMLDivElement>(null);
   const countryMap = new Map(countries.map((c) => [c.id, c]));
 
@@ -44,12 +46,12 @@ export default function Timeline() {
       return {
         war,
         imageUrl,
-        countryName: primaryCountry?.name,
+        countryName: primaryCountry ? localized(primaryCountry, 'name', lang) : undefined,
         idx,
         isTop: idx % 2 === 0,
       };
     });
-  }, [sortedWars, countryMap]);
+  }, [sortedWars, countryMap, lang]);
 
   const totalWidth = items.length * (CARD_WIDTH + CARD_GAP) + CARD_GAP;
 
@@ -131,7 +133,7 @@ export default function Timeline() {
       <div className="flex min-h-screen items-center justify-center bg-archive-cream pt-16">
         <div className="text-center">
           <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-2 border-archive-border border-t-archive-amber" />
-          <p className="text-sm text-archive-muted">正在加载历史档案...</p>
+          <p className="text-sm text-archive-muted">{t('timeline.loading')}</p>
         </div>
       </div>
     );
@@ -142,13 +144,13 @@ export default function Timeline() {
       <section className="px-6 pb-10 pt-12 md:pt-16">
         <div className="mx-auto max-w-6xl">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-sage">
-            Timeline
+            {t('timeline.badge')}
           </p>
           <h1 className="font-serif text-4xl font-medium text-archive-ink md:text-5xl">
-            人类战争编年史
+            {t('timeline.title')}
           </h1>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-archive-muted md:text-base">
-            曲线穿过每个时间锚点，把人类历史上重大的战争串联成一条可见的伤痕脉络。
+            {t('timeline.subtitle')}
           </p>
         </div>
       </section>
@@ -157,14 +159,14 @@ export default function Timeline() {
         {/* 滚动控制按钮 */}
         <button
           onClick={() => scroll('left')}
-          aria-label="向左滚动"
+          aria-label={t('timeline.scrollLeft')}
           className="absolute left-6 top-1/2 z-40 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-archive-border bg-white/95 shadow-soft backdrop-blur-md transition-all hover:scale-110 hover:border-archive-amber hover:text-archive-amber"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
         <button
           onClick={() => scroll('right')}
-          aria-label="向右滚动"
+          aria-label={t('timeline.scrollRight')}
           className="absolute right-6 top-1/2 z-40 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-archive-border bg-white/95 shadow-soft backdrop-blur-md transition-all hover:scale-110 hover:border-archive-amber hover:text-archive-amber"
         >
           <ChevronRight className="h-5 w-5" />
@@ -270,7 +272,7 @@ export default function Timeline() {
                 >
                   <span className="h-1.5 w-1.5 rounded-full bg-archive-amber" />
                   <span className="whitespace-nowrap font-mono text-[10px] font-medium text-archive-ink">
-                    {war.startYear > 0 ? `${war.startYear}` : `公元前 ${-war.startYear}`}
+                    {formatYear(war.startYear, lang)}
                   </span>
                 </div>
               );
@@ -293,6 +295,7 @@ interface TimelineCardProps {
 }
 
 function TimelineCard({ war, imageUrl, countryName, index, onClick }: TimelineCardProps) {
+  const { lang } = useT();
   const baseRotate = index % 2 === 0 ? -2 : 2;
   const [loaded, setLoaded] = useState(false);
 
@@ -329,7 +332,7 @@ function TimelineCard({ war, imageUrl, countryName, index, onClick }: TimelineCa
         )}
         <img
           src={imageUrl}
-          alt={`${war.name} 历史士兵着装`}
+          alt={localized(war, 'name', lang)}
           className={`h-full w-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-105 ${
             loaded ? 'opacity-100' : 'opacity-0'
           }`}
@@ -341,7 +344,7 @@ function TimelineCard({ war, imageUrl, countryName, index, onClick }: TimelineCa
         <div className="absolute inset-0 bg-gradient-to-t from-archive-ink/50 via-transparent to-transparent opacity-80" />
         {/* 年份徽章 */}
         <div className="absolute left-3 top-3 rounded-md border border-white/20 bg-archive-ink/70 px-2 py-0.5 font-mono text-[10px] font-medium text-white backdrop-blur-md">
-          {formatYearRange(war.startYear, war.endYear)}
+          {formatYearRange(war.startYear, war.endYear, lang)}
         </div>
         {/* 国家标签 */}
         {countryName && (
@@ -354,19 +357,19 @@ function TimelineCard({ war, imageUrl, countryName, index, onClick }: TimelineCa
       {/* 内容 */}
       <div className="relative p-4">
         <h3 className="font-serif text-lg leading-snug text-archive-ink transition-colors duration-300 group-hover:text-archive-amber">
-          {war.name}
+          {localized(war, 'name', lang)}
         </h3>
         <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-archive-muted">
-          {war.background}
+          {localized(war, 'background', lang)}
         </p>
         <div className="mt-3 flex items-center justify-between border-t border-archive-border/60 pt-3 text-[10px] text-archive-muted">
           <span className="flex items-center gap-1">
             <MapPin className="h-3 w-3" />
-            <span className="line-clamp-1">{war.location}</span>
+            <span className="line-clamp-1">{localized(war, 'location', lang)}</span>
           </span>
           <span className="flex shrink-0 items-center gap-1 font-medium text-archive-terracotta">
             <Skull className="h-3 w-3" />
-            {formatCasualties(war.casualties)}
+            {formatCasualties(war.casualties, lang)}
           </span>
         </div>
       </div>

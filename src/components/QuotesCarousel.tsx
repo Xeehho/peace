@@ -3,11 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Quote as QuoteIcon, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useQuotes } from '@/hooks/useQuotes';
 import { formatYear } from '@/utils/format';
+import { useT, localized } from '@/i18n/useT';
 
 const AUTOPLAY_INTERVAL = 8000;
 
 export function QuotesCarousel() {
   const { quotes, loading } = useQuotes();
+  const { t, lang } = useT();
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
 
@@ -47,10 +49,10 @@ export function QuotesCarousel() {
       <div className="relative mx-auto max-w-4xl">
         <div className="mb-12 text-center">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-amber/80">
-            Voices for Peace
+            {t('quotes.badge')}
           </p>
           <h2 className="font-serif text-3xl font-medium text-archive-cream md:text-4xl">
-            和平之声
+            {t('quotes.title')}
           </h2>
         </div>
 
@@ -68,16 +70,16 @@ export function QuotesCarousel() {
               className="text-center"
             >
               <blockquote className="font-serif text-2xl leading-relaxed text-archive-cream md:text-3xl">
-                "{current.quote}"
+                "{localized(current, 'quote', lang)}"
               </blockquote>
               <div className="mt-8 flex flex-col items-center gap-1">
-                <p className="font-medium text-archive-amber">{current.author}</p>
+                <p className="font-medium text-archive-amber">{localized(current, 'author', lang)}</p>
                 <p className="text-sm text-archive-muted">
-                  {current.role} · {formatYear(current.year)}
+                  {localized(current, 'role', lang)} · {formatYear(current.year, lang)}
                 </p>
               </div>
               <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-archive-muted/80">
-                {current.context}
+                {localized(current, 'context', lang)}
               </p>
             </motion.div>
           </AnimatePresence>
@@ -87,7 +89,7 @@ export function QuotesCarousel() {
         <div className="mt-10 flex items-center justify-center gap-6">
           <button
             onClick={prev}
-            aria-label="上一条"
+            aria-label={t('quotes.prev')}
             className="flex h-10 w-10 items-center justify-center rounded-full border border-archive-muted/30 text-archive-muted transition-all hover:border-archive-amber hover:text-archive-amber"
           >
             <ChevronLeft className="h-5 w-5" />
@@ -99,7 +101,7 @@ export function QuotesCarousel() {
               <button
                 key={i}
                 onClick={() => goTo(i, i > index ? 1 : -1)}
-                aria-label={`第 ${i + 1} 条`}
+                aria-label={t('quotes.indicator', i + 1)}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   i === index
                     ? 'w-8 bg-archive-amber'
@@ -111,7 +113,7 @@ export function QuotesCarousel() {
 
           <button
             onClick={next}
-            aria-label="下一条"
+            aria-label={t('quotes.next')}
             className="flex h-10 w-10 items-center justify-center rounded-full border border-archive-muted/30 text-archive-muted transition-all hover:border-archive-amber hover:text-archive-amber"
           >
             <ChevronRight className="h-5 w-5" />

@@ -6,6 +6,7 @@
     "lat": 35.8617,
     "lon": 104.1954,
     "description": "拥有数千年连续文明史，历史上经历了统一与分裂的多次轮回，也是二十世纪多场重大战争的参战国。",
+    "descriptionEn": "A continuous civilization spanning thousands of years, China endured repeated cycles of unification and fragmentation and was a party to many major wars of the 20th century.",
     "totalWars": 7,
     "estimatedCasualties": 95000000
   },
@@ -16,6 +17,7 @@
     "lat": 37.0902,
     "lon": -95.7129,
     "description": "18 世纪独立后迅速扩张，20 世纪成为两次世界大战与冷战的关键力量。",
+    "descriptionEn": "Independent since the 18th century and expanding rapidly, the US became a key player in both world wars and the Cold War.",
     "totalWars": 9,
     "estimatedCasualties": 2500000
   },
@@ -26,6 +28,7 @@
     "lat": 55.3781,
     "lon": -3.436,
     "description": "曾建立庞大的殖民帝国，在拿破仑战争、两次世界大战中扮演核心角色。",
+    "descriptionEn": "Once builder of a vast colonial empire, the UK played a central role in the Napoleonic Wars and both world wars.",
     "totalWars": 7,
     "estimatedCasualties": 2200000
   },
@@ -36,6 +39,7 @@
     "lat": 51.1657,
     "lon": 10.4515,
     "description": "19 世纪统一后迅速崛起，发动了两次世界大战，深刻改变了现代历史走向。",
+    "descriptionEn": "Unified in the 19th century and rising swiftly, Germany launched two world wars that profoundly shaped modern history.",
     "totalWars": 5,
     "estimatedCasualties": 12000000
   },
@@ -46,6 +50,7 @@
     "lat": 46.2276,
     "lon": 2.2137,
     "description": "欧洲大陆传统强国，经历了百年战争、拿破仑战争与两次世界大战。",
+    "descriptionEn": "A traditional power of the European continent, France went through the Hundred Years' War, the Napoleonic Wars, and both world wars.",
     "totalWars": 6,
     "estimatedCasualties": 3500000
   },
@@ -56,6 +61,7 @@
     "lat": 61.524,
     "lon": 105.3188,
     "description": "领土横跨欧亚，参与了拿破仑战争、两次世界大战及冷战时期的多场冲突。",
+    "descriptionEn": "Spanning Europe and Asia, Russia took part in the Napoleonic Wars, both world wars, and numerous Cold War conflicts.",
     "totalWars": 7,
     "estimatedCasualties": 30000000
   },
@@ -66,6 +72,7 @@
     "lat": 36.2048,
     "lon": 138.2529,
     "description": "明治维新后走上扩张道路，参与了甲午战争、日俄战争与第二次世界大战。",
+    "descriptionEn": "After the Meiji Restoration Japan embarked on expansion, joining the First Sino-Japanese War, the Russo-Japanese War, and World War II.",
     "totalWars": 5,
     "estimatedCasualties": 5500000
   },
@@ -76,6 +83,7 @@
     "lat": 41.8719,
     "lon": 12.5674,
     "description": "古罗马帝国的继承者，现代意大利在两次世界大战中均为重要参战国。",
+    "descriptionEn": "Heir to the Roman Empire, modern Italy was a major belligerent in both world wars.",
     "totalWars": 4,
     "estimatedCasualties": 1200000
   },
@@ -86,6 +94,7 @@
     "lat": 26.8206,
     "lon": 30.8025,
     "description": "古代文明的发祥地之一，见证了十字军东征、拿破仑远征与现代中东战争。",
+    "descriptionEn": "One of the cradles of ancient civilization, Egypt witnessed the Crusades, Napoleon's expedition, and modern Middle Eastern wars.",
     "totalWars": 3,
     "estimatedCasualties": 300000
   },
@@ -96,6 +105,7 @@
     "lat": 39.0742,
     "lon": 21.8243,
     "description": "西方文明摇篮，伯罗奔尼撒战争与希波战争的发源地。",
+    "descriptionEn": "Cradle of Western civilization and birthplace of the Peloponnesian and Greco-Persian Wars.",
     "totalWars": 3,
     "estimatedCasualties": 250000
   },
@@ -106,6 +116,7 @@
     "lat": 20.5937,
     "lon": 78.9629,
     "description": "南亚次大陆文明古国，历经孔雀王朝扩张、莫卧儿征服与英殖民战争。",
+    "descriptionEn": "An ancient civilization of the South Asian subcontinent, India saw Mauryan expansion, Mughal conquest, and British colonial wars.",
     "totalWars": 3,
     "estimatedCasualties": 4000000
   },
@@ -116,6 +127,7 @@
     "lat": 46.8625,
     "lon": 103.8467,
     "description": "13 世纪蒙古帝国的核心，成吉思汗的西征震撼了欧亚大陆。",
+    "descriptionEn": "Heart of the 13th-century Mongol Empire, whose westward conquests under Genghis Khan shook Eurasia.",
     "totalWars": 2,
     "estimatedCasualties": 15000000
   },
@@ -126,6 +138,7 @@
     "lat": 33.93911,
     "lon": 67.709953,
     "description": "位于中亚十字路口的“帝国坟场”，历经英阿战争、苏阿战争与美军阿富汗战争。",
+    "descriptionEn": "The 'graveyard of empires' at the crossroads of Central Asia, surviving the Anglo-Afghan Wars, the Soviet-Afghan War, and the US-led Afghanistan War.",
     "totalWars": 3,
     "estimatedCasualties": 1500000
   },
@@ -136,6 +149,7 @@
     "lat": 33.223191,
     "lon": 43.679291,
     "description": "美索不达米亚文明发源地，现代经历了两伊战争、海湾战争与伊拉克战争。",
+    "descriptionEn": "Birthplace of Mesopotamian civilization; in modern times it endured the Iran-Iraq War, the Gulf War, and the Iraq War.",
     "totalWars": 4,
     "estimatedCasualties": 800000
   },
@@ -146,6 +160,7 @@
     "lat": 32.427908,
     "lon": 53.688046,
     "description": "波斯文明的继承者，1979 年伊斯兰革命后与西方及伊拉克爆发多场冲突。",
+    "descriptionEn": "Heir to Persian civilization, Iran clashed with the West and with Iraq multiple times after the 1979 Islamic Revolution.",
     "totalWars": 3,
     "estimatedCasualties": 600000
   },
@@ -156,6 +171,7 @@
     "lat": 48.379433,
     "lon": 31.16558,
     "description": "东欧平原上的国家，2022 年起成为俄乌冲突的主战场。",
+    "descriptionEn": "A nation on the East European Plain; since 2022 it has been the main theater of the Russo-Ukrainian War.",
     "totalWars": 1,
     "estimatedCasualties": 500000
   },
@@ -166,6 +182,7 @@
     "lat": 31.046051,
     "lon": 34.851612,
     "description": "1948 年建国后历经多次中东战争，是中东冲突的核心一方。",
+    "descriptionEn": "Founded in 1948, Israel has fought in multiple Arab-Israeli wars and remains a central party in the Middle East conflict.",
     "totalWars": 3,
     "estimatedCasualties": 120000
   },
@@ -176,6 +193,7 @@
     "lat": 14.058324,
     "lon": 108.277199,
     "description": "东南亚国家，20 世纪历经抗法、抗美与中越边境冲突。",
+    "descriptionEn": "A Southeast Asian nation, Vietnam in the 20th century endured wars against France, the United States, and a border conflict with China.",
     "totalWars": 2,
     "estimatedCasualties": 3500000
   },
@@ -186,6 +204,7 @@
     "lat": 35.9078,
     "lon": 127.7669,
     "description": "朝鲜半岛国家，20 世纪历经日本殖民、二战分裂与朝鲜战争，至今南北分治。",
+    "descriptionEn": "A nation on the Korean Peninsula; in the 20th century it survived Japanese colonization, WWII-era partition, and the Korean War, and remains divided to this day.",
     "totalWars": 2,
     "estimatedCasualties": 3000000
   },
@@ -196,6 +215,7 @@
     "lat": 40.4637,
     "lon": -3.7492,
     "description": "伊比利亚半岛国家，曾建立庞大殖民帝国，20 世纪经历残酷内战。",
+    "descriptionEn": "An Iberian nation that built a vast colonial empire and endured a brutal civil war in the 20th century.",
     "totalWars": 2,
     "estimatedCasualties": 600000
   },
@@ -206,6 +226,7 @@
     "lat": 38.9637,
     "lon": 35.2433,
     "description": "奥斯曼帝国的继承者，地跨欧亚，参与了一战、希土战争与多次中东冲突。",
+    "descriptionEn": "Successor to the Ottoman Empire, straddling Europe and Asia, Turkey took part in WWI, the Greco-Turkish War, and several Middle Eastern conflicts.",
     "totalWars": 3,
     "estimatedCasualties": 1500000
   },
@@ -216,6 +237,7 @@
     "lat": 21.5218,
     "lon": -77.7812,
     "description": "加勒比海岛国，冷战时期因导弹危机险些引发核战争。",
+    "descriptionEn": "A Caribbean island nation that nearly triggered nuclear war during the Cold War missile crisis.",
     "totalWars": 1,
     "estimatedCasualties": 5000
   },
@@ -226,6 +248,7 @@
     "lat": -1.9403,
     "lon": 29.8739,
     "description": "东非内陆国家，1994 年发生震惊世界的种族灭绝，百日内近百万人丧生。",
+    "descriptionEn": "A landlocked East African nation; in 1994 it suffered a genocide that shocked the world, with nearly a million killed in a hundred days.",
     "totalWars": 1,
     "estimatedCasualties": 1000000
   },
@@ -236,6 +259,7 @@
     "lat": 44.0165,
     "lon": 21.0059,
     "description": "巴尔干半岛国家，前南斯拉夫核心，历经两次世界大战与南联盟战争。",
+    "descriptionEn": "A Balkan nation and core of the former Yugoslavia, Serbia weathered both world wars and the Yugoslav Wars.",
     "totalWars": 3,
     "estimatedCasualties": 800000
   },
@@ -246,6 +270,7 @@
     "lat": 15.5527,
     "lon": 48.5164,
     "description": "阿拉伯半岛古国，2014 年爆发内战至今，酿成当代最严重的人道主义危机之一。",
+    "descriptionEn": "An ancient land on the Arabian Peninsula; its ongoing civil war since 2014 has created one of the worst humanitarian crises of our time.",
     "totalWars": 1,
     "estimatedCasualties": 377000
   },
@@ -256,6 +281,7 @@
     "lat": 56.1304,
     "lon": -106.3468,
     "description": "北美国家，作为英联邦成员参与了一战、二战及阿富汗战争。",
+    "descriptionEn": "A North American nation that, as a Commonwealth member, took part in WWI, WWII, and the War in Afghanistan.",
     "totalWars": 3,
     "estimatedCasualties": 120000
   },
@@ -266,6 +292,7 @@
     "lat": -25.2744,
     "lon": 133.7751,
     "description": "大洋洲国家，作为英联邦成员参与了一战、二战、越南战争与阿富汗战争。",
+    "descriptionEn": "An Oceanian nation that, as a Commonwealth member, fought in WWI, WWII, the Vietnam War, and the War in Afghanistan.",
     "totalWars": 4,
     "estimatedCasualties": 110000
   }

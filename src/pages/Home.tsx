@@ -13,11 +13,13 @@ import { StatsSection } from '@/components/StatsSection';
 import { QuotesCarousel } from '@/components/QuotesCarousel';
 import { WarHighlights } from '@/components/WarHighlights';
 import { useAppStore } from '@/stores/appStore';
+import { useT } from '@/i18n/useT';
 
 export default function Home() {
   const { countries, loading: countriesLoading } = useCountries();
   const { wars, loading: warsLoading } = useWars();
   const { viewMode } = useAppStore();
+  const { t } = useT();
 
   const isLoading = countriesLoading || warsLoading;
 
@@ -27,7 +29,7 @@ export default function Home() {
         <div className="flex h-screen w-full items-center justify-center">
           <div className="text-center">
             <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-2 border-archive-border border-t-archive-amber" />
-            <p className="text-sm text-archive-muted">正在加载历史档案...</p>
+            <p className="text-sm text-archive-muted">{t('home.loading')}</p>
           </div>
         </div>
       ) : (
@@ -50,7 +52,7 @@ export default function Home() {
             <ViewToggle />
 
             <div className="pointer-events-none absolute bottom-6 right-6 z-20 hidden text-right text-xs text-archive-muted md:block">
-              <p>左键拖拽旋转 · 滚轮缩放 · 右键平移</p>
+              <p>{t('home.controlsHint')}</p>
             </div>
           </div>
 

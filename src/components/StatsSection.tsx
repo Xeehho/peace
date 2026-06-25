@@ -5,6 +5,8 @@ import { Skull, Swords, Globe2, Hourglass } from 'lucide-react';
 import { useWars } from '@/hooks/useWars';
 import { useCountries } from '@/hooks/useCountries';
 import { formatCasualties } from '@/utils/format';
+import { useT } from '@/i18n/useT';
+import type { Language } from '@/types';
 
 interface StatItemProps {
   icon: React.ReactNode;
@@ -12,9 +14,10 @@ interface StatItemProps {
   label: string;
   formatFn?: (v: number) => string;
   delay: number;
+  lang: Language;
 }
 
-function AnimatedCounter({ value, formatFn }: { value: number; formatFn?: (v: number) => string }) {
+function AnimatedCounter({ value, formatFn, lang }: { value: number; formatFn?: (v: number) => string; lang: Language }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
   const motionValue = useMotionValue(0);
@@ -26,16 +29,16 @@ function AnimatedCounter({ value, formatFn }: { value: number; formatFn?: (v: nu
       duration: 2,
       ease: [0.22, 1, 0.36, 1],
       onUpdate: (latest) => {
-        setDisplay(formatFn ? formatFn(Math.round(latest)) : Math.round(latest).toLocaleString('zh-CN'));
+        setDisplay(formatFn ? formatFn(Math.round(latest)) : Math.round(latest).toLocaleString(lang === 'en' ? 'en-US' : 'zh-CN'));
       },
     });
     return controls.stop;
-  }, [inView, value, motionValue, formatFn]);
+  }, [inView, value, motionValue, formatFn, lang]);
 
   return <span ref={ref}>{display}</span>;
 }
 
-function StatItem({ icon, value, label, formatFn, delay }: StatItemProps) {
+function StatItem({ icon, value, label, formatFn, delay, lang }: StatItemProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -49,7 +52,7 @@ function StatItem({ icon, value, label, formatFn, delay }: StatItemProps) {
         {icon}
       </div>
       <div className="font-mono text-4xl font-bold text-archive-ink md:text-5xl">
-        <AnimatedCounter value={value} formatFn={formatFn} />
+        <AnimatedCounter value={value} formatFn={formatFn} lang={lang} />
       </div>
       <p className="mt-2 text-sm text-archive-muted">{label}</p>
     </motion.div>
@@ -59,6 +62,7 @@ function StatItem({ icon, value, label, formatFn, delay }: StatItemProps) {
 export function StatsSection() {
   const { wars } = useWars();
   const { countries } = useCountries();
+  const { t, lang } = useT();
 
   const totalCasualties = wars.reduce((sum, w) => sum + w.casualties, 0);
   const yearSpan = wars.length > 0
@@ -70,13 +74,13 @@ export function StatsSection() {
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-sage">
-            The Cost of War
+            {t('stats.badge')}
           </p>
           <h2 className="font-serif text-3xl font-medium text-archive-ink md:text-4xl">
-            战争的代价
+            {t('stats.title')}
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-archive-muted">
-            每一个数字背后，都是一个个真实存在过的人——父亲、儿子、丈夫、朋友。
+            {t('stats.subtitle')}
           </p>
         </div>
 
@@ -84,27 +88,31 @@ export function StatsSection() {
           <StatItem
             icon={<Swords className="h-6 w-6" />}
             value={wars.length}
-            label="有记录的战争"
+            label={t('stats.recordedWars')}
             delay={0}
+            lang={lang}
           />
           <StatItem
             icon={<Skull className="h-6 w-6" />}
             value={totalCasualties}
-            label="累计伤亡人数"
-            formatFn={formatCasualties}
+            label={t('stats.totalCasualties')}
+            formatFn={(v) => formatCasualties(v, lang)}
             delay={0.1}
+            lang={lang}
           />
           <StatItem
             icon={<Globe2 className="h-6 w-6" />}
             value={countries.length}
-            label="涉及国家与地区"
+            label={t('stats.involvedCountries')}
             delay={0.2}
+            lang={lang}
           />
           <StatItem
             icon={<Hourglass className="h-6 w-6" />}
             value={yearSpan}
-            label="跨越年数"
+            label={t('stats.yearSpan')}
             delay={0.3}
+            lang={lang}
           />
         </div>
       </div>

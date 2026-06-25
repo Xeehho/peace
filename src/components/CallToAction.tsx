@@ -1,6 +1,8 @@
 import { HeartHandshake, Heart } from 'lucide-react';
+import { useT } from '@/i18n/useT';
 
 export function CallToAction() {
+  const { t } = useT();
   return (
     <section
       id="cta"
@@ -9,10 +11,10 @@ export function CallToAction() {
       <div className="mx-auto max-w-3xl text-center">
         <Heart className="mx-auto mb-6 h-8 w-8 text-archive-terracotta" />
         <h2 className="font-serif text-3xl font-medium text-archive-ink md:text-4xl">
-          战争没有赢家，只有幸存者。
+          {t('cta.title')}
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-archive-muted md:text-base">
-          历史教会我们，冲突的代价永远无法衡量。今天的选择，将决定明天的世界。愿每一份记忆都成为和平的基石。
+          {t('cta.subtitle')}
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
@@ -22,10 +24,10 @@ export function CallToAction() {
             className="flex items-center gap-2 rounded-full border border-archive-terracotta bg-archive-terracotta px-6 py-2.5 text-sm text-white transition-colors hover:bg-[#a34e42]"
           >
             <HeartHandshake className="h-4 w-4" />
-            支持联合国和平倡议
+            {t('cta.button')}
           </a>
           <span className="text-xs text-archive-muted">
-            让历史照亮未来的和平之路
+            {t('cta.footnote')}
           </span>
         </div>
       </div>

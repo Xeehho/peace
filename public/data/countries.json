@@ -178,5 +178,95 @@
     "description": "东南亚国家，20 世纪历经抗法、抗美与中越边境冲突。",
     "totalWars": 2,
     "estimatedCasualties": 3500000
+  },
+  {
+    "id": "korea",
+    "name": "韩国/朝鲜",
+    "nameEn": "Korea",
+    "lat": 35.9078,
+    "lon": 127.7669,
+    "description": "朝鲜半岛国家，20 世纪历经日本殖民、二战分裂与朝鲜战争，至今南北分治。",
+    "totalWars": 2,
+    "estimatedCasualties": 3000000
+  },
+  {
+    "id": "spain",
+    "name": "西班牙",
+    "nameEn": "Spain",
+    "lat": 40.4637,
+    "lon": -3.7492,
+    "description": "伊比利亚半岛国家，曾建立庞大殖民帝国，20 世纪经历残酷内战。",
+    "totalWars": 2,
+    "estimatedCasualties": 600000
+  },
+  {
+    "id": "turkey",
+    "name": "土耳其",
+    "nameEn": "Turkey",
+    "lat": 38.9637,
+    "lon": 35.2433,
+    "description": "奥斯曼帝国的继承者，地跨欧亚，参与了一战、希土战争与多次中东冲突。",
+    "totalWars": 3,
+    "estimatedCasualties": 1500000
+  },
+  {
+    "id": "cuba",
+    "name": "古巴",
+    "nameEn": "Cuba",
+    "lat": 21.5218,
+    "lon": -77.7812,
+    "description": "加勒比海岛国，冷战时期因导弹危机险些引发核战争。",
+    "totalWars": 1,
+    "estimatedCasualties": 5000
+  },
+  {
+    "id": "rwanda",
+    "name": "卢旺达",
+    "nameEn": "Rwanda",
+    "lat": -1.9403,
+    "lon": 29.8739,
+    "description": "东非内陆国家，1994 年发生震惊世界的种族灭绝，百日内近百万人丧生。",
+    "totalWars": 1,
+    "estimatedCasualties": 1000000
+  },
+  {
+    "id": "serbia",
+    "name": "塞尔维亚",
+    "nameEn": "Serbia",
+    "lat": 44.0165,
+    "lon": 21.0059,
+    "description": "巴尔干半岛国家，前南斯拉夫核心，历经两次世界大战与南联盟战争。",
+    "totalWars": 3,
+    "estimatedCasualties": 800000
+  },
+  {
+    "id": "yemen",
+    "name": "也门",
+    "nameEn": "Yemen",
+    "lat": 15.5527,
+    "lon": 48.5164,
+    "description": "阿拉伯半岛古国，2014 年爆发内战至今，酿成当代最严重的人道主义危机之一。",
+    "totalWars": 1,
+    "estimatedCasualties": 377000
+  },
+  {
+    "id": "canada",
+    "name": "加拿大",
+    "nameEn": "Canada",
+    "lat": 56.1304,
+    "lon": -106.3468,
+    "description": "北美国家，作为英联邦成员参与了一战、二战及阿富汗战争。",
+    "totalWars": 3,
+    "estimatedCasualties": 120000
+  },
+  {
+    "id": "australia",
+    "name": "澳大利亚",
+    "nameEn": "Australia",
+    "lat": -25.2744,
+    "lon": 133.7751,
+    "description": "大洋洲国家，作为英联邦成员参与了一战、二战、越南战争与阿富汗战争。",
+    "totalWars": 4,
+    "estimatedCasualties": 110000
   }
 ]

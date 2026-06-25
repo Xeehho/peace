@@ -6,7 +6,8 @@ import { useAppStore } from '@/stores/appStore';
 const navLinks = [
   { to: '/', label: '首页' },
   { to: '/timeline', label: '时间线' },
-  { to: '/#about', label: '关于' },
+  { to: '/insights', label: '数据洞察' },
+  { to: '/about', label: '关于' },
 ];
 
 export function Navbar() {
@@ -15,7 +16,6 @@ export function Navbar() {
   const { resetToGlobal } = useAppStore();
 
   const isActive = (path: string) => {
-    if (path === '/#about') return false;
     return location.pathname === path;
   };
 

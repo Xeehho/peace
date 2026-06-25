@@ -482,5 +482,362 @@
       { "countryId": "china", "caption": "解放军 65 式草绿色军服，红领章，解放帽，胶鞋" },
       { "countryId": "vietnam", "caption": "越军橄榄绿野战服，苏式钢盔，AK-47" }
     ]
+  },
+  {
+    "id": "punic-wars",
+    "name": "布匿战争",
+    "startYear": -264,
+    "endYear": -146,
+    "location": "地中海西部、西西里、北非",
+    "belligerents": ["罗马共和国", "迦太基共和国"],
+    "casualties": 1500000,
+    "background": "罗马与迦太基为争夺地中海西部霸权与贸易控制权爆发三次战争，最终迦太基被夷为平地，罗马确立了地中海霸主地位，却也埋下了穷兵黩武的种子。",
+    "relatedCountryIds": ["italy"],
+    "figures": [
+      { "name": "汉尼拔·巴卡", "description": "迦太基名将，率军翻越阿尔卑斯山奇袭意大利。" },
+      { "name": "大西庇阿", "description": "罗马名将，扎马战役击败汉尼拔。" }
+    ],
+    "attires": [
+      { "countryId": "italy", "caption": "罗马军团环状胸甲与青铜盔，方形大盾 scutum 与短剑 gladius" }
+    ]
+  },
+  {
+    "id": "qin-unification",
+    "name": "秦统一战争",
+    "startYear": -230,
+    "endYear": -221,
+    "location": "中国中原地区",
+    "belligerents": ["秦国", "韩、赵、魏、楚、燕、齐六国"],
+    "casualties": 1000000,
+    "background": "战国末期，秦王嬴政以远交近攻之策十年内依次吞并六国，结束五百余年分裂，却以严刑峻法与沉重徭役为代价，统一仅十五年便土崩瓦解。",
+    "relatedCountryIds": ["china"],
+    "figures": [
+      { "name": "嬴政", "description": "秦王政，即秦始皇，完成统一大业。" },
+      { "name": "王翦", "description": "秦国名将，灭楚之战主帅。" }
+    ],
+    "attires": [
+      { "countryId": "china", "caption": "秦军鱼鳞甲与铁盔，黑色战袍，长戈与弩机" }
+    ]
+  },
+  {
+    "id": "three-kingdoms",
+    "name": "三国战争",
+    "startYear": 220,
+    "endYear": 280,
+    "location": "中国",
+    "belligerents": ["魏", "蜀", "吴"],
+    "casualties": 3000000,
+    "background": "东汉末年群雄割据，最终形成魏蜀吴三国鼎立，连年征战使人口锐减，却也成为英雄辈出的传奇时代，最终由司马氏一统三国。",
+    "relatedCountryIds": ["china"],
+    "figures": [
+      { "name": "曹操", "description": "魏国奠基者，统一北方的政治家与军事家。" },
+      { "name": "诸葛亮", "description": "蜀汉丞相，六出祁山北伐。" }
+    ],
+    "attires": [
+      { "countryId": "china", "caption": "汉末魏晋札甲与筒袖铠，铁盔或帻，环首刀与长矛" }
+    ]
+  },
+  {
+    "id": "an-shi-rebellion",
+    "name": "安史之乱",
+    "startYear": 755,
+    "endYear": 763,
+    "location": "中国北方",
+    "belligerents": ["唐朝官军", "安史叛军"],
+    "casualties": 13000000,
+    "background": "盛唐之际，节度使安禄山与史思明以清君侧为名发动叛乱，八年战火使大唐由盛转衰，人口骤减，成为中华文明由开放转向内敛的转折点。",
+    "relatedCountryIds": ["china"],
+    "figures": [
+      { "name": "安禄山", "description": "范阳节度使，叛乱发动者。" },
+      { "name": "郭子仪", "description": "唐朝名将，平定安史之乱的主帅。" }
+    ],
+    "attires": [
+      { "countryId": "china", "caption": "唐军明光铠与圆护，皮盔或铁兜鍪，横刀与长槊" }
+    ]
+  },
+  {
+    "id": "thirty-years-war",
+    "name": "三十年战争",
+    "startYear": 1618,
+    "endYear": 1648,
+    "location": "神圣罗马帝国、欧洲",
+    "belligerents": ["新教阵营", "天主教阵营"],
+    "casualties": 8000000,
+    "background": "宗教改革后，神圣罗马帝国境内新教与天主教诸侯的矛盾引爆全欧大战，最终以威斯特伐利亚和约结束，确立了现代国家主权体系，却使德意志人口减半。",
+    "relatedCountryIds": ["germany", "france", "uk"],
+    "figures": [
+      { "name": "古斯塔夫二世·阿道夫", "description": "瑞典国王，新教阵营英雄。" },
+      { "name": "阿尔布雷希特·冯·华伦斯坦", "description": "神圣罗马帝国名将。" }
+    ],
+    "attires": [
+      { "countryId": "germany", "caption": "德意志雇佣兵皮甲与胸甲，宽檐帽与羽毛，长矛或火绳枪" },
+      { "countryId": "france", "caption": "法国近卫军白色十字罩袍，胸甲与铁盔" }
+    ]
+  },
+  {
+    "id": "seven-years-war",
+    "name": "七年战争",
+    "startYear": 1756,
+    "endYear": 1763,
+    "location": "欧洲、北美、印度、加勒比",
+    "belligerents": ["英国-普鲁士联盟", "法国-奥地利-俄国联盟"],
+    "casualties": 1000000,
+    "background": "列强为争夺殖民地与欧洲霸权爆发全球性战争，英国由此奠定海上霸权，普鲁士则跻身欧洲强国，战争规模之广被称为“第一次世界大战”。",
+    "relatedCountryIds": ["uk", "france", "germany", "russia"],
+    "figures": [
+      { "name": "腓特烈大帝", "description": "普鲁士国王，以弱胜强的军事天才。" },
+      { "name": "威廉·皮特", "description": "英国首相，主导英国全球战略。" }
+    ],
+    "attires": [
+      { "countryId": "uk", "caption": "英军红色上衣与白色马裤，三角帽，布朗贝斯火枪" },
+      { "countryId": "france", "caption": "法军白色制服与彩色翻领，三角帽，刺刀" },
+      { "countryId": "germany", "caption": "普鲁士深蓝制服与白色绑腿，斜挎弹药盒" }
+    ]
+  },
+  {
+    "id": "american-revolution",
+    "name": "美国独立战争",
+    "startYear": 1775,
+    "endYear": 1783,
+    "location": "北美十三州",
+    "belligerents": ["北美十三州", "英国"],
+    "casualties": 50000,
+    "background": "北美殖民地不堪英国苛税与无代表之治，揭竿而起寻求独立，在法国援助下以弱胜强，建立了世界上第一个现代共和制国家，鼓舞了全球反殖民浪潮。",
+    "relatedCountryIds": ["usa", "uk", "france"],
+    "figures": [
+      { "name": "乔治·华盛顿", "description": "大陆军总司令，美国国父。" },
+      { "name": "拉法耶特侯爵", "description": "法国贵族，援助美军独立。" }
+    ],
+    "attires": [
+      { "countryId": "usa", "caption": "大陆军蓝色上衣与白色或鹿皮裤，三角帽，帆布绑腿" },
+      { "countryId": "uk", "caption": "英军红色上衣与白色马裤，熊皮帽或三角帽" },
+      { "countryId": "france", "caption": "法军白色制服与蓝色翻领，金色纽扣，三角帽" }
+    ]
+  },
+  {
+    "id": "opium-war",
+    "name": "鸦片战争",
+    "startYear": 1840,
+    "endYear": 1842,
+    "location": "中国东南沿海",
+    "belligerents": ["清朝", "英国"],
+    "casualties": 30000,
+    "background": "英国为扭转对华贸易逆差向中国走私鸦片，清政府禁烟后英军以坚船利炮叩关，中国战败签订《南京条约》，开启了百年屈辱的半殖民地历史。",
+    "relatedCountryIds": ["china", "uk"],
+    "figures": [
+      { "name": "林则徐", "description": "钦差大臣，虎门销烟的民族英雄。" },
+      { "name": "义律", "description": "英国驻华商务监督，挑起战争。" }
+    ],
+    "attires": [
+      { "countryId": "china", "caption": "清军勇营号衣与补子，顶戴花翎，大刀与鸟枪" },
+      { "countryId": "uk", "caption": "英军红色上衣与白色十字带，shako 军帽，布朗贝斯火枪" }
+    ]
+  },
+  {
+    "id": "taiping-rebellion",
+    "name": "太平天国运动",
+    "startYear": 1851,
+    "endYear": 1864,
+    "location": "中国南方",
+    "belligerents": ["太平天国", "清朝"],
+    "casualties": 20000000,
+    "background": "洪秀全以拜上帝教号召农民起义，建立太平天国与清廷对峙十四年，是中国历史上最惨烈的内战，死亡人数超过一战，深刻动摇了清朝统治根基。",
+    "relatedCountryIds": ["china"],
+    "figures": [
+      { "name": "洪秀全", "description": "太平天国天王，自称上帝次子。" },
+      { "name": "曾国藩", "description": "湘军统帅，平定太平天国。" }
+    ],
+    "attires": [
+      { "countryId": "china", "caption": "太平军黄红头巾与长发，短衣束带，长矛与刀" }
+    ]
+  },
+  {
+    "id": "chinese-civil-war",
+    "name": "中国内战",
+    "startYear": 1927,
+    "endYear": 1949,
+    "location": "中国",
+    "belligerents": ["国民党", "共产党"],
+    "casualties": 8000000,
+    "background": "国共两党因意识形态与权力之争爆发长期内战，中间因抗日战争而短暂合作，战后再度全面开战，最终共产党胜出建立新中国，国民党退守台湾，两岸分治延续至今。",
+    "relatedCountryIds": ["china"],
+    "figures": [
+      { "name": "蒋介石", "description": "国民政府领导人，败退台湾。" },
+      { "name": "毛泽东", "description": "中国共产党领袖，建立新中国。" }
+    ],
+    "attires": [
+      { "countryId": "china", "caption": "国军黄绿色军服与德式或美式钢盔；解放军土黄色军服与八一帽徽" }
+    ]
+  },
+  {
+    "id": "cuban-missile-crisis",
+    "name": "古巴导弹危机",
+    "startYear": 1962,
+    "endYear": 1962,
+    "location": "古巴、加勒比海",
+    "belligerents": ["美国", "苏联"],
+    "casualties": 0,
+    "background": "苏联在古巴部署核导弹，美国海上封锁，十三天对峙险些引发核战争，是人类距离自我毁灭最近的一刻，最终以双方妥协化解，开启了美苏缓和。",
+    "relatedCountryIds": ["usa", "russia", "cuba"],
+    "figures": [
+      { "name": "约翰·F·肯尼迪", "description": "美国总统，冷静应对危机。" },
+      { "name": "尼基塔·赫鲁晓夫", "description": "苏联领导人，最终撤回导弹。" }
+    ],
+    "attires": [
+      { "countryId": "usa", "caption": "美军橄榄绿常服与钢盔，海军卡其色制服" },
+      { "countryId": "russia", "caption": "苏军卡其色军服与大檐帽" },
+      { "countryId": "cuba", "caption": "古巴军绿色橄榄帽与胡须，平民装束" }
+    ]
+  },
+  {
+    "id": "indo-pakistani-war",
+    "name": "印巴战争",
+    "startYear": 1965,
+    "endYear": 1965,
+    "location": "克什米尔、印巴边境",
+    "belligerents": ["印度", "巴基斯坦"],
+    "casualties": 20000,
+    "background": "英国殖民者撤离后，印巴因克什米尔归属爆发多次战争，宗教仇恨与领土争端交织，成为南亚持续至今的火药桶，两国均发展出核武器相互威慑。",
+    "relatedCountryIds": ["india"],
+    "figures": [
+      { "name": "拉尔·巴哈杜尔·夏斯特里", "description": "印度总理，领导1965年战争。" },
+      { "name": "阿尤布·汗", "description": "巴基斯坦总统，发动反攻。" }
+    ],
+    "attires": [
+      { "countryId": "india", "caption": "印军橄榄绿丛林迷彩与钢盔，英式装备" }
+    ]
+  },
+  {
+    "id": "rwandan-genocide",
+    "name": "卢旺达种族灭绝",
+    "startYear": 1994,
+    "endYear": 1994,
+    "location": "卢旺达",
+    "belligerents": ["胡图族极端派", "图西族"],
+    "casualties": 1000000,
+    "background": "胡图族极端分子百日内屠杀近百万图西族人，国际社会袖手旁观，是人类历史上最迅速、最密集的种族灭绝之一，揭露了文明外衣下的人性深渊。",
+    "relatedCountryIds": ["rwanda"],
+    "figures": [
+      { "name": "保罗·卡加梅", "description": "卢旺达爱国阵线领袖，终结种族灭绝。" },
+      { "name": "西奥内斯特·巴戈索拉", "description": "种族灭绝主要策划者。" }
+    ],
+    "attires": [
+      { "countryId": "rwanda", "caption": "民兵平民装束与彩色印花布，手持砍刀 machete" }
+    ]
+  },
+  {
+    "id": "kosovo-war",
+    "name": "科索沃战争",
+    "startYear": 1998,
+    "endYear": 1999,
+    "location": "科索沃、南联盟",
+    "belligerents": ["南联盟", "北约 / 科索沃解放军"],
+    "casualties": 13000,
+    "background": "南联盟镇压科索沃阿族分离运动，北约以人道主义干预为由轰炸南联盟78天，开启了未经联合国授权的先例，也暴露了冷战后国际秩序的脆弱。",
+    "relatedCountryIds": ["serbia", "usa", "uk"],
+    "figures": [
+      { "name": "斯洛博丹·米洛舍维奇", "description": "南联盟总统，被西方称为“巴尔干屠夫”。" },
+      { "name": "韦斯利·克拉克", "description": "北约盟军最高司令。" }
+    ],
+    "attires": [
+      { "countryId": "serbia", "caption": "南联盟军橄榄绿迷彩与钢盔，AK-47" },
+      { "countryId": "usa", "caption": "美军飞行员飞行服与飞行头盔，或沙漠迷彩" },
+      { "countryId": "uk", "caption": "英军沙漠迷彩与钢盔" }
+    ]
+  },
+  {
+    "id": "yemen-civil-war",
+    "name": "也门内战",
+    "startYear": 2014,
+    "endYear": 2025,
+    "location": "也门",
+    "belligerents": ["胡塞武装", "也门政府 / 沙特联军"],
+    "casualties": 377000,
+    "background": "胡塞武装夺取首都后，沙特领导联军干预，演变为沙特与伊朗的代理人战争，封锁与饥荒造成大量平民死亡，被联合国称为当代最严重的人道主义灾难。",
+    "relatedCountryIds": ["yemen"],
+    "figures": [
+      { "name": "阿卜杜勒-马利克·胡塞", "description": "胡塞武装领袖。" },
+      { "name": "阿卜杜拉布·曼苏尔·哈迪", "description": "也门流亡总统。" }
+    ],
+    "attires": [
+      { "countryId": "yemen", "caption": "胡塞战士传统长裙与头巾，背 AK-47 与凉鞋" }
+    ]
+  },
+  {
+    "id": "fall-of-rome",
+    "name": "罗马帝国灭亡",
+    "startYear": 376,
+    "endYear": 476,
+    "location": "欧洲、地中海",
+    "belligerents": ["西罗马帝国", "日耳曼诸部族"],
+    "casualties": 5000000,
+    "background": "匈奴西迁引发日耳曼民族大迁徙，哥特人、汪达尔人、匈人相继冲击罗马边境，476年西罗马末帝被废，古典文明落幕，欧洲进入中世纪，文明的脆弱在蛮族铁蹄下显露无遗。",
+    "relatedCountryIds": ["italy", "germany"],
+    "figures": [
+      { "name": "阿拉里克", "description": "西哥特王，410年攻陷罗马。" },
+      { "name": "奥多亚塞", "description": "日耳曼雇佣军首领，废黜西罗马末帝。" }
+    ],
+    "attires": [
+      { "countryId": "italy", "caption": "晚期罗马军团鳞甲与圆盾，spatha 长剑" },
+      { "countryId": "germany", "caption": "日耳曼战士皮甲或无甲，毛皮与粗布长袍，长矛与斧" }
+    ]
+  },
+  {
+    "id": "fall-of-constantinople",
+    "name": "君士坦丁堡陷落",
+    "startYear": 1453,
+    "endYear": 1453,
+    "location": "君士坦丁堡",
+    "belligerents": ["奥斯曼帝国", "拜占庭帝国"],
+    "casualties": 80000,
+    "background": "奥斯曼苏丹穆罕默德二世以巨炮轰击千年城墙，攻克君士坦丁堡，延续千年的拜占庭帝国终结，标志着中世纪结束，也切断了东西方贸易促使大航海时代到来。",
+    "relatedCountryIds": ["turkey", "greece"],
+    "figures": [
+      { "name": "穆罕默德二世", "description": "奥斯曼苏丹，“征服者”。" },
+      { "name": "君士坦丁十一世", "description": "末代拜占庭皇帝，城破战死。" }
+    ],
+    "attires": [
+      { "countryId": "turkey", "caption": "奥斯曼近卫军白色帽与长袍，链甲与弯刀" },
+      { "countryId": "greece", "caption": "拜占庭士兵链甲与圆盾，紫袍与十字徽" }
+    ]
+  },
+  {
+    "id": "spanish-civil-war",
+    "name": "西班牙内战",
+    "startYear": 1936,
+    "endYear": 1939,
+    "location": "西班牙",
+    "belligerents": ["国民军", "共和军"],
+    "casualties": 500000,
+    "background": "左右翼矛盾激化引发内战，德国与意大利支持佛朗哥，苏联与国际纵队支持共和政府，格尔尼卡首次展示了对平民的无差别轰炸，成为二战的预演。",
+    "relatedCountryIds": ["spain", "germany", "italy", "russia"],
+    "figures": [
+      { "name": "弗朗西斯科·佛朗哥", "description": "国民军领袖，建立独裁统治。" },
+      { "name": "多洛雷斯·伊巴露丽", "description": "“热情之花”，共和派宣传家。" }
+    ],
+    "attires": [
+      { "countryId": "spain", "caption": "国民军卡其色军服与侧帽，皮弹药带" },
+      { "countryId": "germany", "caption": "秃鹰军团原野灰制服与钢盔" },
+      { "countryId": "italy", "caption": "志愿军黑衬衫与钢盔，“黑衫军”" }
+    ]
+  },
+  {
+    "id": "first-indochina-war",
+    "name": "越南抗法战争",
+    "startYear": 1946,
+    "endYear": 1954,
+    "location": "越南、老挝、柬埔寨",
+    "belligerents": ["越南民主共和国", "法国"],
+    "casualties": 500000,
+    "background": "二战后法国企图恢复印度支那殖民统治，越南人民在胡志明领导下展开九年抗战，奠边府战役全歼法军，迫使法国撤出，却引来美国介入，埋下越战祸根。",
+    "relatedCountryIds": ["vietnam", "france", "usa"],
+    "figures": [
+      { "name": "武元甲", "description": "越军大将，奠边府战役总指挥。" },
+      { "name": "纳瓦尔", "description": "法军总司令，奠边府战败。" }
+    ],
+    "attires": [
+      { "countryId": "vietnam", "caption": "越盟橄榄绿野战服与斗笠，橡胶凉鞋" },
+      { "countryId": "france", "caption": "法军丛林迷彩与豹纹帽，M1 钢盔" }
+    ]
   }
 ]

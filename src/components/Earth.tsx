@@ -19,10 +19,13 @@ export function Earth() {
       <meshStandardMaterial
         map={map}
         normalMap={normalMap}
-        normalScale={new THREE.Vector2(0.6, 0.6)}
+        normalScale={new THREE.Vector2(0.5, 0.5)}
         roughnessMap={specularMap}
-        roughness={0.75}
-        metalness={0.05}
+        roughness={0.6}
+        metalness={0.1}
+        emissive={new THREE.Color('#3a4a5a')}
+        emissiveMap={map}
+        emissiveIntensity={0.15}
       />
     </mesh>
   );

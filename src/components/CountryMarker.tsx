@@ -9,6 +9,7 @@ interface CountryMarkerProps {
   country: Country;
   isSelected: boolean;
   isHovered: boolean;
+  viewMode: 'global' | 'country';
   onClick: () => void;
   onPointerEnter: () => void;
   onPointerLeave: () => void;
@@ -21,6 +22,7 @@ export function CountryMarker({
   country,
   isSelected,
   isHovered,
+  viewMode,
   onClick,
   onPointerEnter,
   onPointerLeave,
@@ -86,9 +88,13 @@ export function CountryMarker({
         />
       </mesh>
 
-      {(isSelected || isHovered) && (
-        <Html distanceFactor={6} style={{ pointerEvents: 'none' }}>
-          <div className="whitespace-nowrap rounded-full border border-archive-border bg-white/95 px-3 py-1 text-xs font-medium text-archive-ink shadow-soft backdrop-blur-sm">
+      {isHovered && !isSelected && (
+        <Html
+          distanceFactor={viewMode === 'country' ? 22 : 10}
+          style={{ pointerEvents: 'none' }}
+          zIndexRange={[10, 0]}
+        >
+          <div className="whitespace-nowrap rounded border border-archive-border bg-white/95 px-1.5 py-0.5 text-[9px] font-medium text-archive-ink shadow-soft">
             {country.name}
           </div>
         </Html>

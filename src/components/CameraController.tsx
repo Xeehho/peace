@@ -13,7 +13,7 @@ interface CameraControllerProps {
 
 const DEFAULT_POSITION = new THREE.Vector3(0, 0.6, 3.4);
 const DEFAULT_TARGET = new THREE.Vector3(0, 0, 0);
-const TRANSITION_DURATION = 2.5; // seconds
+const TRANSITION_DURATION = 2.5;
 
 export function CameraController({ targetCountry, viewMode, controlsRef }: CameraControllerProps) {
   const { camera } = useThree();
@@ -22,6 +22,7 @@ export function CameraController({ targetCountry, viewMode, controlsRef }: Camer
   const startPos = useRef(DEFAULT_POSITION.clone());
   const startLookAt = useRef(DEFAULT_TARGET.clone());
   const progress = useRef(1);
+  const finished = useRef(true);
 
   useEffect(() => {
     if (controlsRef.current) {
@@ -40,6 +41,7 @@ export function CameraController({ targetCountry, viewMode, controlsRef }: Camer
       targetLookAt.current.copy(DEFAULT_TARGET);
     }
     progress.current = 0;
+    finished.current = false;
   }, [targetCountry, viewMode, controlsRef, camera.position]);
 
   useFrame((_, delta) => {
@@ -53,10 +55,14 @@ export function CameraController({ targetCountry, viewMode, controlsRef }: Camer
         .lerp(targetLookAt.current, t);
       camera.lookAt(currentLookAt);
 
-      if (progress.current >= 1 && controlsRef.current) {
-        controlsRef.current.enabled = viewMode === 'global';
-        controlsRef.current.target.copy(targetLookAt.current);
-        controlsRef.current.update();
+      if (progress.current >= 1 && !finished.current) {
+        finished.current = true;
+        if (controlsRef.current) {
+          // Sync controls target with final lookAt, then enable for global mode
+          controlsRef.current.target.copy(targetLookAt.current);
+          controlsRef.current.enabled = viewMode === 'global';
+          // Do NOT call update() — it would snap the camera based on stale internal state
+        }
       }
     }
   });

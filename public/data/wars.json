@@ -241,13 +241,14 @@
     "belligerents": ["北越 / 越共", "南越 / 美国"],
     "casualties": 3000000,
     "background": "冷战背景下，美国为防止共产主义扩张而介入越南内战。",
-    "relatedCountryIds": ["usa"],
+    "relatedCountryIds": ["usa", "vietnam"],
     "figures": [
       { "name": "胡志明", "description": "越南民主共和国领导人。" },
       { "name": "林登·约翰逊", "description": "美国总统，大幅升级美军介入。" }
     ],
     "attires": [
-      { "countryId": "usa", "caption": "丛林迷彩 M65 野战夹克，M1 钢盔，帆布靴" }
+      { "countryId": "usa", "caption": "丛林迷彩 M65 野战夹克，M1 钢盔，帆布靴" },
+      { "countryId": "vietnam", "caption": "越共黑色或橄榄绿野战服，斗笠，橡胶凉鞋" }
     ]
   },
   {
@@ -259,14 +260,15 @@
     "belligerents": ["多国部队", "伊拉克"],
     "casualties": 85000,
     "background": "伊拉克入侵科威特后，美国领导多国部队进行军事干预。",
-    "relatedCountryIds": ["usa", "uk"],
+    "relatedCountryIds": ["usa", "uk", "iraq"],
     "figures": [
       { "name": "诺曼·施瓦茨科普夫", "description": "多国部队总司令，主导“沙漠风暴”行动。" },
       { "name": "萨达姆·侯赛因", "description": "伊拉克总统，发动入侵科威特。" }
     ],
     "attires": [
       { "countryId": "usa", "caption": "六色沙漠迷彩 DBDU 或巧克力片迷彩，PASGT 头盔" },
-      { "countryId": "uk", "caption": "英军沙漠 DPM 迷彩，Mk6 钢盔" }
+      { "countryId": "uk", "caption": "英军沙漠 DPM 迷彩，Mk6 钢盔" },
+      { "countryId": "iraq", "caption": "伊拉克陆军橄榄绿或卡其色棉制服，钢盔" }
     ]
   },
   {
@@ -285,6 +287,200 @@
     ],
     "attires": [
       { "countryId": "china", "caption": "秦汉时期皮甲与青铜盔，宽袖深衣，长剑" }
+    ]
+  },
+  {
+    "id": "six-day-war",
+    "name": "六日战争",
+    "startYear": 1967,
+    "endYear": 1967,
+    "location": "中东",
+    "belligerents": ["以色列", "埃及、叙利亚、约旦"],
+    "casualties": 20000,
+    "background": "第三次中东战争，以色列在六天内击败阿拉伯联军，大幅改变中东版图。",
+    "relatedCountryIds": ["israel", "egypt"],
+    "figures": [
+      { "name": "摩西·达扬", "description": "以色列国防部长，独眼将军。" },
+      { "name": "贾马尔·阿卜杜勒·纳赛尔", "description": "埃及总统，阿拉伯民族主义领袖。" }
+    ],
+    "attires": [
+      { "countryId": "israel", "caption": "以军橄榄褐 1950 式野战服，英式钢盔，Uzi 冲锋枪" },
+      { "countryId": "egypt", "caption": "埃军卡其色棉制服，苏式钢盔，AK-47" }
+    ]
+  },
+  {
+    "id": "iran-iraq-war",
+    "name": "两伊战争",
+    "startYear": 1980,
+    "endYear": 1988,
+    "location": "伊朗、伊拉克边境",
+    "belligerents": ["伊拉克", "伊朗"],
+    "casualties": 1000000,
+    "background": "萨达姆入侵伊朗，引发长达八年的边境战争，使用化学武器与人海战术。",
+    "relatedCountryIds": ["iraq", "iran"],
+    "figures": [
+      { "name": "萨达姆·侯赛因", "description": "伊拉克总统，发动战争。" },
+      { "name": "鲁霍拉·霍梅尼", "description": "伊朗最高领袖，领导伊朗抗战。" }
+    ],
+    "attires": [
+      { "countryId": "iraq", "caption": "伊拉克陆军橄榄绿棉制服，苏式钢盔与 AK-47" },
+      { "countryId": "iran", "caption": "伊朗陆军美式橄榄褐制服，M1 钢盔，部分民兵着平民装" }
+    ]
+  },
+  {
+    "id": "soviet-afghan-war",
+    "name": "苏联阿富汗战争",
+    "startYear": 1979,
+    "endYear": 1989,
+    "location": "阿富汗",
+    "belligerents": ["苏联", "阿富汗圣战者"],
+    "casualties": 1000000,
+    "background": "苏联入侵阿富汗扶持亲苏政权，圣战者在西方与伊斯兰国家支持下长期抵抗。",
+    "relatedCountryIds": ["russia", "afghanistan"],
+    "figures": [
+      { "name": "鲍里斯·格罗莫夫", "description": "苏军第四十集团军最后一任司令。" },
+      { "name": "艾哈迈德·沙阿·马苏德", "description": "“潘杰希尔雄狮”，圣战者领袖。" }
+    ],
+    "attires": [
+      { "countryId": "russia", "caption": "苏军卡其色 M1969 制服，SSH-40 钢盔，AK-74" },
+      { "countryId": "afghanistan", "caption": "圣战者传统 perahan tunban 长袍，羊毛背心，背 AK-47" }
+    ]
+  },
+  {
+    "id": "911-attacks",
+    "name": "9·11 恐怖袭击",
+    "startYear": 2001,
+    "endYear": 2001,
+    "location": "美国纽约、华盛顿",
+    "belligerents": ["基地组织", "美国"],
+    "casualties": 2996,
+    "background": "基地组织劫持民航客机撞击世贸中心与五角大楼，引发全球反恐战争。",
+    "relatedCountryIds": ["usa"],
+    "figures": [
+      { "name": "奥萨马·本·拉登", "description": "基地组织创始人，9·11 袭击幕后策划者。" },
+      { "name": "乔治·W·布什", "description": "美国总统，发起全球反恐战争。" }
+    ],
+    "attires": [
+      { "countryId": "usa", "caption": "纽约消防局 FDNY 棕色防火服与头盔，警员蓝色制服" },
+      { "countryId": "afghanistan", "caption": "基地组织成员阿拉伯式白色长袍与头巾" }
+    ]
+  },
+  {
+    "id": "afghanistan-war",
+    "name": "阿富汗战争",
+    "startYear": 2001,
+    "endYear": 2021,
+    "location": "阿富汗",
+    "belligerents": ["美国及北约", "塔利班、基地组织"],
+    "casualties": 240000,
+    "background": "9·11 后美国推翻塔利班政权，长达 20 年的战争最终以塔利班重新掌权告终。",
+    "relatedCountryIds": ["usa", "uk", "afghanistan"],
+    "figures": [
+      { "name": "戴维·彼得雷乌斯", "description": "驻阿美军司令，主导增兵战略。" },
+      { "name": "毛拉·奥马尔", "description": "塔利班创始人及精神领袖。" }
+    ],
+    "attires": [
+      { "countryId": "usa", "caption": "多地形迷彩 OCP/Scorpion W2 制服，ACH 头盔，OTV 防弹衣" },
+      { "countryId": "uk", "caption": "英军多地形模式 MTP 制服，Mk7 头盔" },
+      { "countryId": "afghanistan", "caption": "塔利班战士黑色或白色长袍 perahan tunban，头巾，背 AK-47" }
+    ]
+  },
+  {
+    "id": "iraq-war",
+    "name": "伊拉克战争",
+    "startYear": 2003,
+    "endYear": 2011,
+    "location": "伊拉克",
+    "belligerents": ["美国及联军", "伊拉克"],
+    "casualties": 500000,
+    "background": "美国以伊拉克拥有大规模杀伤性武器为由发动战争，推翻萨达姆政权，引发长期叛乱。",
+    "relatedCountryIds": ["usa", "uk", "iraq"],
+    "figures": [
+      { "name": "乔治·W·布什", "description": "美国总统，发动伊拉克战争。" },
+      { "name": "萨达姆·侯赛因", "description": "伊拉克总统，被推翻并被处决。" }
+    ],
+    "attires": [
+      { "countryId": "usa", "caption": "三色沙漠迷彩 DCU 制服，PASGT 头盔与防弹衣" },
+      { "countryId": "uk", "caption": "英军沙漠 DPM 迷彩，Mk6/Mk7 头盔" },
+      { "countryId": "iraq", "caption": "伊拉克陆军橄榄绿或卡其色棉制服，钢盔" }
+    ]
+  },
+  {
+    "id": "syrian-civil-war",
+    "name": "叙利亚内战",
+    "startYear": 2011,
+    "endYear": 2024,
+    "location": "叙利亚",
+    "belligerents": ["叙利亚政府", "反对派、ISIS、库尔德武装"],
+    "casualties": 600000,
+    "background": "阿拉伯之春引发的叙利亚抗议升级为全面内战，多方势力介入，造成大规模难民危机。",
+    "relatedCountryIds": ["russia", "iran", "iraq"],
+    "figures": [
+      { "name": "巴沙尔·阿萨德", "description": "叙利亚总统，依靠俄伊支持维持政权。" },
+      { "name": "阿布·贝克尔·巴格达迪", "description": "ISIS 首领，自称哈里发。" }
+    ],
+    "attires": [
+      { "countryId": "russia", "caption": "俄军 EMR 数字迷彩制服，6B45 防弹衣，AK-74M" },
+      { "countryId": "iran", "caption": "伊斯兰革命卫队橄榄绿制服，黑色头巾" },
+      { "countryId": "iraq", "caption": "ISIS 武装分子黑色长袍与头巾，自杀背心" }
+    ]
+  },
+  {
+    "id": "us-iran-conflict",
+    "name": "美伊冲突",
+    "startYear": 2020,
+    "endYear": 2024,
+    "location": "中东",
+    "belligerents": ["美国", "伊朗"],
+    "casualties": 1500,
+    "background": "美国刺杀苏莱曼尼后，伊朗及其代理人与美国及盟友在中东多次交锋。",
+    "relatedCountryIds": ["usa", "iran", "israel"],
+    "figures": [
+      { "name": "卡西姆·苏莱曼尼", "description": "伊朗圣城旅指挥官，被美军无人机刺杀。" },
+      { "name": "唐纳德·特朗普", "description": "美国总统，下令刺杀苏莱曼尼。" }
+    ],
+    "attires": [
+      { "countryId": "usa", "caption": "美军多地形迷彩 OCP 制服，ACH 头盔与防弹衣" },
+      { "countryId": "iran", "caption": "伊斯兰革命卫队橄榄绿制服，黑色头巾，背步枪" },
+      { "countryId": "israel", "caption": "以军橄榄褐制服，Tavor 步枪，防弹背心" }
+    ]
+  },
+  {
+    "id": "russia-ukraine-war",
+    "name": "俄乌冲突",
+    "startYear": 2022,
+    "endYear": 2025,
+    "location": "乌克兰",
+    "belligerents": ["俄罗斯", "乌克兰"],
+    "casualties": 500000,
+    "background": "俄罗斯对乌克兰发动全面入侵，是二战后欧洲最大规模常规战争，引发全球能源与粮食危机。",
+    "relatedCountryIds": ["russia", "ukraine"],
+    "figures": [
+      { "name": "弗拉基米尔·普京", "description": "俄罗斯总统，发动入侵。" },
+      { "name": "弗拉基米尔·泽连斯基", "description": "乌克兰总统，战时领导国家抵抗。" }
+    ],
+    "attires": [
+      { "countryId": "russia", "caption": "俄军 EMR 数字迷彩制服，6B45 防弹衣，AK-12" },
+      { "countryId": "ukraine", "caption": "乌军 MM-14 迷彩制服，凯夫拉头盔，西方援助武器" }
+    ]
+  },
+  {
+    "id": "sino-vietnamese-war",
+    "name": "中越边境战争",
+    "startYear": 1979,
+    "endYear": 1979,
+    "location": "中越边境",
+    "belligerents": ["中国", "越南"],
+    "casualties": 60000,
+    "background": "中苏交恶与越南入侵柬埔寨后，中国发动“自卫反击战”，双方均宣称胜利。",
+    "relatedCountryIds": ["china", "vietnam"],
+    "figures": [
+      { "name": "邓小平", "description": "中国实际最高领导人，决策发动战争。" },
+      { "name": "武元甲", "description": "越南大将，指挥越北防御。" }
+    ],
+    "attires": [
+      { "countryId": "china", "caption": "解放军 65 式草绿色军服，红领章，解放帽，胶鞋" },
+      { "countryId": "vietnam", "caption": "越军橄榄绿野战服，苏式钢盔，AK-47" }
     ]
   }
 ]

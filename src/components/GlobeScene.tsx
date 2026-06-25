@@ -39,9 +39,10 @@ export function GlobeScene({ countries, wars }: GlobeSceneProps) {
 
   return (
     <>
-      <ambientLight intensity={0.25} />
-      <directionalLight position={[5, 3, 5]} intensity={1.1} color="#fff8f0" />
-      <pointLight position={[-5, -2, -5]} intensity={0.25} color="#c88a3d" />
+      <ambientLight intensity={0.6} />
+      <directionalLight position={[5, 3, 5]} intensity={1.5} color="#fff8f0" />
+      <pointLight position={[-5, -2, -5]} intensity={0.4} color="#c88a3d" />
+      <hemisphereLight args={['#ffffff', '#4a6fa5', 0.5]} />
 
       <OrbitControls
         ref={controlsRef}
@@ -51,6 +52,7 @@ export function GlobeScene({ countries, wars }: GlobeSceneProps) {
         minDistance={1.6}
         maxDistance={6}
         autoRotate={false}
+        enableDamping={false}
         enabled={viewMode === 'global'}
       />
 
@@ -69,6 +71,7 @@ export function GlobeScene({ countries, wars }: GlobeSceneProps) {
             country={country}
             isSelected={country.id === selectedCountryId}
             isHovered={country.id === hoveredCountryId}
+            viewMode={viewMode}
             onClick={() => setSelectedCountry(country.id)}
             onPointerEnter={() => setHoveredCountry(country.id)}
             onPointerLeave={() => setHoveredCountry(null)}

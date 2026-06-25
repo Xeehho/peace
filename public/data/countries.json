@@ -16,7 +16,7 @@
     "lat": 37.0902,
     "lon": -95.7129,
     "description": "18 世纪独立后迅速扩张，20 世纪成为两次世界大战与冷战的关键力量。",
-    "totalWars": 6,
+    "totalWars": 9,
     "estimatedCasualties": 2500000
   },
   {
@@ -56,7 +56,7 @@
     "lat": 61.524,
     "lon": 105.3188,
     "description": "领土横跨欧亚，参与了拿破仑战争、两次世界大战及冷战时期的多场冲突。",
-    "totalWars": 6,
+    "totalWars": 7,
     "estimatedCasualties": 30000000
   },
   {
@@ -118,5 +118,65 @@
     "description": "13 世纪蒙古帝国的核心，成吉思汗的西征震撼了欧亚大陆。",
     "totalWars": 2,
     "estimatedCasualties": 15000000
+  },
+  {
+    "id": "afghanistan",
+    "name": "阿富汗",
+    "nameEn": "Afghanistan",
+    "lat": 33.93911,
+    "lon": 67.709953,
+    "description": "位于中亚十字路口的“帝国坟场”，历经英阿战争、苏阿战争与美军阿富汗战争。",
+    "totalWars": 3,
+    "estimatedCasualties": 1500000
+  },
+  {
+    "id": "iraq",
+    "name": "伊拉克",
+    "nameEn": "Iraq",
+    "lat": 33.223191,
+    "lon": 43.679291,
+    "description": "美索不达米亚文明发源地，现代经历了两伊战争、海湾战争与伊拉克战争。",
+    "totalWars": 4,
+    "estimatedCasualties": 800000
+  },
+  {
+    "id": "iran",
+    "name": "伊朗",
+    "nameEn": "Iran",
+    "lat": 32.427908,
+    "lon": 53.688046,
+    "description": "波斯文明的继承者，1979 年伊斯兰革命后与西方及伊拉克爆发多场冲突。",
+    "totalWars": 3,
+    "estimatedCasualties": 600000
+  },
+  {
+    "id": "ukraine",
+    "name": "乌克兰",
+    "nameEn": "Ukraine",
+    "lat": 48.379433,
+    "lon": 31.16558,
+    "description": "东欧平原上的国家，2022 年起成为俄乌冲突的主战场。",
+    "totalWars": 1,
+    "estimatedCasualties": 500000
+  },
+  {
+    "id": "israel",
+    "name": "以色列",
+    "nameEn": "Israel",
+    "lat": 31.046051,
+    "lon": 34.851612,
+    "description": "1948 年建国后历经多次中东战争，是中东冲突的核心一方。",
+    "totalWars": 3,
+    "estimatedCasualties": 120000
+  },
+  {
+    "id": "vietnam",
+    "name": "越南",
+    "nameEn": "Vietnam",
+    "lat": 14.058324,
+    "lon": 108.277199,
+    "description": "东南亚国家，20 世纪历经抗法、抗美与中越边境冲突。",
+    "totalWars": 2,
+    "estimatedCasualties": 3500000
   }
 ]

@@ -6,7 +6,7 @@ import { useWars } from '@/hooks/useWars';
 import { formatCasualties, formatYearRange } from '@/utils/format';
 
 export function CountryPanel() {
-  const { selectedCountryId, setSelectedWar } = useAppStore();
+  const { selectedCountryId, selectedWarId, setSelectedWar } = useAppStore();
   const { countries } = useCountries();
   const { wars } = useWars();
 
@@ -15,9 +15,12 @@ export function CountryPanel() {
     (w) => country && w.relatedCountryIds.includes(country.id)
   );
 
+  // Hide country panel when war drawer is open (war drawer slides over it)
+  const visible = country && !selectedWarId;
+
   return (
     <AnimatePresence>
-      {country && (
+      {visible && (
         <motion.aside
           initial={{ x: '100%', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}

@@ -34,6 +34,15 @@ export interface War {
   attires?: AttireItem[];
 }
 
+export interface Quote {
+  id: string;
+  quote: string;
+  author: string;
+  role: string;
+  year: number;
+  context: string;
+}
+
 export type ViewMode = 'global' | 'country';
 
 export interface AppState {

@@ -9,6 +9,9 @@ import { WarModal } from '@/components/WarModal';
 import { TimeSlider } from '@/components/TimeSlider';
 import { ViewToggle } from '@/components/ViewToggle';
 import { CallToAction } from '@/components/CallToAction';
+import { StatsSection } from '@/components/StatsSection';
+import { QuotesCarousel } from '@/components/QuotesCarousel';
+import { WarHighlights } from '@/components/WarHighlights';
 import { useAppStore } from '@/stores/appStore';
 
 export default function Home() {
@@ -51,6 +54,9 @@ export default function Home() {
             </div>
           </div>
 
+          <StatsSection />
+          <WarHighlights />
+          <QuotesCarousel />
           <CallToAction />
         </>
       )}

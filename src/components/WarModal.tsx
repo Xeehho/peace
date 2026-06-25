@@ -1,14 +1,14 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, MapPin, Skull, Users, UserCircle2, Shirt, ArrowLeft } from 'lucide-react';
+import { X, MapPin, Skull, Users, UserCircle2, Shirt, ArrowLeft, TrendingDown, Clock, AlertTriangle } from 'lucide-react';
 import { useAppStore } from '@/stores/appStore';
 import { useCountries } from '@/hooks/useCountries';
 import { useWars } from '@/hooks/useWars';
-import { formatCasualties, formatYearRange } from '@/utils/format';
+import { formatCasualties, formatYearRange, formatYear } from '@/utils/format';
 import { generateAttireImageUrl } from '@/utils/image';
 import { AttireFigureCard } from './AttireFigureCard';
 
 export function WarModal() {
-  const { selectedWarId, setSelectedWar, selectedCountryId, setSelectedCountry } = useAppStore();
+  const { selectedWarId, setSelectedWar, selectedCountryId } = useAppStore();
   const { wars } = useWars();
   const { countries } = useCountries();
 
@@ -24,11 +24,14 @@ export function WarModal() {
 
   const handleBack = () => {
     setSelectedWar(null);
-    // If no country was selected, this was opened from timeline — go back
-    if (!selectedCountryId) {
-      // Already on timeline, just close
-    }
   };
+
+  // 计算战争持续年数
+  const duration = war ? (war.endYear ?? war.startYear) - war.startYear : 0;
+
+  // 计算伤亡占比（相对于所有战争）
+  const totalCasualties = wars.reduce((sum, w) => sum + w.casualties, 0);
+  const casualtyPercentage = war && totalCasualties > 0 ? (war.casualties / totalCasualties) * 100 : 0;
 
   return (
     <AnimatePresence>
@@ -108,10 +111,78 @@ export function WarModal() {
                 </p>
               </div>
 
+              {/* 战争影响分析 */}
+              <div className="mt-6">
+                <h3 className="mb-3 flex items-center gap-2 font-serif text-lg text-archive-ink">
+                  <TrendingDown className="h-4 w-4 text-archive-terracotta" />
+                  战争影响
+                </h3>
+                <div className="space-y-3">
+                  {/* 持续时间 */}
+                  <div className="flex items-center gap-3 rounded-lg border border-archive-border/60 bg-white p-3">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-archive-cream text-archive-amber">
+                      <Clock className="h-4 w-4" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-xs text-archive-muted">持续时长</p>
+                      <p className="text-sm font-medium text-archive-ink">
+                        {duration === 0 ? '同年爆发与结束' : `${duration} 年`}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* 伤亡占比可视化 */}
+                  <div className="rounded-lg border border-archive-border/60 bg-white p-3">
+                    <div className="mb-2 flex items-center justify-between">
+                      <p className="text-xs text-archive-muted">占记录总伤亡比</p>
+                      <p className="font-mono text-sm font-medium text-archive-terracotta">
+                        {casualtyPercentage.toFixed(1)}%
+                      </p>
+                    </div>
+                    <div className="h-2 overflow-hidden rounded-full bg-archive-cream">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: `${Math.min(casualtyPercentage, 100)}%` }}
+                        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+                        className="h-full rounded-full bg-gradient-to-r from-archive-amber to-archive-terracotta"
+                      />
+                    </div>
+                  </div>
+
+                  {/* 涉及国家数 */}
+                  <div className="flex items-center gap-3 rounded-lg border border-archive-border/60 bg-white p-3">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-archive-cream text-archive-sage">
+                      <MapPin className="h-4 w-4" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-xs text-archive-muted">涉及国家与地区</p>
+                      <div className="mt-1 flex flex-wrap gap-1.5">
+                        {war.relatedCountryIds.map((cid) => {
+                          const c = countryMap.get(cid);
+                          return c ? (
+                            <span key={cid} className="rounded-full bg-archive-cream px-2 py-0.5 text-[10px] font-medium text-archive-ink">
+                              {c.name}
+                            </span>
+                          ) : null;
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="mt-6">
                 <h3 className="mb-2 font-serif text-lg text-archive-ink">背景故事</h3>
                 <p className="leading-relaxed text-archive-muted">
                   {war.background}
+                </p>
+              </div>
+
+              {/* 反思提示 */}
+              <div className="mt-4 flex items-start gap-2.5 rounded-lg border border-archive-amber/30 bg-archive-amber/5 p-4">
+                <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-archive-amber" />
+                <p className="text-xs leading-relaxed text-archive-muted">
+                  {formatCasualties(war.casualties)} 不是一个冰冷的数字，而是无数被战争吞噬的人生——每一个数字背后，都是一个完整的故事。
                 </p>
               </div>
 

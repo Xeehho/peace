@@ -1,6 +1,6 @@
 import { useRef, useMemo, useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { MapPin, ChevronLeft, ChevronRight, Skull } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MapPin, ChevronLeft, ChevronRight, Skull, GitCompareArrows, Check, X } from 'lucide-react';
 import { useWars } from '@/hooks/useWars';
 import { useCountries } from '@/hooks/useCountries';
 import { useAppStore } from '@/stores/appStore';
@@ -8,6 +8,7 @@ import { formatYear, formatYearRange, formatCasualties } from '@/utils/format';
 import { generateWarImageUrl } from '@/utils/image';
 import { CallToAction } from '@/components/CallToAction';
 import { SiteBackground } from '@/components/SiteBackground';
+import { WarCompare } from '@/components/WarCompare';
 import { useT, localized } from '@/i18n/useT';
 import type { War } from '@/types';
 
@@ -26,6 +27,35 @@ export default function Timeline() {
   const { t, lang } = useT();
   const scrollRef = useRef<HTMLDivElement>(null);
   const countryMap = new Map(countries.map((c) => [c.id, c]));
+
+  // 对比模式状态
+  const [compareMode, setCompareMode] = useState(false);
+  const [selectedForCompare, setSelectedForCompare] = useState<string[]>([]);
+  const [showCompare, setShowCompare] = useState(false);
+
+  const toggleCompareSelection = (warId: string) => {
+    setSelectedForCompare((cur) => {
+      if (cur.includes(warId)) return cur.filter((id) => id !== warId);
+      if (cur.length >= 2) return [cur[1], warId]; // 替换最旧的
+      return [...cur, warId];
+    });
+  };
+
+  const exitCompareMode = () => {
+    setCompareMode(false);
+    setSelectedForCompare([]);
+    setShowCompare(false);
+  };
+
+  // 对比模式开启后，选满两个自动弹出对比面板
+  useEffect(() => {
+    if (compareMode && selectedForCompare.length === 2) {
+      setShowCompare(true);
+    }
+  }, [compareMode, selectedForCompare.length]);
+
+  const warA = wars.find((w) => w.id === selectedForCompare[0]) ?? null;
+  const warB = wars.find((w) => w.id === selectedForCompare[1]) ?? null;
 
   const sortedWars = useMemo(
     () => [...wars].sort((a, b) => a.startYear - b.startYear),
@@ -145,15 +175,81 @@ export default function Timeline() {
       <SiteBackground theme="timeline" />
       <section className="px-6 pb-10 pt-12 md:pt-16">
         <div className="mx-auto max-w-6xl">
-          <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-sage">
-            {t('timeline.badge')}
-          </p>
-          <h1 className="font-serif text-4xl font-medium text-archive-ink md:text-5xl">
-            {t('timeline.title')}
-          </h1>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-archive-muted md:text-base">
-            {t('timeline.subtitle')}
-          </p>
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-sage">
+                {t('timeline.badge')}
+              </p>
+              <h1 className="font-serif text-4xl font-medium text-archive-ink md:text-5xl">
+                {t('timeline.title')}
+              </h1>
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-archive-muted md:text-base">
+                {t('timeline.subtitle')}
+              </p>
+            </div>
+            {/* 对比模式开关 */}
+            <button
+              onClick={() => (compareMode ? exitCompareMode() : setCompareMode(true))}
+              className={`flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-all ${
+                compareMode
+                  ? 'border-archive-terracotta bg-archive-terracotta text-white shadow-soft'
+                  : 'border-archive-border bg-white text-archive-ink hover:border-archive-amber hover:text-archive-amber'
+              }`}
+            >
+              <GitCompareArrows className="h-3.5 w-3.5" />
+              {compareMode ? t('compare.clear') : t('compare.title')}
+            </button>
+          </div>
+
+          {/* 对比模式选择提示条 */}
+          <AnimatePresence>
+            {compareMode && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                className="overflow-hidden"
+              >
+                <div className="mt-4 flex items-center gap-3 rounded-xl border border-archive-amber/40 bg-archive-amber/5 px-4 py-2.5">
+                  <span className="text-xs text-archive-muted">
+                    {selectedForCompare.length === 0
+                      ? t('compare.selectHint')
+                      : `${t('compare.selected')} ${selectedForCompare.length}/2`}
+                  </span>
+                  <div className="ml-auto flex items-center gap-2">
+                    {selectedForCompare.map((id, i) => {
+                      const w = wars.find((x) => x.id === id);
+                      return (
+                        <span
+                          key={id}
+                          className="flex items-center gap-1 rounded-md bg-white px-2 py-0.5 text-[11px] font-medium text-archive-ink shadow-sm"
+                        >
+                          <span className="text-archive-terracotta">{i + 1}.</span>
+                          <span className="max-w-[120px] truncate">{w ? localized(w, 'name', lang) : ''}</span>
+                          <button
+                            onClick={() => toggleCompareSelection(id)}
+                            className="text-archive-muted hover:text-archive-terracotta"
+                            aria-label="remove"
+                          >
+                            <X className="h-3 w-3" />
+                          </button>
+                        </span>
+                      );
+                    })}
+                    {selectedForCompare.length === 2 && (
+                      <button
+                        onClick={() => setShowCompare(true)}
+                        className="flex items-center gap-1 rounded-md bg-archive-terracotta px-2.5 py-1 text-[11px] font-medium text-white transition-colors hover:bg-archive-ink"
+                      >
+                        <Check className="h-3 w-3" />
+                        {t('compare.compareBtn')}
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </section>
 
@@ -207,7 +303,15 @@ export default function Timeline() {
                     imageUrl={imageUrl}
                     countryName={countryName}
                     index={idx}
-                    onClick={() => setSelectedWar(war.id)}
+                    compareSelected={compareMode && selectedForCompare.includes(war.id)}
+                    compareMode={compareMode}
+                    onClick={() => {
+                      if (compareMode) {
+                        toggleCompareSelection(war.id);
+                      } else {
+                        setSelectedWar(war.id);
+                      }
+                    }}
                   />
                 </div>
               );
@@ -284,6 +388,16 @@ export default function Timeline() {
       </section>
 
       <CallToAction />
+
+      {/* 战争对比弹窗 */}
+      {showCompare && (
+        <WarCompare
+          warA={warA}
+          warB={warB}
+          countries={countries}
+          onClose={() => setShowCompare(false)}
+        />
+      )}
     </main>
   );
 }
@@ -294,9 +408,11 @@ interface TimelineCardProps {
   countryName?: string;
   index: number;
   onClick: () => void;
+  compareSelected?: boolean;
+  compareMode?: boolean;
 }
 
-function TimelineCard({ war, imageUrl, countryName, index, onClick }: TimelineCardProps) {
+function TimelineCard({ war, imageUrl, countryName, index, onClick, compareSelected = false, compareMode = false }: TimelineCardProps) {
   const { lang } = useT();
   const baseRotate = index % 2 === 0 ? -2 : 2;
   const [loaded, setLoaded] = useState(false);
@@ -315,7 +431,13 @@ function TimelineCard({ war, imageUrl, countryName, index, onClick }: TimelineCa
         boxShadow: '0 24px 60px rgba(0,0,0,0.12)',
         transition: { duration: 0.35, ease: 'easeOut' },
       }}
-      className="group relative block h-full w-full overflow-hidden rounded-2xl border border-archive-border bg-white text-left shadow-soft"
+      className={`group relative block h-full w-full overflow-hidden rounded-2xl border bg-white text-left shadow-soft transition-colors ${
+        compareSelected
+          ? 'border-archive-terracotta ring-2 ring-archive-terracotta/30'
+          : compareMode
+          ? 'border-archive-border hover:border-archive-amber'
+          : 'border-archive-border'
+      }`}
       style={{
         transform: `rotate(${baseRotate}deg)`,
         transformOrigin: 'center',
@@ -324,6 +446,13 @@ function TimelineCard({ war, imageUrl, countryName, index, onClick }: TimelineCa
     >
       {/* 顶部细条装饰 */}
       <div className="h-1 w-full bg-gradient-to-r from-archive-terracotta via-archive-amber to-archive-terracotta" />
+
+      {/* 对比模式选中标记 */}
+      {compareSelected && (
+        <div className="absolute right-3 top-3 z-20 flex h-6 w-6 items-center justify-center rounded-full bg-archive-terracotta text-white shadow-lg">
+          <Check className="h-3.5 w-3.5" />
+        </div>
+      )}
 
       {/* 战争相关人物/着装插画 */}
       <div className="relative aspect-[4/3] overflow-hidden bg-archive-border">
@@ -337,7 +466,7 @@ function TimelineCard({ war, imageUrl, countryName, index, onClick }: TimelineCa
           alt={localized(war, 'name', lang)}
           className={`h-full w-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-105 ${
             loaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          } ${compareMode && !compareSelected ? 'opacity-60' : ''}`}
           loading="lazy"
           onLoad={() => setLoaded(true)}
           onError={() => setLoaded(true)}

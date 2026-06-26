@@ -15,6 +15,7 @@ import { useCountries } from '@/hooks/useCountries';
 import { formatCasualties } from '@/utils/format';
 import { CallToAction } from '@/components/CallToAction';
 import { SiteBackground } from '@/components/SiteBackground';
+import { ConflictNetwork } from '@/components/ConflictNetwork';
 import { useT, localized } from '@/i18n/useT';
 
 interface AnimatedCounterProps {
@@ -381,6 +382,9 @@ export default function Insights() {
           </div>
         </div>
       </section>
+
+      {/* 交战方关系网络图 */}
+      <ConflictNetwork wars={wars} countries={countries} />
 
       {/* 国家参与战争热度 */}
       <section className="px-6 pb-16">

@@ -70,17 +70,17 @@ export function CountryMarker({
           onPointerLeave();
         }}
       >
-        <sphereGeometry args={[0.024, 16, 16]} />
+        <sphereGeometry args={[0.012, 12, 12]} />
         <meshBasicMaterial transparent opacity={0} depthWrite={false} />
       </mesh>
 
       <mesh ref={markerRef}>
-        <sphereGeometry args={[0.024, 16, 16]} />
+        <sphereGeometry args={[0.012, 12, 12]} />
         <meshBasicMaterial color={COLOR_DEFAULT} toneMapped={false} />
       </mesh>
 
       <mesh ref={glowRef}>
-        <sphereGeometry args={[0.024, 16, 16]} />
+        <sphereGeometry args={[0.012, 12, 12]} />
         <meshBasicMaterial
           color="#c88a3d"
           transparent

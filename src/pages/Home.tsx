@@ -1,4 +1,5 @@
 import { Canvas } from '@react-three/fiber';
+import { EffectComposer, Bloom, Vignette } from '@react-three/postprocessing';
 import { Suspense } from 'react';
 import { useCountries } from '@/hooks/useCountries';
 import { useWars } from '@/hooks/useWars';
@@ -10,6 +11,7 @@ import { TimeSlider } from '@/components/TimeSlider';
 import { ViewToggle } from '@/components/ViewToggle';
 import { CallToAction } from '@/components/CallToAction';
 import { StatsSection } from '@/components/StatsSection';
+import { TollCounter } from '@/components/TollCounter';
 import { QuotesCarousel } from '@/components/QuotesCarousel';
 import { WarHighlights } from '@/components/WarHighlights';
 import { SiteBackground } from '@/components/SiteBackground';
@@ -45,6 +47,16 @@ export default function Home() {
             >
               <Suspense fallback={null}>
                 <GlobeScene countries={countries} wars={wars} />
+                <EffectComposer>
+                  <Bloom
+                    intensity={0.6}
+                    luminanceThreshold={0.6}
+                    luminanceSmoothing={0.9}
+                    mipmapBlur
+                    radius={0.5}
+                  />
+                  <Vignette eskil={false} offset={0.2} darkness={0.6} />
+                </EffectComposer>
               </Suspense>
             </Canvas>
 
@@ -58,6 +70,7 @@ export default function Home() {
             </div>
           </div>
 
+          <TollCounter />
           <StatsSection />
           <WarHighlights />
           <QuotesCarousel />

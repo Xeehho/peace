@@ -6,7 +6,6 @@ import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib';
 import type { Country, War } from '@/types';
 import { useAppStore } from '@/stores/appStore';
 import { Earth } from './Earth';
-import { Atmosphere } from './Atmosphere';
 import { CountryMarker } from './CountryMarker';
 import { CountryBorders } from './CountryBorders';
 import { WarArcs } from './WarArcs';
@@ -59,7 +58,6 @@ export function GlobeScene({ countries, wars }: GlobeSceneProps) {
 
       <group ref={earthGroupRef}>
         <Earth />
-        <Atmosphere />
         <CountryBorders
           countries={countries}
           selectedCountryId={selectedCountryId}

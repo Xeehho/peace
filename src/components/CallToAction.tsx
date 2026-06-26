@@ -1,15 +1,13 @@
 import { HeartHandshake, Heart } from 'lucide-react';
 import { useT } from '@/i18n/useT';
-import { PageBackground } from './PageBackground';
 
 export function CallToAction() {
   const { t } = useT();
   return (
     <section
       id="cta"
-      className="relative z-10 overflow-hidden border-t border-archive-border/60 bg-archive-cream px-6 py-20"
+      className="relative z-10 bg-transparent px-6 py-20"
     >
-      <PageBackground variant="cta" instance={0} />
       <div className="relative mx-auto max-w-3xl text-center">
         <Heart className="mx-auto mb-6 h-8 w-8 text-archive-terracotta" />
         <h2 className="font-serif text-3xl font-medium text-archive-ink md:text-4xl">

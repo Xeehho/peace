@@ -14,8 +14,8 @@ import { useWars } from '@/hooks/useWars';
 import { useCountries } from '@/hooks/useCountries';
 import { formatCasualties } from '@/utils/format';
 import { CallToAction } from '@/components/CallToAction';
+import { SiteBackground } from '@/components/SiteBackground';
 import { useT, localized } from '@/i18n/useT';
-import { PageBackground } from '@/components/PageBackground';
 
 interface AnimatedCounterProps {
   value: number;
@@ -164,7 +164,7 @@ export default function Insights() {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-archive-cream pt-16">
+      <div className="flex min-h-screen items-center justify-center pt-16">
         <div className="text-center">
           <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-2 border-archive-border border-t-archive-amber" />
           <p className="text-sm text-archive-muted">{t('insights.loading')}</p>
@@ -209,10 +209,10 @@ export default function Insights() {
   ];
 
   return (
-    <main className="min-h-screen bg-archive-cream pt-16">
+    <main className="relative isolate min-h-screen pt-16">
+      <SiteBackground theme="insights" />
       {/* 页面标题区 */}
-      <section className="relative overflow-hidden px-6 pb-10 pt-12 md:pt-16">
-        <PageBackground variant="hero" instance={0} />
+      <section className="px-6 pb-10 pt-12 md:pt-16">
         <div className="relative mx-auto max-w-6xl">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-sage">
             {t('insights.badge')}
@@ -227,8 +227,7 @@ export default function Insights() {
       </section>
 
       {/* 核心统计数字 */}
-      <section className="relative overflow-hidden px-6 pb-16">
-        <PageBackground variant="stats" instance={1} />
+      <section className="px-6 pb-16">
         <div className="relative mx-auto max-w-6xl">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {statCards.map((card, idx) => {
@@ -263,8 +262,7 @@ export default function Insights() {
       </section>
 
       {/* 伤亡人数时代趋势图 */}
-      <section className="relative overflow-hidden px-6 pb-16">
-        <PageBackground variant="insights" instance={0} />
+      <section className="px-6 pb-16">
         <div className="relative mx-auto max-w-6xl">
           <div className="mb-6 flex items-center gap-2">
             <TrendingUp className="h-4 w-4 text-archive-terracotta" />
@@ -329,8 +327,7 @@ export default function Insights() {
       </section>
 
       {/* 伤亡最惨重的战争 TOP 10 */}
-      <section className="relative overflow-hidden px-6 pb-16">
-        <PageBackground variant="warArchive" instance={1} />
+      <section className="px-6 pb-16">
         <div className="relative mx-auto max-w-6xl">
           <div className="mb-6 flex items-center gap-2">
             <BarChart3 className="h-4 w-4 text-archive-terracotta" />
@@ -386,8 +383,7 @@ export default function Insights() {
       </section>
 
       {/* 国家参与战争热度 */}
-      <section className="relative overflow-hidden px-6 pb-16">
-        <PageBackground variant="insights" instance={1} />
+      <section className="px-6 pb-16">
         <div className="relative mx-auto max-w-6xl">
           <div className="mb-6 flex items-center gap-2">
             <Users className="h-4 w-4 text-archive-terracotta" />
@@ -415,7 +411,7 @@ export default function Insights() {
                       delay: idx * 0.05,
                       ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="flex items-center gap-3 rounded-xl border border-archive-border/60 bg-archive-cream/40 p-3 transition-colors hover:border-archive-amber/50"
+                    className="flex items-center gap-3 rounded-xl border border-archive-border/40 bg-white/50 p-3 transition-colors hover:border-archive-amber/50"
                   >
                     <div className="flex w-12 shrink-0 items-center justify-center">
                       {flag ? (
@@ -463,8 +459,7 @@ export default function Insights() {
       </section>
 
       {/* 反思语 */}
-      <section className="relative overflow-hidden px-6 pb-20">
-        <PageBackground variant="cta" instance={1} />
+      <section className="px-6 pb-20">
         <div className="relative mx-auto max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

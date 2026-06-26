@@ -12,6 +12,7 @@ import { CallToAction } from '@/components/CallToAction';
 import { StatsSection } from '@/components/StatsSection';
 import { QuotesCarousel } from '@/components/QuotesCarousel';
 import { WarHighlights } from '@/components/WarHighlights';
+import { SiteBackground } from '@/components/SiteBackground';
 import { useAppStore } from '@/stores/appStore';
 import { useT } from '@/i18n/useT';
 
@@ -24,7 +25,8 @@ export default function Home() {
   const isLoading = countriesLoading || warsLoading;
 
   return (
-    <main className="relative min-h-screen bg-archive-cream">
+    <main className="relative isolate min-h-screen">
+      <SiteBackground theme="home" />
       {isLoading ? (
         <div className="flex h-screen w-full items-center justify-center">
           <div className="text-center">

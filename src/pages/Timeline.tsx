@@ -7,6 +7,7 @@ import { useAppStore } from '@/stores/appStore';
 import { formatYear, formatYearRange, formatCasualties } from '@/utils/format';
 import { generateWarImageUrl } from '@/utils/image';
 import { CallToAction } from '@/components/CallToAction';
+import { SiteBackground } from '@/components/SiteBackground';
 import { useT, localized } from '@/i18n/useT';
 import type { War } from '@/types';
 
@@ -130,7 +131,7 @@ export default function Timeline() {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-archive-cream pt-16">
+      <div className="flex min-h-screen items-center justify-center pt-16">
         <div className="text-center">
           <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-2 border-archive-border border-t-archive-amber" />
           <p className="text-sm text-archive-muted">{t('timeline.loading')}</p>
@@ -140,7 +141,8 @@ export default function Timeline() {
   }
 
   return (
-    <main className="min-h-screen bg-archive-cream pt-16">
+    <main className="relative isolate min-h-screen pt-16">
+      <SiteBackground theme="timeline" />
       <section className="px-6 pb-10 pt-12 md:pt-16">
         <div className="mx-auto max-w-6xl">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-sage">

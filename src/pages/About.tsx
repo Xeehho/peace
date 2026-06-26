@@ -12,8 +12,8 @@ import {
   Heart,
 } from 'lucide-react';
 import { CallToAction } from '@/components/CallToAction';
+import { SiteBackground } from '@/components/SiteBackground';
 import { useT } from '@/i18n/useT';
-import { PageBackground } from '@/components/PageBackground';
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
@@ -81,10 +81,10 @@ export default function About() {
   ];
 
   return (
-    <main className="min-h-screen bg-archive-cream pt-16">
+    <main className="relative isolate min-h-screen pt-16">
+      <SiteBackground theme="about" />
       {/* 1. 英雄区 */}
-      <section className="relative overflow-hidden px-6 pb-12 pt-12 md:pt-20">
-        <PageBackground variant="hero" instance={1} />
+      <section className="px-6 pb-12 pt-12 md:pt-20">
         <div className="relative mx-auto max-w-4xl text-center">
           <motion.div {...fadeUp}>
             <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-sage">
@@ -118,8 +118,7 @@ export default function About() {
       </section>
 
       {/* 2. 我们的使命 */}
-      <section className="relative overflow-hidden px-6 pb-20">
-        <PageBackground variant="about" instance={0} />
+      <section className="px-6 pb-20">
         <div className="relative mx-auto max-w-6xl">
           <motion.div {...fadeUp} className="mb-10">
             <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-sage">
@@ -172,8 +171,7 @@ export default function About() {
       </section>
 
       {/* 3. 为什么记录战争？ */}
-      <section className="relative overflow-hidden border-y border-archive-border/60 bg-white/50 px-6 py-20">
-        <PageBackground variant="about" instance={1} />
+      <section className="px-6 py-20">
         <div className="relative mx-auto max-w-3xl">
           <motion.div {...fadeUp} className="mb-8">
             <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-sage">
@@ -221,8 +219,7 @@ export default function About() {
       </section>
 
       {/* 4. 方法论 */}
-      <section className="relative overflow-hidden px-6 py-20">
-        <PageBackground variant="insights" instance={2} />
+      <section className="px-6 py-20">
         <div className="relative mx-auto max-w-6xl">
           <motion.div {...fadeUp} className="mb-10">
             <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-sage">
@@ -274,8 +271,7 @@ export default function About() {
       </section>
 
       {/* 5. 数据来源 */}
-      <section className="relative overflow-hidden border-y border-archive-border/60 bg-white/50 px-6 py-20">
-        <PageBackground variant="about" instance={2} />
+      <section className="px-6 py-20">
         <div className="relative mx-auto max-w-4xl">
           <motion.div {...fadeUp} className="mb-10">
             <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-sage">
@@ -320,10 +316,9 @@ export default function About() {
         </div>
       </section>
 
-      {/* 6. 技术实现 */}
-      <section className="relative overflow-hidden px-6 py-20">
-        <PageBackground variant="insights" instance={3} />
-        <div className="relative mx-auto max-w-5xl">
+      {/* 6. 技术栈 */}
+      <section className="px-6 py-20">
+        <div className="relative mx-auto max-w-4xl">
           <motion.div {...fadeUp} className="mb-10">
             <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-archive-sage">
               {t('about.techBadge')}
@@ -366,8 +361,7 @@ export default function About() {
       </section>
 
       {/* 7. 致谢 */}
-      <section className="relative overflow-hidden border-t border-archive-border/60 bg-white/50 px-6 py-20">
-        <PageBackground variant="cta" instance={2} />
+      <section className="px-6 py-20">
         <div className="relative mx-auto max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

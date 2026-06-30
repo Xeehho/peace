@@ -96,7 +96,7 @@ export function WarSceneIllustration({ year, warName, location, className = '' }
   );
 }
 
-function renderBattlefield(era: string, palette: any) {
+function renderBattlefield(era: string, palette: Palette) {
   switch (era) {
     case 'ancient':
       return (
@@ -328,6 +328,7 @@ function renderBattlefield(era: string, palette: any) {
 }
 
 type Era = 'ancient' | 'medieval' | 'earlyModern' | 'industrial' | 'ww' | 'coldWar';
+type Palette = Record<string, string>;
 
 function getEra(year: number): Era {
   if (year < 500) return 'ancient';
@@ -339,7 +340,7 @@ function getEra(year: number): Era {
 }
 
 function getPalette(era: string) {
-  const palettes: Record<Era, any> = {
+  const palettes: Record<Era, Palette> = {
     ancient: {
       skyTop: '#c9a87c',
       skyMid: '#e8d4a8',

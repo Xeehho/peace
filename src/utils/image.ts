@@ -74,7 +74,9 @@ export function generateWarImageUrl(
   belligerents: string[],
   background: string
 ): string {
-  const prompt = `A dramatic historical war scene of ${warName} in ${location}, epic battlefield illustration, atmospheric smoke and dramatic lighting, historical painting style, no text, no watermark`;
+  const enName = WAR_NAME_EN[warName] ?? warName;
+  const factions = belligerents.slice(0, 3).join(' vs ');
+  const prompt = `A dramatic historical war scene of ${enName} (${year}) in ${location}, ${factions}, ${background.slice(0, 120)}, epic battlefield illustration, atmospheric smoke and dramatic lighting, historical painting style, no text, no watermark`;
   const encoded = encodeURIComponent(prompt);
   return `https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=${encoded}&image_size=landscape_4_3`;
 }

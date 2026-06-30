@@ -3,7 +3,7 @@ import { X, MapPin, Skull, Users, UserCircle2, Shirt, ArrowLeft, TrendingDown, C
 import { useAppStore } from '@/stores/appStore';
 import { useCountries } from '@/hooks/useCountries';
 import { useWars } from '@/hooks/useWars';
-import { formatCasualties, formatYearRange, formatYear } from '@/utils/format';
+import { formatCasualties, formatYearRange } from '@/utils/format';
 import { generateAttireImageUrl } from '@/utils/image';
 import { AttireFigureCard } from './AttireFigureCard';
 import { useT, localized, localizedArray } from '@/i18n/useT';

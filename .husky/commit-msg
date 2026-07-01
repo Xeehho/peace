@@ -1,2 +1,0 @@
-npx --no -- commitlint --edit "$1"
-node scripts/append-trae-author.mjs "$1"

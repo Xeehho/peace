@@ -9,7 +9,6 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "check": "tsc -b --noEmit",
-    "prepare": "husky",
     "ship": "node scripts/ship.mjs"
   },
   "dependencies": {
